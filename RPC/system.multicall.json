@@ -1,6 +1,6 @@
 {
 	"name": "system.multicall",
-	"category": "Functions Defined by the XML-RPC Standard",
+	"category": "Defined by XML-RPC Standard",
 	"shortDescription": "Use this method to call multiple RPC methods at once in order to reduce traffic.",
 	"description": "This method can be used to call multiple methods at the same time. This can speed up RPC communication as there is no latency between the RPC calls.",
 	"signatures": ["Array system.multicall(Array methods)"],

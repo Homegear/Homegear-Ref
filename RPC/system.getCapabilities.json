@@ -1,6 +1,6 @@
 {
 	"name": "system.getCapabilities",
-	"category": "Functions Defined by the XML-RPC Standard",
+	"category": "Defined by XML-RPC Standard",
 	"shortDescription": "Lists Homegear's RPC capabilities.",
 	"description": "This method lists the RPC capabilities of the Homegear RPC server.",
 	"signatures": ["Struct system.getCapabilities()"],

@@ -1,6 +1,6 @@
 {
 	"name": "system.methodSignature",
-	"category": "Functions Defined by the XML-RPC Standard",
+	"category": "Defined by XML-RPC Standard",
 	"shortDescription": "Returns a RPC method's signature.",
 	"description": "This method returns the signature of a RPC method.",
 	"signatures": ["Array system.methodSignature(String methodName)"],

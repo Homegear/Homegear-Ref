@@ -1,6 +1,6 @@
 {
 	"name": "system.methodHelp",
-	"category": "Functions Defined by the XML-RPC Standard",
+	"category": "Defined by XML-RPC Standard",
 	"shortDescription": "Returns a short description of a RPC method.",
 	"description": "This method returns the description text of a RPC method.",
 	"signatures": ["String system.methodHelp(String methodName)"],
