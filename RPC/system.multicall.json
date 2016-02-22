@@ -18,7 +18,7 @@
 		"name": "params",
 		"type": "Array",
 		"description": "Array of the parameters which should be passed to the method",
-		"exampleValue": "Array\n      ( \n        (String) JEQ0551288:2\n        (String) SETPOINT\n      )"
+		"exampleValue": "Array\n(\n  (String) JEQ0551288:2\n  (String) SETPOINT\n)"
 	}],
 	"deprecatedSignatures": [""],
 	"returnValue": "Returns an Array of the method responses. Each element is one response.",
