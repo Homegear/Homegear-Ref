@@ -1,0 +1,22 @@
+{
+	"name": "system.methodSignature",
+	"category": "Functions Defined by the XML-RPC Standard",
+	"shortDescription": "Returns a RPC method's signature.",
+	"description": "This method returns the signature of a RPC method.",
+	"signatures": ["Array system.methodSignature(String methodName)"],
+	"parameters": [{
+		"name": "methodName",
+		"type": "String",
+		"description": "The name of the method",
+		"exampleValue": "getLinks"
+	}],
+	"returnValue": "Returns an Array of signatures. Each signature again is an array. The first element is the return type and the second to the last element are the parameter types.",
+	"errors": [{
+		"code": -32602,
+		"description": "Method was not found"
+	}],
+	"exampleOutput": [{
+		"call": "system.methodSignature("getLinks")",
+		"output": "(Array length=3)\n{\n  (Array length=1)\n  {\n    (String) array\n  }\n  (Array length=2)\n  {\n    (String) array\n    (String) string\n  }\n  (Array length=3)\n  {\n    (String) array\n    (String) string\n    (String) i4\n  }\n}"
+	}]
+}

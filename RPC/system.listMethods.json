@@ -1,5 +1,6 @@
 {
 	"name": "system.listMethods",
+	"category": "Functions Defined by the XML-RPC Standard",
 	"shortDescription": "Lists all supported RPC methods.",
 	"description": "This method lists all RPC methods, the Homegear RPC server knows or, when being sent by Homegear's RPC client, requests all methods the RPC event server knows.",
 	"signatures": ["Array system.listMethods()"],

@@ -1,5 +1,9 @@
 {
 	"name": "",
+	"category": "",
+	"minHomegearVersion": "",
+	"maxHomegearVersion": "",
+	"lastModified": 0,
 	"shortDescription": "",
 	"description": "",
 	"signatures": [""],
@@ -7,10 +11,14 @@
 		"name": "",
 		"type": "",
 		"description": "",
-		"exampleValue": "",
+		"exampleValue": ""
 	}],
 	"deprecatedSignatures": [""],
 	"returnValue": "",
+	"errors": [{
+		"code": 0,
+		"description": ""
+	}],
 	"exampleOutput": [{
 		"call": "",
 		"output": ""
