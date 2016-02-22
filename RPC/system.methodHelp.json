@@ -1,0 +1,17 @@
+{
+	"name": "system.methodHelp",
+	"shortDescription": "Returns a short description of a RPC method.",
+	"description": "This method returns the description text of a RPC method.",
+	"signatures": ["String system.methodHelp(String methodName)"],
+	"parameters": [{
+		"name": "methodName",
+		"type": "String",
+		"description": "The name of the RPC method",
+		"exampleValue": "createDevice",
+	}],
+	"returnValue": "Returns a description string or error -32602 when the method was not found.",
+	"exampleOutput": [{
+		"call": "system.methodHelp(\"system.getCapabilities\")",
+		"output": "(String) Lists server's RPC capabilities."
+	}]
+}

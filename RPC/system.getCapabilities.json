@@ -1,0 +1,11 @@
+{
+	"name": "system.getCapabilities",
+	"shortDescription": "Lists Homegear's RPC capabilities.",
+	"description": "This method lists the RPC capabilities of the Homegear RPC server.",
+	"signatures": ["Struct system.getCapabilities()"],
+	"returnValue": "<p>Returns a struct. Each element describes one capability.</p><p>The element again is a struct with two fields:</p><ul><li><b>specUrl (String):</b> URL to a description of the capability</li><li><b>specVersion (Integer):</b> Version used</li></ul>",
+	"exampleOutput": [{
+		"call": "system.getCapabilities",
+		"output": "(Struct length=3)\n{\n  [xmlrpc]\n  {\n    (Struct length=2)\n    {\n      [specUrl]\n      {\n        (String) http://www.xmlrpc.com/spec\n      }\n      [specVersion]\n      {\n        (Integer) 1\n      }\n    }\n  }\n  [faults_interop]\n  {\n    (Struct length=2)\n    {\n      [specUrl]\n      {\n        (String) http://xmlrpc-epi.sourceforge.net/specs/rfc.fault_codes.php\n      }\n      [specVersion]\n      {\n        (Integer) 20010516\n      }\n    }\n  }\n  [introspection]\n  {\n    (Struct length=2)\n    {\n      [specUrl]\n      {\n        (String) http://scripts.incutio.com/xmlrpc/introspection.html\n      }\n      [specVersion]\n      {\n        (Integer) 1\n      }\n    }\n  }\n}"
+	}]
+}

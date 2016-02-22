@@ -1,0 +1,11 @@
+{
+	"name": "system.listMethods",
+	"shortDescription": "Lists all supported RPC methods.",
+	"description": "This method lists all RPC methods, the Homegear RPC server knows or, when being sent by Homegear's RPC client, requests all methods the RPC event server knows.",
+	"signatures": ["Array system.listMethods()"],
+	"returnValue": "eturns an array of strings. Each element is one function name.",
+	"exampleOutput": [{
+		"call": "system.listMethods()",
+		"output": "(Array length=34)\n{\n  (String) addDevice\n  (String) addLink\n  (String) deleteDevice\n  (String) deleteMetadata\n  (String) getAllMetadata\n  (String) getDeviceDescription\n  (String) getInstallMode\n  (String) getKeyMismatchDevice\n  (String) getLinkInfo\n  (String) getLinkPeers\n  (String) getLinks\n  (String) getMetadata\n  (String) getParamset\n  (String) getParamsetDescription\n  (String) getParamsetId\n  (String) getServiceMessages\n  (String) getValue\n  (String) init\n  (String) listBidcosInterfaces\n  (String) listDevices\n  (String) listTeams\n  (String) logLevel\n  (String) putParamset\n  (String) removeLink\n  (String) setInstallMode\n  (String) setLinkInfo\n  (String) setMetadata\n  (String) setTeam\n  (String) setValue\n  (String) system.getCapabilities\n  (String) system.listMethods\n  (String) system.methodHelp\n  (String) system.methodSignature\n  (String) system.multicall\n}"
+	}]
+}
