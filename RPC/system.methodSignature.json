@@ -16,7 +16,7 @@
 		"description": "Method was not found"
 	}],
 	"exampleOutput": [{
-		"call": "system.methodSignature("getLinks")",
+		"call": "system.methodSignature(\"getLinks\")",
 		"output": "(Array length=3)\n{\n  (Array length=1)\n  {\n    (String) array\n  }\n  (Array length=2)\n  {\n    (String) array\n    (String) string\n  }\n  (Array length=3)\n  {\n    (String) array\n    (String) string\n    (String) i4\n  }\n}"
 	}]
 }

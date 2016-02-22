@@ -20,7 +20,6 @@
 		"description": "Array of the parameters which should be passed to the method",
 		"exampleValue": "Array\n(\n  (String) JEQ0551288:2\n  (String) SETPOINT\n)"
 	}],
-	"deprecatedSignatures": [""],
 	"returnValue": "Returns an Array of the method responses. Each element is one response.",
 	"exampleOutput": [{
 		"call": "system.multicall(\n	(Array length=2)\n	{\n	  (Struct length=2)\n	  {\n		[methodName]\n		{\n		  (String) getValue\n		}\n		[params]\n		{\n		  (Array length=2)\n		  {\n			(String) JEQ0551288:2\n			(String) SETPOINT\n		  }\n		}\n	  }\n	  (Struct length=2)\n	  {\n		[methodName]\n		{\n		  (String) getValue\n		}\n		[params]\n		{\n		  (Array length=2)\n		  {\n			(String) JEQ0534326:2\n			(String) SETPOINT\n		  }\n		}\n	  }\n	}\n)",
