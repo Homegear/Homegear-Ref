@@ -1,13 +1,19 @@
 {
-	"name": "Homegear::getScriptId",
+	"name": "Homegear::registerThread",
 	"category": "General",
-	"shortDescription": "Returns the id and token of the current script.",
-	"description": "Homegear assigns a unique id to each script. This id is used to identify the script in different threads. Additionally a password token is generated, so a script can not accidently register as a different script. getScriptId() returns the id and the token for the current script. The returned string can then be used to register new threads using \"<a href=\"#HomegearregisterThread\">registerThread()</a>\". getScriptId() only returns valid data, if this method is called within the main thread or after \"<a href=\"#HomegearregisterThread\">registerThread()</a>\" has been called.",
-	"signatures": ["string getScriptId()"],
-	"returnValue": "Returns the script id as integer.",
+	"shortDescription": "Makes a new thread known to Homegear.",
+	"description": "This method makes a new thread known to Homegear. This is needed to be able to receive events.",
+	"signatures": ["bool registerThread(string scriptId)"],
+	"parameters": [{
+		"name": "scriptId",
+		"type": "string",
+		"description": "The script id and token as returned by \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\". Note that \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\" only can be called in main thread or after registerThread() has been called.",
+		"exampleValue": "3,MTIzNDU2Nzg5MDEyMzQ1Ng=="
+	}],
+	"returnValue": "Returns true on success and false if no matching thread could be found.",
 	"exampleOutput": [{
-		"call": "Homegear::getScriptId()",
-		"output": "4241"
+		"call": "registerThread(\"3,MTIzNDU2Nzg5MDEyMzQ1Ng==\")",
+		"output": "true"
 	}],
 	"example": "<?php\n/**\n * Class to share data between the main script and the event thread.\n */\nclass SharedData extends Threaded\n{\n    public $scriptId = 0;\n	public $lastEvent;\n    public function run() {}\n}\n\n/**\n * Class to process events received from Homegear\n */\nclass EventThread extends Thread\n{\n    private $sharedData;\n	public function __construct($sharedData)\n	{\n		$this->sharedData = $sharedData;\n	}\n	\n	public function run()\n	{\n		$hg = new \Homegear\Homegear();\n		// Make the new thread known to Homegear. Without this, pollEvent() is not working.\n		if($hg->registerThread($this->sharedData->scriptId) === false)\n		{\n			$hg->log(2, \"Could not register thread.\");\n			return;\n		}\n		// Get events for peer with ID 1.\n		$hg->subscribePeer(1);\n		\n		// Run the thread until Homegear shuts down.\n		while(!$hg->shuttingDown())\n		{\n			$result = $hg->pollEvent();\n			if($result !== false)\n			{\n				// Pass result to main thread\n				$this->sharedData->lastEvent = $result;\n				\n				// Wake up main thread\n				$this->synchronized(function($thread){ $thread->notify(); }, $this);\n			}\n		}\n	}\n}\n\n$hg = new \Homegear\Homegear();\n\n$sharedData = new SharedData();\n// Store script id and password token in shared data.\n$sharedData->scriptId = $hg->getScriptId();\n\n// Create and start new event thread.\n$thread = new EventThread($sharedData);\n$thread->start();\n\n// Run main thread until Homegear shuts down.\nwhile(!$hg->shuttingDown())\n{\n	// Wait to be notified by event thread with a timeout of 5 seconds.\n	$thread->synchronized(function($thread){ $thread->wait(5000000); }, $thread);\n	\n	// Check if lastEvent was set.\n	if($sharedData->lastEvent)\n	{\n		// Print lastEvent to log and reset it.\n		$hg->log(4, print_r($sharedData->lastEvent, true));\n		$sharedData->lastEvent = false;\n	}\n}\n\n// Wait for event thread to finish\n$thread->join();\n?>"
 }
