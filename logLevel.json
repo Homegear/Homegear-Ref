@@ -1,0 +1,22 @@
+{
+	"name": "logLevel",
+	"category": "General",
+	"minHomegearVersion": ">=0.5.0",
+	"shortDescription": "Gets or sets the current log level.",
+	"description": "This method gets or sets the current log level. ",
+	"signatures": [
+		"Integer logLevel()",
+		"Integer logLevel(Integer level)"
+	],
+	"parameters": [{
+		"name": "level",
+		"type": "Integer",
+		"description": "The log level to set. Valid values are:<ul><li>0: Log nothing</li><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>Don't use \"debug\" for normal operation as it slows down Homegear.",
+		"exampleValue": "4"
+	}],
+	"returnValue": "Returns the current log level as integer",
+	"exampleOutput": [{
+		"call": "logLevel()",
+		"output": "(Integer) 4"
+	}]
+}

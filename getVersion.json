@@ -1,0 +1,12 @@
+{
+	"name": "getVersion",
+	"category": "General",
+	"shortDescription": "Returns Homegear's version number.",
+	"description": "This method returns the installed version of Homegear.",
+	"signatures": ["String getVersion()"],
+	"returnValue": "Returns the installed version of Homegear.",
+	"exampleOutput": [{
+		"call": "getVersion()",
+		"output": "(String) Homegear 0.4.3"
+	}]
+}
