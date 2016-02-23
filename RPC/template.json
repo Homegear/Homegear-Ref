@@ -19,6 +19,10 @@
 		"code": 0,
 		"description": ""
 	}],
+	"throws": [{
+		"exception": "",
+		"description": ""
+	}],
 	"exampleOutput": [{
 		"call": "",
 		"output": ""
