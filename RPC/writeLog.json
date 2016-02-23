@@ -16,8 +16,8 @@
 	}, {
 		"name": "logLevel",
 		"type": "Integer",
-		"description": "The log level of the message. If Homegear's log level value is lower than this value, no message is logged.",
-		"exampleValue": "4<ul><li>0: Log nothing</li><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>"
+		"description": "The log level of the message. If Homegear's log level value is lower than this value, no message is logged. Valid values are:<ul><li>0: Log nothing</li><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
+		"exampleValue": "4"
 	}],
 	"returnValue": "Always returns Void."
 }
