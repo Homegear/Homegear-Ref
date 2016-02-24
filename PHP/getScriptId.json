@@ -2,7 +2,7 @@
 	"name": "Homegear::getScriptId",
 	"category": "General",
 	"shortDescription": "Returns the id of the current script.",
-	"description": "Homegear assigns a unique id to each script. This id is used to identify the script in different threads. getScriptId() returns the id for the current script. This only works, if this method is called within the main thread or after \"<a href=\"#registerThread\">registerThread</a>\" has been called.",
+	"description": "Homegear assigns a unique id to each script. This id is used to identify the script in different threads. getScriptId() returns the id for the current script. This only works, if this method is called within the main thread or after \"<a href=\"#HomegearregisterThread\">registerThread</a>\" has been called.",
 	"signatures": ["int getScriptId()"],
 	"returnValue": "Returns the script id as integer.",
 	"exampleOutput": [{
