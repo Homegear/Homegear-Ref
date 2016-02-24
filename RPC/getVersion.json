@@ -7,6 +7,6 @@
 	"returnValue": "Returns the installed version of Homegear.",
 	"exampleOutput": [{
 		"call": "getVersion()",
-		"output": "(String) Homegear 0.4.3"
+		"output": "KFN0cmluZykgSG9tZWdlYXIgMC40LjM="
 	}]
 }

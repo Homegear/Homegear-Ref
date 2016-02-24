@@ -17,6 +17,6 @@
 	"returnValue": "Returns the current log level as integer",
 	"exampleOutput": [{
 		"call": "logLevel()",
-		"output": "(Integer) 4"
+		"output": "KEludGVnZXIpIDQ="
 	}]
 }

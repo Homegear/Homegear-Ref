@@ -13,6 +13,6 @@
 	"returnValue": "Returns a description string or error -32602 when the method was not found.",
 	"exampleOutput": [{
 		"call": "system.methodHelp(\"system.getCapabilities\")",
-		"output": "(String) Lists server's RPC capabilities."
+		"output": "KFN0cmluZykgTGlzdHMgc2VydmVyJ3MgUlBDIGNhcGFiaWxpdGllcy4="
 	}]
 }

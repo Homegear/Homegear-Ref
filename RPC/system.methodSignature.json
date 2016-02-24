@@ -17,6 +17,6 @@
 	}],
 	"exampleOutput": [{
 		"call": "system.methodSignature(\"getLinks\")",
-		"output": "(Array length=3)\n{\n  (Array length=1)\n  {\n    (String) array\n  }\n  (Array length=2)\n  {\n    (String) array\n    (String) string\n  }\n  (Array length=3)\n  {\n    (String) array\n    (String) string\n    (String) i4\n  }\n}"
+		"output": "KEFycmF5IGxlbmd0aD0zKQ0Kew0KICAoQXJyYXkgbGVuZ3RoPTEpDQogIHsNCiAgICAoU3RyaW5nKSBhcnJheQ0KICB9DQogIChBcnJheSBsZW5ndGg9MikNCiAgew0KICAgIChTdHJpbmcpIGFycmF5DQogICAgKFN0cmluZykgc3RyaW5nDQogIH0NCiAgKEFycmF5IGxlbmd0aD0zKQ0KICB7DQogICAgKFN0cmluZykgYXJyYXkNCiAgICAoU3RyaW5nKSBzdHJpbmcNCiAgICAoU3RyaW5nKSBpNA0KICB9DQp9"
 	}]
 }
