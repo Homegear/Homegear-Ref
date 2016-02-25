@@ -17,7 +17,7 @@
 	}],
 	"returnValue": "Returns \"true\" on success.",
 	"errors": [{
-		"code": false,
+		"code": "false",
 		"description": "Error writing to device."
 	}]
 }

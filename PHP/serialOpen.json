@@ -27,7 +27,7 @@
 	}],
 	"returnValue": "Returns the file pointer resource handle of the serial device.",
 	"errors": [{
-		"code": false,
+		"code": "false",
 		"description": "Device could not be opened."
 	}]
 }
