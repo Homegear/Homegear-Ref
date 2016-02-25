@@ -3,7 +3,7 @@
 	"category": "Serial Communication",
 	"shortDescription": "Writes data to a serial device.",
 	"description": "This method writes one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") to a serial device previously opened with HomegearSerial::open().",
-	"signatures": ["mixed close(resource $handle, int $timeout)"],
+	"signatures": ["bool write(resource $handle, int $timeout)"],
 	"parameters": [{
 		"name": "handle",
 		"type": "resource",

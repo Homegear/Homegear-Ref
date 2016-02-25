@@ -3,7 +3,7 @@
 	"category": "Serial Communication",
 	"shortDescription": "Reads data from a serial device.",
 	"description": "This method reads one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") from a serial device previously opened with HomegearSerial::open().",
-	"signatures": ["mixed close(resource $handle, int $timeout)"],
+	"signatures": ["string read(resource $handle, int $timeout)"],
 	"parameters": [{
 		"name": "handle",
 		"type": "resource",

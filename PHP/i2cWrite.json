@@ -1,0 +1,28 @@
+{
+	"name": "HomegearI2c::write",
+	"category": "I²C Communication",
+	"shortDescription": "Writes data to an I²C device.",
+	"description": "This method writes data to an I²C device previously opened with HomegearI2c::open().",
+	"signatures": ["bool write(resource $handle, string $data [, bool $dataIsBinary])"],
+	"parameters": [{
+		"name": "handle",
+		"type": "resource",
+		"description": "The file pointer resource returned by HomegearI2c::open()",
+		"exampleValue": ""
+	}, {
+		"name": "data",
+		"type": "bool",
+		"description": "The data as hexadecimal string",
+		"exampleValue": "8F727ACC3022"
+	}, {
+		"name": "dataIsBinary",
+		"type": "bool",
+		"description": "Data is in raw binary format instead of hexadecimal string",
+		"exampleValue": "true"
+	}],
+	"returnValue": "Returns "true" on success.",
+	"errors": [{
+		"code": "false",
+		"description": "Error writing to device."
+	}]
+}
