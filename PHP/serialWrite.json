@@ -1,0 +1,23 @@
+{
+	"name": "HomegearSerial::write",
+	"category": "Serial Communication",
+	"shortDescription": "Writes data to a serial device.",
+	"description": "This method writes one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") to a serial device previously opened with HomegearSerial::open().",
+	"signatures": ["mixed close(resource $handle, int $timeout)"],
+	"parameters": [{
+		"name": "handle",
+		"type": "resource",
+		"description": "The file pointer resource returned by HomegearSerial::open()",
+		"exampleValue": ""
+	}, {
+		"name": "data",
+		"type": "string",
+		"description": "The data to write. If you omit the new line character it is automatically appended.",
+		"exampleValue": "5000"
+	}],
+	"returnValue": "Returns \"true\" on success.",
+	"errors": [{
+		"code": false,
+		"description": "Error writing to device."
+	}]
+}

@@ -1,0 +1,33 @@
+{
+	"name": "HomegearSerial::open",
+	"category": "Serial Communication",
+	"shortDescription": "Opens a serial device.",
+	"description": "This method opens a serial device and returns a device handle needed for HomegearSerial::read() and HomegearSerial::write(). Remember to close the device with HomegearSerial::close() if you don't need it anymore.",
+	"signatures": ["resource open(string $device, int $baudrate [, bool $evenParity [, bool $oddParity]])"],
+	"parameters": [{
+		"name": "device",
+		"type": "string",
+		"description": "The device to open",
+		"exampleValue": "/dev/ttyAMA0"
+	}, {
+		"name": "baudrate",
+		"type": "int",
+		"description": "The baudrate to use",
+		"exampleValue": "19200"
+	}, {
+		"name": "evenParity",
+		"type": "bool",
+		"description": "Set to \"true\" if the data contains an even parity bit.",
+		"exampleValue": "true"
+	}, {
+		"name": "oddParity",
+		"type": "bool",
+		"description": "Set to \"true\" if the data contains an even parity bit.",
+		"exampleValue": "true"
+	}],
+	"returnValue": "Returns the file pointer resource handle of the serial device.",
+	"errors": [{
+		"code": false,
+		"description": "Device could not be opened."
+	}]
+}
