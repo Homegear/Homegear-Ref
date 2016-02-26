@@ -1,0 +1,13 @@
+{
+	"name": "HomegearGpio::open",
+	"category": "GPIO Operations",
+	"shortDescription": "Opens a GPIO.",
+	"description": "This method opens a GPIO. Make sure you have enough permissions to export GPIOs. If you don't you can set \"exportGpios\" in /etc/homegear/main.conf. This setting tells Homegear to export the GPIOs during start up before it drops it's root privileges.",
+	"signatures": ["void open(int $index)"],
+	"parameters": [{
+		"name": "index",
+		"type": "int",
+		"description": "The index of the GPIO to open",
+		"exampleValue": "18"
+	}]
+}

@@ -1,0 +1,18 @@
+{
+	"name": "HomegearGpio::set",
+	"category": "GPIO Operations",
+	"shortDescription": "Sets the state of a GPIO.",
+	"description": "This method sets the state of a GPIO. Before calling this method, the GPIO needs to be opened with HomegearGpio::open().",
+	"signatures": ["void get(int $index, bool $value)"],
+	"parameters": [{
+		"name": "index",
+		"type": "int",
+		"description": "The index of the GPIO",
+		"exampleValue": "18"
+	}, {
+		"name": "value",
+		"type": "bool",
+		"description": "The new state to set",
+		"exampleValue": "true"
+	}]
+}

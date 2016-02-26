@@ -1,0 +1,18 @@
+{
+	"name": "HomegearGpio::setDirection",
+	"category": "GPIO Operations",
+	"shortDescription": "Sets the direction of a GPIO.",
+	"description": "This method sets the direction of a GPIO. Before calling this method, the GPIO needs to be opened with HomegearGpio::open().",
+	"signatures": ["void setDirection(int $index, int $direction)"],
+	"parameters": [{
+		"name": "index",
+		"type": "int",
+		"description": "The index of the GPIO",
+		"exampleValue": "18"
+	}, {
+		"name": "direction",
+		"type": "int",
+		"description": "The direction to set. Possible values are HomegearGpio::DIRECTION_IN (0) and HomegearGpio::DIRECTION_OUT (1).",
+		"exampleValue": "HomegearGpio::DIRECTION_OUT"
+	}]
+}
