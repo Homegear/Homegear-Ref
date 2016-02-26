@@ -4,5 +4,5 @@
 	"shortDescription": "Checks if Homegear is shuttingDown.",
 	"description": "This method check if Homegear is shutting down. When it returns \"true\" the script should exit.",
 	"signatures": ["bool shuttingDown()"],
-	"returnValue": "Returns \"true\" if Homegear is shutting down \"false\" otherwise."
+	"returnValue": "Returns \"true\" if Homegear is shutting down, \"false\" otherwise."
 }
