@@ -3,7 +3,7 @@
 	"category": "I²C Communication",
 	"shortDescription": "Writes data to an I²C device.",
 	"description": "This method writes data to an I²C device previously opened with HomegearI2c::open().",
-	"signatures": ["bool write(resource $handle, string $data [, bool $dataIsBinary])"],
+	"signatures": ["bool write(resource $handle, string $data [, bool $dataIsBinary = false])"],
 	"parameters": [{
 		"name": "handle",
 		"type": "resource",

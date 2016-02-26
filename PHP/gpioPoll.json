@@ -3,7 +3,7 @@
 	"category": "GPIO Operations",
 	"shortDescription": "Waits for a GPIO state change to occur.",
 	"description": "Waits for a GPIO state change to occur. Before calling this method, the GPIO needs to be opened by calling HomegearGpio::open(). This method blocks until the configured edge is detected on the GPIO (see <a href=\"#HomegearGpiopoll\">setEdge()</a>). It only works, when the GPIO is configured as input. If no state change occurs the method needs close to no system resources.",
-	"signatures": ["int poll(int $index, int $timeout)"],
+	"signatures": ["int poll(int $index, int $timeout [, bool $debounce = false])"],
 	"parameters": [{
 		"name": "index",
 		"type": "int",
@@ -14,6 +14,11 @@
 		"type": "int",
 		"description": "The maximum time to wait for a state change.",
 		"exampleValue": ""
+	}, {
+		"name": "debounce",
+		"type": "bool",
+		"description": "When set Homegear waits for 20 ms after receiving an interrupt. Set this if the GPIO is connected to an analog input like a switch.",
+		"exampleValue": "true"
 	}],
 	"returnValue": "Returns the state (0 or 1) on success.",
 	"errors": [{
@@ -27,5 +32,5 @@
 		"call": "poll(17, 5000)",
 		"output": "MQ=="
 	}],
-	"example": "PD9waHANCi8qDQogKiBUaGlzIGV4YW1wbGUgd2FpdHMgZm9yIGEgY2hhbmdlIG9uIEdQSU8gMjIgYW5kIG1pcnJvcnMgdGhlIG5ldyBzdGF0ZSBvZiBHUElPIDIyIHRvIEdQSU8gMjQuDQogKi8NCg0KLy8gQ3JlYXRlIEhvbWVnZWFyIG9iamVjdC4NCiRoZyA9IG5ldyBcSG9tZWdlYXJcSG9tZWdlYXIoKTsNCg0KLy8gQ3JlYXRlIEdQSU8gb2JqZWN0Lg0KJGdwaW8gPSBuZXcgXEhvbWVnZWFyXEhvbWVnZWFyR3BpbygpOw0KDQovLyBPcGVuIEdQSU8uDQokZ3Bpby0+b3BlbigyMik7DQoNCi8vIFNldCBkaXJlY3Rpb24gdG8gaW5wdXQuDQokZ3Bpby0+c2V0RGlyZWN0aW9uKDIyLCAwKTsNCg0KLy8gU2V0IGVkZ2UgdG8gYm90aC4NCiRncGlvLT5zZXRFZGdlKDIyLCAyKTsNCg0KLy8gV2UganVzdCBvcGVuZWQgdGhlIEdQSU8sIHNvIHBvbGwgdG8gZGlzY2FyZCB0aGUgb2NjdXJlZCBjaGFuZ2UuDQokcmVzdWx0ID0gJGdwaW8tPnBvbGwoMjIsIDEpOw0KDQokcmVzdWx0ID0gLTI7DQp3aGlsZSgkcmVzdWx0ID09IC0yKSAvLyBTdGF5IGluIGxvb3AgaWYgcG9sbCB0aW1lcyBvdXQuDQp7DQogICAgICAgIC8vIFdhaXQgZm9yIHN0YXRlIGNoYW5nZS4NCiAgICAgICAgJHJlc3VsdCA9ICRncGlvLT5wb2xsKDIyLCA1MDAwKTsNCn0NCg0KaWYoJHJlc3VsdCA9PSAtMSkgZGllKCJFcnJvciByZWFkaW5nIEdQSU8iKTsNCg0KJGhnLT5sb2coNCwgIlZhbHVlIG9mIEdQSU8gMjI6ICIuJHJlc3VsdCk7DQoNCi8vIENsb3NlIEdQSU8uDQokZ3Bpby0+Y2xvc2UoMjIpOw0KDQovLyBPcGVuIG91dHB1dCBHUElPDQokZ3Bpby0+b3BlbigyNCk7DQoNCi8vIFNldCBkaXJlY3Rpb24gdG8gb3V0cHV0Lg0KJGdwaW8tPnNldERpcmVjdGlvbigyNCwgMSk7DQoNCi8vIFNldCBzdGF0ZSBvZiBHUElPIDI0IHRvIHN0YXRlIG9mIEdQSU8gMjIuDQokZ3Bpby0+c2V0KDI0LCAkcmVzdWx0KTsNCg0KLy8gQ2xvc2UgR1BJTyAyNA0KJGdwaW8tPmNsb3NlKDI0KTsNCj8+DQo="
+	"example": "PD9waHANCi8qDQogKiBUaGlzIGV4YW1wbGUgd2FpdHMgZm9yIGEgY2hhbmdlIG9uIEdQSU8gMjIgYW5kIG1pcnJvcnMgdGhlIG5ldyBzdGF0ZSBvZiBHUElPIDIyIHRvIEdQSU8gMjQuDQogKi8NCg0KLy8gQ3JlYXRlIEhvbWVnZWFyIG9iamVjdC4NCiRoZyA9IG5ldyBcSG9tZWdlYXJcSG9tZWdlYXIoKTsNCg0KLy8gQ3JlYXRlIEdQSU8gb2JqZWN0Lg0KJGdwaW8gPSBuZXcgXEhvbWVnZWFyXEhvbWVnZWFyR3BpbygpOw0KDQovLyBPcGVuIEdQSU8uDQokZ3Bpby0+b3BlbigyMik7DQoNCi8vIFNldCBkaXJlY3Rpb24gdG8gaW5wdXQuDQokZ3Bpby0+c2V0RGlyZWN0aW9uKDIyLCAwKTsNCg0KLy8gU2V0IGVkZ2UgdG8gYm90aC4NCiRncGlvLT5zZXRFZGdlKDIyLCAyKTsNCg0KLy8gV2UganVzdCBvcGVuZWQgdGhlIEdQSU8sIHNvIHBvbGwgdG8gZGlzY2FyZCB0aGUgb2NjdXJlZCBjaGFuZ2UuDQokcmVzdWx0ID0gJGdwaW8tPnBvbGwoMjIsIDEpOw0KDQokcmVzdWx0ID0gLTI7DQp3aGlsZSgkcmVzdWx0ID09IC0yKSAvLyBTdGF5IGluIGxvb3AgaWYgcG9sbCB0aW1lcyBvdXQuDQp7DQogICAgICAgIC8vIFdhaXQgZm9yIHN0YXRlIGNoYW5nZS4NCiAgICAgICAgJHJlc3VsdCA9ICRncGlvLT5wb2xsKDIyLCA1MDAwLCB0cnVlKTsNCn0NCg0KaWYoJHJlc3VsdCA9PSAtMSkgZGllKCJFcnJvciByZWFkaW5nIEdQSU8iKTsNCg0KJGhnLT5sb2coNCwgIlZhbHVlIG9mIEdQSU8gMjI6ICIuJHJlc3VsdCk7DQoNCi8vIENsb3NlIEdQSU8uDQokZ3Bpby0+Y2xvc2UoMjIpOw0KDQovLyBPcGVuIG91dHB1dCBHUElPDQokZ3Bpby0+b3BlbigyNCk7DQoNCi8vIFNldCBkaXJlY3Rpb24gdG8gb3V0cHV0Lg0KJGdwaW8tPnNldERpcmVjdGlvbigyNCwgMSk7DQoNCi8vIFNldCBzdGF0ZSBvZiBHUElPIDI0IHRvIHN0YXRlIG9mIEdQSU8gMjIuDQokZ3Bpby0+c2V0KDI0LCAkcmVzdWx0KTsNCg0KLy8gQ2xvc2UgR1BJTyAyNA0KJGdwaW8tPmNsb3NlKDI0KTsNCj8+DQo="
 }

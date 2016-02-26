@@ -1,9 +1,9 @@
 {
 	"name": "HomegearSerial::write",
-	"category": "Serial Communication",
+	"category": "Serial Communication (TTY)",
 	"shortDescription": "Writes data to a serial device.",
 	"description": "This method writes one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") to a serial device previously opened with HomegearSerial::open().",
-	"signatures": ["bool write(resource $handle, int $timeout)"],
+	"signatures": ["bool write(resource $handle, string $data)"],
 	"parameters": [{
 		"name": "handle",
 		"type": "resource",
@@ -13,7 +13,7 @@
 		"name": "data",
 		"type": "string",
 		"description": "The data to write. If you omit the new line character it is automatically appended.",
-		"exampleValue": "5000"
+		"exampleValue": "Hallo Welt!\\n"
 	}],
 	"returnValue": "Returns \"true\" on success.",
 	"errors": [{

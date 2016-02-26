@@ -1,6 +1,6 @@
 {
 	"name": "HomegearSerial::close",
-	"category": "Serial Communication",
+	"category": "Serial Communication (TTY)",
 	"shortDescription": "Closes a serial device.",
 	"description": "This method closes a serial device previously opened with HomegearSerial::open().",
 	"signatures": ["bool close(resource $handle)"],

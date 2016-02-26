@@ -1,9 +1,9 @@
 {
 	"name": "HomegearSerial::open",
-	"category": "Serial Communication",
+	"category": "Serial Communication (TTY)",
 	"shortDescription": "Opens a serial device.",
 	"description": "This method opens a serial device and returns a device handle needed for HomegearSerial::read() and HomegearSerial::write(). Remember to close the device with HomegearSerial::close() if you don't need it anymore.",
-	"signatures": ["resource open(string $device, int $baudrate [, bool $evenParity [, bool $oddParity]])"],
+	"signatures": ["resource open(string $device, int $baudrate [, bool $evenParity = false [, bool $oddParity = false]])"],
 	"parameters": [{
 		"name": "device",
 		"type": "string",
