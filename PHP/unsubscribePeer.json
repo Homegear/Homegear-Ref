@@ -2,7 +2,7 @@
 	"name": "Homegear::unsubscribePeer",
 	"category": "General",
 	"shortDescription": "Disables reception of events.",
-	"description": "This method disables reception of events for a device previously enabled by calling <a href=\"HomegearsubscribePeer\">subscribePeer()</a>. If you are calling unsubscribePeer() from a different thread than the main thread you need to call <a href=\"HomegearregisterThread\">registerThread()</a> first.",
+	"description": "This method disables reception of events for a device previously enabled by calling <a href=\"#HomegearsubscribePeer\">subscribePeer()</a>. If you are calling unsubscribePeer() from a different thread than the main thread you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first.",
 	"signatures": ["void unsubscribePeer(int $peerId)"],
 	"parameters": [{
 		"name": "peerId",
