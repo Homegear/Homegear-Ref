@@ -1,0 +1,17 @@
+{
+	"name": "Homegear::subscribePeer",
+	"category": "General",
+	"shortDescription": "Enables reception of events for a device.",
+	"description": "This method enables reception of events for a device. You need to call subscribePeer() for <a href=\"HomegearpollEvent\">pollEvent()</a> to return events for a device. If you are calling subscribePeer() from a different thread than the main thread you need to call <a href=\"HomegearregisterThread\">registerThread()</a> first.",
+	"signatures": ["void subscribePeer(int $peerId)"],
+	"parameters": [{
+		"name": "peerId",
+		"type": "int",
+		"description": "The id of the peer to get events for",
+		"exampleValue": "32"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Thrown only when not in main thread and when script id registered with registerThread() is invalid or registerThread() was not called."
+	}]
+}

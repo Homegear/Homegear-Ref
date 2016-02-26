@@ -2,9 +2,15 @@
 	"name": "Homegear::pollEvent",
 	"category": "General",
 	"shortDescription": "Waits for an event from Homegear.",
-	"description": "This method blocks until an event from Homegear is received. General events and events concerning all devices are always returned. Device value and configuration changes are only returned if the script has called <a href=\"#HomegearsubscribePeer\">Homegear::subscribePeer()</a> for the device. See the RPC reference for \"event\", \"newDevices\", \"deleteDevices\" and \"updateDevice\" for more information about the returned values.",
-	"signatures": ["array pollEvent()"],
-	"returnValue": "Returns an associative array with information about the event: <div class=\"table-responsive\"><table class=\"table table-striped\"><thead><th>Key</th><th>Value</th></tr></thead><tbody><tr><th>TYPE</th><td>The event method called (\"event\", \"deleteDevices\", \"newDevices\" or \"updateDevice\").</td></tr><tr><th>PEERID</th><td>The ID of the peer raising the event. Set for \"event\" and \"updateDevice\".</td></tr><tr><th>CHANNEL</th><td>The channel the event is raised for. Set for \"event\" and \"updateDevice\".</td></tr><tr><th>VARIABLE</th><td>The updated variable. Set for \"event\".</td></tr><tr><th>VALUE</th><td>The new value of the variable (\"event\"), an array of type DeviceDescription (\"newDevices\") or an array with information about the deleted devices (\"delteDevices\")..</td></tr><tr><th>HINT</th><td>Set for \"updateDevice\". 0: Device or channel configuration changed; 1: Device links changed; 2: Teams changed.</td></tr></tbody></table>",
+	"description": "This method blocks until an event from Homegear is received. General events and events concerning all devices are always returned. Device value and configuration changes are only returned if the script has called <a href=\"#HomegearsubscribePeer\">Homegear::subscribePeer()</a> for the device. See the RPC reference for \"event\", \"newDevices\", \"deleteDevices\" and \"updateDevice\" for more information about the returned values. If you are calling pollEvent() from a different thread than the main thread you need to call <a href=\"HomegearregisterThread\">registerThread()</a> first.",
+	"signatures": ["array pollEvent([int $timeout = -1])"],
+	"parameters": [{
+		"name": "timeout",
+		"type": "int",
+		"description": "The maximum amount of time to wait for an event in milliseconds.",
+		"exampleValue": "5000"
+	}],
+	"returnValue": "Returns an associative array with information about the event: <div class=\"table-responsive\"><table class=\"table table-striped\"><thead><tr><th>Key</th><th>Value</th></tr></thead><tbody><tr><th>TYPE</th><td>The event method called (\"event\", \"deleteDevices\", \"newDevices\" or \"updateDevice\").</td></tr><tr><th>PEERID</th><td>The ID of the peer raising the event. Set for \"event\" and \"updateDevice\".</td></tr><tr><th>CHANNEL</th><td>The channel the event is raised for. Set for \"event\" and \"updateDevice\".</td></tr><tr><th>VARIABLE</th><td>The updated variable. Set for \"event\".</td></tr><tr><th>VALUE</th><td>The new value of the variable (\"event\"), an array of type DeviceDescription (\"newDevices\") or an array with information about the deleted devices (\"deleteDevices\")..</td></tr><tr><th>HINT</th><td>Set for \"updateDevice\". 0: Device or channel configuration changed; 1: Device links changed; 2: Teams changed.</td></tr></tbody></table>",
 	"errors": [{
 		"code": "false",
 		"description": "Returned on error."
