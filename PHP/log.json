@@ -2,7 +2,7 @@
 	"name": "Homegear::log",
 	"category": "General",
 	"shortDescription": "Writes a message to the script engine log file.",
-	"description": "This method writes a message to the script engine log or error log file.",
+	"description": "This method writes a message to the script engine log and (on errors) error log file (/var/log/homegear/homegear-scriptengine.log and /var/log/homegear/homegear-scriptengine.err by default).",
 	"signatures": ["bool log(int $logLevel, string $message)"],
 	"parameters": [{
 		"name": "logLevel",
@@ -19,5 +19,6 @@
 	"errors": [{
 		"code": "false",
 		"description": "Message was empty."
-	}]
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmxvZygzLCAiSGVsbG8gSG9tZWdlYXIhIikpOyc="
 }
