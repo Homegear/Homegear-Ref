@@ -1,0 +1,23 @@
+{
+	"name": "Homegear::log",
+	"category": "General",
+	"shortDescription": "Writes a message to the script engine log file.",
+	"description": "This method writes a message to the script engine log or error log file.",
+	"signatures": ["bool log(int $logLevel, string $message)"],
+	"parameters": [{
+		"name": "logLevel",
+		"type": "int",
+		"description": "The log level of the message. If Homegear's log level value is lower than this value, no message is logged. Valid values are:<ul><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
+		"exampleValue": "4"
+	}, {
+		"name": "message",
+		"type": "string",
+		"description": "The message to write to the log file. The date will be automatically prepended.",
+		"exampleValue": "My message."
+	}],
+	"returnValue": "Returns \"true\" on success.",
+	"errors": [{
+		"code": "false",
+		"description": "Message was empty."
+	}]
+}
