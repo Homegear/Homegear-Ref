@@ -1,0 +1,29 @@
+{
+	"name": "Homegear::loadModule",
+	"category": "Modules",
+	"shortDescription": "Loads a Homegear module.",
+	"description": "This method loads a Homegear module from the module directory (/var/lib/homegear/modules by default).",
+	"signatures": ["int loadModule(string $filename)"],
+	"parameters": [{
+		"name": "filename",
+		"type": "string",
+		"description": "The filename of the module to load",
+		"exampleValue": "mod_insteon.so"
+	}],
+	"returnValue": "Returns \"0\" on success and \"1\" if the module is already loaded.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown error"
+	}, {
+		"code": -2,
+		"description": "A module with the provided filename does not exist."
+	}, {
+		"code": -4,
+		"description": "Device family initialization was not successful"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Thrown on parameter errors."
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmxvYWRNb2R1bGUoIm1vZF9taXNjZWxsYW5lb3VzLnNvIikpOyc="
+}
