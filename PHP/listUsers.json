@@ -1,0 +1,17 @@
+{
+	"name": "Homegear::listUsers",
+	"category": "Users",
+	"shortDescription": "Returns all user names.",
+	"description": "This method returns an array with all user names known to Homegear.",
+	"signatures": ["array listUsers()"],
+	"returnValue": "Returns a string array with all user names.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": ""
+	}],
+	"exampleOutput": [{
+		"call": "print_r(listUsers())",
+		"output": "QXJyYXkNCigNCiAgICBbMF0gPT4gaG9tZWdlYXINCiAgICBbMV0gPT4gc2F0aHlhDQopDQo="
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICdwcmludF9yKCRoZy0+bGlzdFVzZXJzKCkpOyc="
+}

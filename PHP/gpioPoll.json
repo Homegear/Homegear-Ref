@@ -12,7 +12,7 @@
 	}, {
 		"name": "timeout",
 		"type": "int",
-		"description": "The maximum time to wait for a state change.",
+		"description": "The maximum time in milliseconds to wait for a state change.",
 		"exampleValue": ""
 	}, {
 		"name": "debounce",

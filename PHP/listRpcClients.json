@@ -1,0 +1,17 @@
+{
+	"name": "Homegear::listRpcClients",
+	"category": "General",
+	"shortDescription": "Returns information about all registered RPC event servers.",
+	"description": "This method returns information about all registered RPC event servers (all servers that called init).",
+	"signatures": ["array listRpcClients()"],
+	"returnValue": "Returns an array with one entry for each registered server. Eeach entry is an associative array containing the client information.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": ""
+	}],
+	"exampleOutput": [{
+		"call": "listRpcClients()",
+		"output": "YXJyYXkoMSkgew0KICBbMF09Pg0KICBhcnJheSgxMykgew0KICAgIFsiQklOQVJZX1JQQyJdPT4NCiAgICBib29sKHRydWUpDQogICAgWyJDTElFTlRfSUQiXT0+DQogICAgaW50KDApDQogICAgWyJJTklUX0JJTkFSWV9NT0RFIl09Pg0KICAgIGJvb2wodHJ1ZSkNCiAgICBbIklOSVRfSU5URVJGQUNFX0lEIl09Pg0KICAgIHN0cmluZygzMCkgIkhvbWVnZWFyTGliLjE5Mi4xNjguMC4xMzc6OTg3NyINCiAgICBbIklOSVRfSlNPTl9NT0RFIl09Pg0KICAgIGJvb2woZmFsc2UpDQogICAgWyJJTklUX0tFRVBfQUxJVkUiXT0+DQogICAgYm9vbCh0cnVlKQ0KICAgIFsiSU5JVF9ORVdfRk9STUFUIl09Pg0KICAgIGJvb2wodHJ1ZSkNCiAgICBbIklOSVRfU1VCU0NSSUJFX1BFRVJTIl09Pg0KICAgIGJvb2woZmFsc2UpDQogICAgWyJJTklUX1VSTCJdPT4NCiAgICBzdHJpbmcoMjcpICJiaW5hcnk6Ly8xOTIuMTY4LjAuMTM3Ojk4NzciDQogICAgWyJJUF9BRERSRVNTIl09Pg0KICAgIHN0cmluZygxMykgIjE5Mi4xNjguMC4xMzciDQogICAgWyJKU09OX1JQQyJdPT4NCiAgICBib29sKGZhbHNlKQ0KICAgIFsiV0VCU09DS0VUIl09Pg0KICAgIGJvb2woZmFsc2UpDQogICAgWyJYTUxfUlBDIl09Pg0KICAgIGJvb2woZmFsc2UpDQogIH0NCn0NCg=="
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmxpc3RScGNDbGllbnRzKCkpOyc="
+}

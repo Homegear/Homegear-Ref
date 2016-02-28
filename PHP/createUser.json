@@ -1,0 +1,24 @@
+{
+	"name": "Homegear::createUser",
+	"category": "Users",
+	"shortDescription": "Creates a new user.",
+	"description": "This method creates a new user in Homegear.",
+	"signatures": ["bool createUser($username, $password)"],
+	"parameters": [{
+		"name": "username",
+		"type": "string",
+		"description": "The alpha-numeric name of the new user",
+		"exampleValue": "will"
+	}, {
+		"name": "password",
+		"type": "string",
+		"description": "The password of the new user",
+		"exampleValue": "secret"
+	}],
+	"returnValue": "Returns \"true\" on success.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid."
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmNyZWF0ZVVzZXIoImZvbyIsICJmb29iYXIwMSIpKTsn"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "Homegear::updateUser",
+	"category": "Users",
+	"shortDescription": "Updates the password of an existing user.",
+	"description": "This method updates the password of an existing user in Homegear.",
+	"signatures": ["bool updateUser($username, $password)"],
+	"parameters": [{
+		"name": "username",
+		"type": "string",
+		"description": "The name of the user",
+		"exampleValue": "will"
+	}, {
+		"name": "password",
+		"type": "string",
+		"description": "The new password of the user",
+		"exampleValue": "new_secret"
+	}],
+	"returnValue": "Returns \"true\" on success.",
+	"errors": [{
+		"code": "false",
+		"description": "Something went wrong (e. g. the user doesn't exist)"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid."
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnVwZGF0ZVVzZXIoImZvbyIsICJmb29iYXIwMiIpKTsn"
+}
