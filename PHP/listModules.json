@@ -1,0 +1,17 @@
+{
+	"name": "Homegear::listModules",
+	"category": "Modules",
+	"shortDescription": "Lists all Homegear modules.",
+	"description": "This method lists all Homegear modules (loaded and not loaded) in the module directory (/var/lib/homegear/modules by default) .",
+	"signatures": ["array listModules()"],
+	"returnValue": "Returns an array with one entry for each module. Each entry again is an associative array with information about the module.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": ""
+	}],
+	"exampleOutput": [{
+		"call": "var_dump($hg->listModules())",
+		"output": "YXJyYXkoMykgew0KICBbMF09Pg0KICBhcnJheSg1KSB7DQogICAgWyJCQVNFTElCX1ZFUlNJT04iXT0+DQogICAgc3RyaW5nKDEwKSAiMC42LjAtMTA1MSINCiAgICBbIkZBTUlMWV9JRCJdPT4NCiAgICBpbnQoMCkNCiAgICBbIkZBTUlMWV9OQU1FIl09Pg0KICAgIHN0cmluZygxNikgIkhvbWVNYXRpYyBCaWRDb1MiDQogICAgWyJGSUxFTkFNRSJdPT4NCiAgICBzdHJpbmcoMjIpICJtb2RfaG9tZW1hdGljYmlkY29zLnNvIg0KICAgIFsiTE9BREVEIl09Pg0KICAgIGJvb2wodHJ1ZSkNCiAgfQ0KICBbMV09Pg0KICBhcnJheSg1KSB7DQogICAgWyJCQVNFTElCX1ZFUlNJT04iXT0+DQogICAgc3RyaW5nKDEwKSAiMC42LjAtMTA1MSINCiAgICBbIkZBTUlMWV9JRCJdPT4NCiAgICBpbnQoMjU0KQ0KICAgIFsiRkFNSUxZX05BTUUiXT0+DQogICAgc3RyaW5nKDEzKSAiTWlzY2VsbGFuZW91cyINCiAgICBbIkZJTEVOQU1FIl09Pg0KICAgIHN0cmluZygyMCkgIm1vZF9taXNjZWxsYW5lb3VzLnNvIg0KICAgIFsiTE9BREVEIl09Pg0KICAgIGJvb2wodHJ1ZSkNCiAgfQ0KICBbMl09Pg0KICBhcnJheSg1KSB7DQogICAgWyJCQVNFTElCX1ZFUlNJT04iXT0+DQogICAgc3RyaW5nKDEwKSAiMC42LjAtMTA1MSINCiAgICBbIkZBTUlMWV9JRCJdPT4NCiAgICBpbnQoOCkNCiAgICBbIkZBTUlMWV9OQU1FIl09Pg0KICAgIHN0cmluZyg3KSAiRUFTWUxlZCINCiAgICBbIkZJTEVOQU1FIl09Pg0KICAgIHN0cmluZygxNCkgIm1vZF9lYXN5bGVkLnNvIg0KICAgIFsiTE9BREVEIl09Pg0KICAgIGJvb2wodHJ1ZSkNCiAgfQ0KfQ0K"
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmxvYWRNb2R1bGUoIm1vZF9taXNjZWxsYW5lb3VzLnNvIikpOyc="
+}

@@ -1,0 +1,26 @@
+{
+	"name": "Homegear::reloadModule",
+	"category": "Modules",
+	"shortDescription": "Reloads a Homegear module.",
+	"description": "This method fully reloads a Homegear module. This can be used for example to reread the device description files.",
+	"signatures": ["int reloadModule(string $filename)"],
+	"parameters": [{
+		"name": "filename",
+		"type": "string",
+		"description": "The filename of the module to reload",
+		"exampleValue": "mod_insteon.so"
+	}],
+	"returnValue": "Returns \"0\" on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown error"
+	}, {
+		"code": -2,
+		"description": "A module with the provided filename does not exist."
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Thrown on parameter errors."
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnJlbG9hZE1vZHVsZSgibW9kX21pc2NlbGxhbmVvdXMuc28iKSk7Jw=="
+}
