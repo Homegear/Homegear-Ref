@@ -1,0 +1,62 @@
+{
+	"name": "Homegear::checkLicense",
+	"category": "Licensing",
+	"shortDescription": "Checks if a device or module is licensed or registers a new license key.",
+	"description": "This method checks if a device or module is licensed or registers a new license key.",
+	"signatures": ["int checkLicense(int $licenseModuleId, int $familyId, int $deviceId [, string $licenseKey])"],
+	"parameters": [{
+		"name": "licenseModuleId",
+		"type": "int",
+		"description": "The id of the license module to use",
+		"exampleValue": "0x7000"
+	}, {
+		"name": "familyId",
+		"type": "int",
+		"description": "The id of the family to check or to register a license key for",
+		"exampleValue": "12"
+	}, {
+		"name": "deviceId",
+		"type": "int",
+		"description": "The id of the device to check or to register a license key for. Set to \"-1\" to check the whole family.",
+		"exampleValue": "216"
+	}, {
+		"name": "licenseKey",
+		"type": "string",
+		"description": "The license key to register",
+		"exampleValue": "ABCDEF-GHIJKL-MNOPQR"
+	}],
+	"returnValue": "Returns \"0\" on success and if the license key is already known. Return \"1\" on new activation.",
+	"errors": [{
+		"code": -1,
+		"description": "Application error"
+	}, {
+		"code": -2,
+		"description": "License module not found"
+	}, {
+		"code": -3,
+		"description": "Communication error"
+	}, {
+		"code": -4,
+		"description": "Invalid data from activation server"
+	}, {
+		"code": -5,
+		"description": "License key is invalid"
+	}, {
+		"code": -6,
+		"description": "License key valid but blocked"
+	}, {
+		"code": -7,
+		"description": "Activation key validation failed"
+	}, {
+		"code": -8,
+		"description": "Parameter license key is empty and no activation data found in database"
+	}, {
+		"code": -9,
+		"description": "Parameter license key is empty and activation key validation from database failed"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": ""
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmNoZWNrTGljZW5zZSgweDcwMDAsIDEyLCAtMSwgIkFCQ0RFRiIpKTsn"
+}

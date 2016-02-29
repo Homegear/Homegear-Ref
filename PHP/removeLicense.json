@@ -1,0 +1,36 @@
+{
+	"name": "Homegear::removeLicense",
+	"category": "Licensing",
+	"shortDescription": "Removes a license key previously registered with checkLicense().",
+	"description": "This method removes a license key and activation data previously registered with checkLicense().",
+	"signatures": ["int removeLicense(int $licenseModuleId, int $familyId, int $deviceId)"],
+	"parameters": [{
+		"name": "licenseModuleId",
+		"type": "int",
+		"description": "The id of the license module to use",
+		"exampleValue": "0x7000"
+	}, {
+		"name": "familyId",
+		"type": "int",
+		"description": "The id of the family to remove the license key for",
+		"exampleValue": "12"
+	}, {
+		"name": "deviceId",
+		"type": "int",
+		"description": "The id of the device to remove the license key for. Set to \"-1\" if the license key was registered for the whole family.",
+		"exampleValue": "216"
+	}],
+	"returnValue": "Returns \"0\" on success and if the license key is already known. Return \"1\" on new activation.",
+	"errors": [{
+		"code": -1,
+		"description": "Application error"
+	}, {
+		"code": -2,
+		"description": "License module not found"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": ""
+	}],
+	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnJlbW92ZUxpY2Vuc2UoMHg3MDAwLCAxMiwgLTEpKTsn"
+}
