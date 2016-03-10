@@ -1,0 +1,17 @@
+{
+	"name": "searchDevices",
+	"category": "Pairing",
+	"shortDescription": "Starts a device search on all supported device families.",
+	"description": "This method causes Homegear to search for new devices within all device families supporting this.",
+	"signatures": [
+		"Integer searchDevices()",
+		"Integer searchDevices(Integer familyId)"
+	],
+	"parameters": [{
+		"name": "familyId",
+		"type": "Integer",
+		"description": "ID of the family to search devices for.",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns the number of newly found devices."
+}

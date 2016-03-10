@@ -1,0 +1,47 @@
+{
+	"name": "createDevice",
+	"category": "Pairing",
+	"shortDescription": "Manually creates a device.",
+	"description": "This method manually creates a new device. This is not supported by all device families or for all devices. createDevice can be used to create virtual devices in the family \"Miscellaneous\".",
+	"signatures": ["Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion)"],
+	"parameters": [{
+		"name": "familyId",
+		"type": "Integer",
+		"description": "ID of the family to create the device in. See: <a href=\"#listFamilies\">listFamilies</a>.",
+		"exampleValue": "1"
+	}, {
+		"name": "deviceType",
+		"type": "Integer",
+		"description": "The type id of the device as specified in the device's XML file.",
+		"exampleValue": "483"
+	}, {
+		"name": "serialNumber",
+		"type": "String",
+		"description": "The serial number of the new device.",
+		"exampleValue": "MY_DEVICE1"
+	}, {
+		"name": "address",
+		"type": "Integer",
+		"description": "The physical address of the new device. Depending on the device family this parameter might be optional. If not needed, set to "-1".",
+		"exampleValue": "9874387"
+	}, {
+		"name": "firmwareVersion",
+		"type": "Integer",
+		"description": "The firmware version of the new device. Depending on the device family this parameter might be optional. If the firmware version is "1.2" set this variable to 0x12 = 18. If not needed, set to "-1".",
+		"exampleValue": "18"
+	}],
+	"returnValue": "Returns the id of the new device on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Device family is unknown or unavailable."
+	}, {
+		"code": -5,
+		"description": "Device with this serial number or address already exists."
+	}, {
+		"code": -6,
+		"description": "Device type is unknown."
+	}, {
+		"code": -32601,
+		"description": "Method not implemented by the device family."
+	}]
+}

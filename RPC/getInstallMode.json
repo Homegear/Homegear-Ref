@@ -1,0 +1,17 @@
+{
+	"name": "getInstallMode",
+	"category": "Pairing",
+	"shortDescription": "Returns the time left in pairing mode.",
+	"description": "This method returns the remaining time the central is in pairing mode.",
+	"signatures": [
+		"Integer getInstallMode()",
+		"Integer getInstallMode(Integer familyId)"
+	],
+	"parameters": [{
+		"name": "familyId",
+		"type": "Integer",
+		"description": "ID of the family to get the remaining time in pairing mode for. If not specified the remaining time in pairing mode of the first central with pairing mode enabled is returned.",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns the remaining time in pairing mode in seconds or \"0\" when the central is not in pairing mode."
+}

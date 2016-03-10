@@ -1,0 +1,30 @@
+{
+	"name": "addDevice",
+	"category": "Pairing",
+	"shortDescription": "Pairs a device without enabling pairing mode.",
+	"description": "This method pairs a device by it's serial number. This doesn't work for all devices.",
+	"signatures": [
+		"DeviceDescription addDevice(String serialNumber)",
+		"DeviceDescription addDevice(Integer familyId, String serialNumber)"
+	],
+	"parameters": [{
+		"name": "serialNumber",
+		"type": "String",
+		"description": "The serial number of the device to pair",
+		"exampleValue": "JEQ0095288"
+	}, {
+		"name": "familyId",
+		"type": "Integer",
+		"description": "ID of the family to add the device to. If not specified \"addDevice\" is executed for all device families supporting it.",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns the device description of the newly paired device when the pairing was successful.",
+	"errors": [{
+		"code": -1,
+		"description": "Pairing was unsuccessful."
+	}],
+	"exampleOutput": [{
+		"call": "addDevice(JEQ0098488)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MTEpDQp7DQogIFtBRERSRVNTXQ0KICB7DQogICAgKFN0cmluZykgSkVRMDA5ODQ4OA0KICB9DQogIFtDSElMRFJFTl0NCiAgew0KICAgIChBcnJheSBsZW5ndGg9MikNCiAgICB7DQogICAgICAoU3RyaW5nKSBKRVEwMDk4NDg4OjANCiAgICAgIChTdHJpbmcpIEpFUTAwOTg0ODg6MQ0KICAgIH0NCiAgfQ0KICBbRklSTVdBUkVdDQogIHsNCiAgICAoU3RyaW5nKSAyLjENCiAgfQ0KICBbRkxBR1NdDQogIHsNCiAgICAoSW50ZWdlcikgMQ0KICB9DQogIFtJTlRFUkZBQ0VdDQogIHsNCiAgICAoU3RyaW5nKSBWQ0VOVFJBTDAxDQogIH0NCiAgW1BBUkFNU0VUU10NCiAgew0KICAgIChBcnJheSBsZW5ndGg9MSkNCiAgICB7DQogICAgICAoU3RyaW5nKSBNQVNURVINCiAgICB9DQogIH0NCiAgW1BBUkVOVF0NCiAgew0KICAgIChTdHJpbmcpDQogIH0NCiAgW1JGX0FERFJFU1NdDQogIHsNCiAgICAoU3RyaW5nKSAxNzk0NDUyDQogIH0NCiAgW1JPQU1JTkddDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtUWVBFXQ0KICB7DQogICAgKFN0cmluZykgSE0tTEMtU3cxUEJVLUZNDQogIH0NCiAgW1ZFUlNJT05dDQogIHsNCiAgICAoSW50ZWdlcikgMg0KICB9DQp9"
+	}]
+}
