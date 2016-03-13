@@ -1,0 +1,19 @@
+{
+	"name": "print_v",
+	"category": "General",
+	"shortDescription": "Prints human-readable information about a Homegear variable.",
+	"description": "This method prints human-readable information about a Homegear variable returned by any of the RPC functions.",
+	"signatures": ["string print_v(mixed $variable [, bool $return = false])"],
+	"parameters": [{
+		"name": "variable",
+		"type": "mixed",
+		"description": "The variable to print",
+		"exampleValue": ""
+	}, {
+		"name": "return",
+		"type": "bool",
+		"description": "If set to \"true\" the information is returned as string and not printed.",
+		"exampleValue": "true"
+	}],
+	"returnValue": "Returns information about the given variable."
+}
