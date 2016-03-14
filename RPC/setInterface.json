@@ -1,0 +1,30 @@
+{
+	"name": "setInterface",
+	"category": "Physical Interfaces",
+	"minHomegearVersion": "0.5.0",
+	"shortDescription": "Sets the physical interface Homegear should use to communicate with a peer.",
+	"description": "This method sets the physical interface Homegear should use to communicate with a peer.",
+	"signatures": ["Void setInterface(Integer peerId, String interfaceId)"],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The id of the peer to set the interface for.",
+		"exampleValue": "131"
+	}, {
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The id of the physical interface as defined in the family interface settings. If empty, the physical interface is reset to the default interface.",
+		"exampleValue": "MyInterface"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Peer is unknown."
+	}, {
+		"code": -5,
+		"description": "Interface is unknown."
+	}, {
+		"code": -104,
+		"description": "ROAMING is enabled. You need to disable it before you can manually choose an interface."
+	}]
+}

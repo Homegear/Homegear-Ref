@@ -1,0 +1,22 @@
+{
+	"name": "listInterfaces",
+	"category": "Physical Interfaces",
+	"minHomegearVersion": "0.5.0",
+	"shortDescription": "Lists all physical interfaces with status information.",
+	"description": "This method returns a list of all physical interfaces. It can be used to determine if an interface is available.",
+	"signatures": [
+		"Array<InterfaceDescription> listInterfaces()",
+		"Array<InterfaceDescription> listInterfaces(Integer familyId)"
+	],
+	"parameters": [{
+		"name": "familyId",
+		"type": "Integer",
+		"description": "The id of the family to get the interfaces for.",
+		"exampleValue": "4"
+	}],
+	"returnValue": "Returns an array of type <a href=\"#interfaceDescription\">InterfaceDescription</a>.",
+	"exampleOutput": [{
+		"call": "listInterfaces()",
+		"output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoU3RydWN0IGxlbmd0aD03KQ0KICB7DQogICAgW0lEXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIE15SW50ZXJmYWNlDQogICAgfQ0KICAgIFtDT05ORUNURURdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDENCiAgICB9DQogICAgW0RFRkFVTFRdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDENCiAgICB9DQogICAgW0ZBTUlMWUlEXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSAwDQogICAgfQ0KICAgIFtMQVNUUEFDS0VUUkVDRUlWRURdDQogICAgew0KICAgICAgKEludGVnZXIpIDEzOTMwNjkyNjQNCiAgICB9DQogICAgW0xBU1RQQUNLRVRTRU5UXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSAxMzkzMDY5MzY0DQogICAgfQ0KICAgIFtQSFlTSUNBTEFERFJFU1NdDQogICAgew0KICAgICAgKEludGVnZXIpIDE2NTgxNzg5DQogICAgfQ0KICAgIFtUWVBFXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIGNjMTEwMA0KICAgIH0NCiAgfQ0KICAoU3RydWN0IGxlbmd0aD03KQ0KICB7DQogICAgW0lEXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIE15U2Vjb25kSW50ZXJmYWNlDQogICAgfQ0KICAgIFtDT05ORUNURURdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDENCiAgICB9DQogICAgW0RFRkFVTFRdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDENCiAgICB9DQogICAgW0ZBTUlMWUlEXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSAxDQogICAgfQ0KICAgIFtMQVNUUEFDS0VUUkVDRUlWRURdDQogICAgew0KICAgICAgKEludGVnZXIpIDEzOTMwNjkyNDMNCiAgICB9DQogICAgW0xBU1RQQUNLRVRTRU5UXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSAxMzkzMDY5MjQzDQogICAgfQ0KICAgIFtQSFlTSUNBTEFERFJFU1NdDQogICAgew0KICAgICAgKEludGVnZXIpIDENCiAgICB9DQogICAgW1RZUEVdDQogICAgew0KICAgICAgKFN0cmluZykgcnM0ODUNCiAgICB9DQogIH0NCn0="
+	}]
+}
