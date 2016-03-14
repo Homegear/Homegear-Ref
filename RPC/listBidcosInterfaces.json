@@ -4,7 +4,7 @@
 	"shortDescription": "This method only exists for compatibility reasons.",
 	"description": "This method only exists for backward compatibility with the CCU and has no real function.",
 	"signatures": ["Array<Struct> listBidcosInterfaces()"],
-	"returnValue": "Returns an array with one element. This element is a struct with four fields:<ul><li><b>ADDRESS (String):</b> The serial number of your central device</li><li><b>DESCRIPTION (String):</b> Always: "Homegear default interface"</li><li><b>CONNECTED (Boolean):</b> State of the RF device. When false RF device is not working.</li><li><b>DEFAULT (Boolean):</b> Always true</li></ul>",
+	"returnValue": "Returns an array with one element. This element is a struct with four fields:<ul><li><b>ADDRESS (String):</b> The serial number of your central device</li><li><b>DESCRIPTION (String):</b> Always: \"Homegear default interface\"</li><li><b>CONNECTED (Boolean):</b> State of the RF device. When false RF device is not working.</li><li><b>DEFAULT (Boolean):</b> Always true</li></ul>",
 	"exampleOutput": [{
 		"call": "listBidcosInterfaces()",
 		"output": "bGlzdEJpZGNvc0ludGVyZmFjZXMoKQ0KIA0KKEFycmF5IGxlbmd0aD0xKQ0Kew0KICAoU3RydWN0IGxlbmd0aD00KQ0KICB7DQogICAgW0FERFJFU1NdDQogICAgew0KICAgICAgKFN0cmluZykgVkNFTlRSQUwwMQ0KICAgIH0NCiAgICBbREVTQ1JJUFRJT05dDQogICAgew0KICAgICAgKFN0cmluZykgSG9tZWdlYXIgZGVmYXVsdCBpbnRlcmZhY2UNCiAgICB9DQogICAgW0NPTk5FQ1RFRF0NCiAgICB7DQogICAgICAoQm9vbGVhbikgMQ0KICAgIH0NCiAgICBbREVGQVVMVF0NCiAgICB7DQogICAgICAoQm9vbGVhbikgMQ0KICAgIH0NCiAgfQ0KfQ=="
