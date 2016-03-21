@@ -11,7 +11,7 @@
 		"name": "url",
 		"type": "String",
 		"description": "The url of the event server to register including \"http://\" and the port. If you use \"binary://\", RPC data is sent in binary format. If you pass \"https://\" or \"binarys://\" SSL is enabled.",
-		"exampleValue": "binarys://192.168.0.5:3344\\nor\\nhttp://[fdef:3::1]:3344\\nor\\nhttps://myeventserver:3344"
+		"exampleValue": "binarys://192.168.0.5:3344\nor\nhttp://[fdef:3::1]:3344\nor\nhttps://myeventserver:3344"
 	}, {
 		"name": "interfaceId",
 		"type": "String",

@@ -13,7 +13,7 @@
 		"name": "peerIds",
 		"type": "Array<Integer>",
 		"description": "Integer array with the peer ids to subscribe. There is no check if a peer id is valid.",
-		"exampleValue": "(Array length=3)\\n{\\n  (Integer) 13\\n  (Integer) 22\\n  (Integer) 31\\n}"
+		"exampleValue": "(Array length=3)\n{\n  (Integer) 13\n  (Integer) 22\n  (Integer) 31\n}"
 	}],
 	"returnValue": "Returns Void on success.",
 	"errors": [{
