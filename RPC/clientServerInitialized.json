@@ -1,0 +1,14 @@
+{
+	"name": "clientServerInitialized",
+	"category": "Event Server",
+	"shortDescription": "Checks if a RPC client's RPC server was successfully (and still is) registered.",
+	"description": "This method checks, if a RPC client's RPC server is registered and connected to Homegear. You can register your RPC \"event\" server by calling <a href=\"#init\">init</a>.",
+	"signatures": ["Boolean clientServerInitialized(String interfaceId)"],
+	"parameters": [{
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The interface ID as specified in <a href=\"#init\">init</a>.",
+		"exampleValue": "MyTotallyAwesomeHomegearClient"
+	}],
+	"returnValue": "Returns \"True\", when the RPC client's RPC server was successfully registered and still is connected or \"False\" otherwise."
+}

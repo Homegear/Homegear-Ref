@@ -1,0 +1,31 @@
+{
+	"name": "init",
+	"category": "Event Server",
+	"shortDescription": "Registers a client's RPC server to Homegear to receive events.",
+	"description": "This method is used to register or unregister a RPC event server with Homegear. After calling this method Homegear's RPC client starts sending events and device updates to the registered server (see RPC Client Methods). It is not necessary to call \"init\" for MQTT or WebSockets.",
+	"signatures": [
+		"Void init(String url, String interfaceId)",
+		"Void init(String url, String interfaceId, Integer flags)"
+	],
+	"parameters": [{
+		"name": "url",
+		"type": "String",
+		"description": "The url of the event server to register including \"http://\" and the port. If you use \"binary://\", RPC data is sent in binary format. If you pass \"https://\" or \"binarys://\" SSL is enabled.",
+		"exampleValue": "binarys://192.168.0.5:3344\\nor\\nhttp://[fdef:3::1]:3344\\nor\\nhttps://myeventserver:3344"
+	}, {
+		"name": "interfaceId",
+		"type": "String",
+		"description": "An arbitrary name for the interface. To unregister an event server, pass an empty string to interfaceId.",
+		"exampleValue": "MyTotallyAwesomeHomegearClient"
+	}, {
+		"name": "flags",
+		"type": "Integer",
+		"description": "The following flags are available:<ul><li><b>0x01:</b> keepAlive: Don't close the connection after each packet.</li><li><b>0x02:</b> binaryMode: Send RPC data in binary format. Equivalent to \"binary://\" or \"binarys://\".</li><li><b>0x04:</b> newFormat: (Recommended) Send device's id in broadcast methods instead of the serial number and activates variable types ARRAY and STRUCT. This is recommended, because serial numbers are not necessarily unique.</li><li><b>0x08:</b> subscribePeers: When set, Homegear will only send events for peers subscribed with <a href=\"#subscribePeers\">subscribePeers</a> to the event server.</li><li><b>0x10:</b> jsonMode: Send RPC data in JSON format.</li></ul>",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -32602,
+		"description": "URL is invalid."
+	}]
+}

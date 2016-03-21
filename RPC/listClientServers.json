@@ -1,0 +1,25 @@
+{
+	"name": "listClientServers",
+	"category": "Event Server",
+	"shortDescription": "Returns information about all RPC servers registered to Homegear by clients.",
+	"description": "This method returns an Array of type <a href=\"#serverInfo\">ServerInfo</a> with one entry for each RPC server registered to Homegear by calling <a href=\"#init\">init</a>.",
+	"signatures": [
+		"ServerInfo listClientServers()",
+		"ServerInfo listClientServers(String interfaceId)"
+	],
+	"parameters": [{
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The interface ID of the RPC server as it was passed to <a href=\"#init\">init</a>. When specified only the <a href=\"#serverInfo\">ServerInfo</a> for this server is returned.",
+		"exampleValue": "MyTotallyAwesomeHomegearClient"
+	}],
+	"returnValue": "Returns an array of type <a href=\"#serverInfo\">ServerInfo</a>.",
+	"errors": [{
+		"code": -32602,
+		"description": "An interface ID was passed as an argument but the server was not found."
+	}],
+	"exampleOutput": [{
+		"call": "listClientServers()",
+		"output": "KEFycmF5IGxlbmd0aD0xKQ0Kew0KICAoU3RydWN0IGxlbmd0aD04KQ0KICB7DQogICAgW0JJTkFSWV0NCiAgICB7DQogICAgICAoQm9vbGVhbikgMA0KICAgIH0NCiAgICBbSE9TVE5BTUVdDQogICAgew0KICAgICAgKFN0cmluZykgMTI3LjAuMC4xDQogICAgfQ0KICAgIFtJTlRFUkZBQ0VfSURdDQogICAgew0KICAgICAgKFN0cmluZykgSVBTDQogICAgfQ0KICAgIFtJUEFERFJFU1NdDQogICAgew0KICAgICAgKFN0cmluZykgMTI3LjAuMC4xDQogICAgfQ0KICAgIFtLRUVQX0FMSVZFXQ0KICAgIHsNCiAgICAgIChCb29sZWFuKSAwDQogICAgfQ0KICAgIFtVU0VfSURdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDANCiAgICB9DQogICAgW1NVQlNDUklCRV9QRUVSU10NCiAgICB7DQogICAgICAoQm9vbGVhbikgMA0KICAgIH0NCiAgICBbUE9SVF0NCiAgICB7DQogICAgICAoU3RyaW5nKSA1NTQ0DQogICAgfQ0KICAgIFtTU0xdDQogICAgew0KICAgICAgKEJvb2xlYW4pIDANCiAgICB9DQogIH0NCn0="
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "unsubscribePeers",
+	"category": "Event Server",
+	"shortDescription": "Unsubscribe peer events after subscribing them with <a href=\"#subscribePeers\">subscribePeers</a>.",
+	"description": "This method is used to unsubscribe peer events after calling \"<a href=\"#subscribePeers\">subscribePeers</a>\".",
+	"signatures": ["Void unsubscribePeers(String eventServerId, Array<Integer> peerIds)"],
+	"parameters": [{
+		"name": "eventServerId",
+		"type": "String",
+		"description": "Either the url exactly as specified in \"<a href=\"#init\">init</a>\" or the WebSocket client id.",
+		"exampleValue": "http://192.168.0.4:3344"
+	}, {
+		"name": "peerIds",
+		"type": "Array<Integer>",
+		"description": "Integer array with the peer ids to unsubscribe. There is no check if a peer id is valid.",
+		"exampleValue": "(Array length=3)\\n{\\n  (Integer) 13\\n  (Integer) 22\\n  (Integer) 31\\n}"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Event server is unknown."
+	}]
+}

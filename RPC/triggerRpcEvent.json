@@ -1,0 +1,25 @@
+{
+	"name": "triggerRpcEvent",
+	"category": "Event Server",
+	"shortDescription": "Manually sends a RPC event to all RPC event servers.",
+	"description": "This method manually calls an RPC event method on all RPC event servers. Currently supported methods are \"<a href=\"deleteDevices\">deleteDevices</a>\", \"<a href=\"newDevices\">newDevices</a>\" and \"<a href=\"updateDevice\">updateDevice</a>\"",
+	"signatures": [
+		"Void triggerRpcEvent(String eventMethod, Array parameters)"
+	],
+	"parameters": [{
+		"name": "eventMethod",
+		"type": "String",
+		"description": "The method to call. Currently supported are:<ul><li><a href=\"deleteDevices\">deleteDevices</a></li><li><a href=\"newDevices\">newDevices</a></li><li><a href=\"updateDevice\">updateDevice</a></li></ul>",
+		"exampleValue": "newDevices"
+	}, {
+		"name": "parameters",
+		"type": "Array",
+		"description": "The parameters to pass to the event method.<ul><li><b>deleteDevices:</b>Array<String> deviceAddresses, Array<Struct> deviceInfo</li><li><b>newDevices:</b>Array<DeviceDescription> devices</li><li><b>deleteDevices:</b>Integer peerId, Integer channel, String address, Integer flags</li></ul>Please see the method's documentation for more information about the parameters.",
+		"exampleValue": ""
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown method."
+	}]
+}
