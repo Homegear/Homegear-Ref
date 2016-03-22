@@ -1,0 +1,38 @@
+{
+	"name": "setMetadata",
+	"category": "Metadata",
+	"shortDescription": "Store metadata for a peer.",
+	"description": "This method can be used to store meta data for devices in Homegear's database which can later be retrieved by calling <a href=\"#getMetadata\">getMetadata</a>.",
+	"signatures": ["Void setMetadata(Integer peerId, String dataId, Variant value)"],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The id of the peer to store the metadata for.",
+		"exampleValue": "131"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the device to store the metadata for (separated by colon).",
+		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
+	}, {
+		"name": "dataId",
+		"type": "String",
+		"description": "An arbitrary name.",
+		"exampleValue": "myData"
+	}],
+	"deprecatedSignatures": ["Void setMetadata(String address, String dataId, Variant value)"],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Peer is unknown."
+	}, {
+		"code": -32700,
+		"description": "Data couldn't be encoded to binary format."
+	}, {
+		"code": -32602,
+		"description": "dataId is longer than 250 characters or the encoded value is larger than 1 KiB."
+	}, {
+		"code": -32500,
+		"description": "Limit of 1 million metadata entries reached."
+	}]
+}
