@@ -18,7 +18,12 @@
 		"name": "dataId",
 		"type": "String",
 		"description": "An arbitrary name.",
-		"exampleValue": "myData"
+		"exampleValue": "\"myData\""
+	}, {
+		"name": "value",
+		"type": "Variant",
+		"description": "The value to store.",
+		"exampleValue": "43"
 	}],
 	"deprecatedSignatures": ["Void setMetadata(String address, String dataId, Variant value)"],
 	"returnValue": "Returns Void on success.",

@@ -1,0 +1,20 @@
+{
+	"name": "deleteSystemVariable",
+	"category": "System Variables",
+	"shortDescription": "Deletes a system variable.",
+	"description": "This method deletes a system variable created with <a href=\"#setSystemVariable\">setSystemVariable</a>.",
+	"signatures": [
+		"Void deleteSystemVariable(String name)"
+	],
+	"parameters": [{
+		"name": "name",
+		"type": "String",
+		"description": "The name of the system variable to delete.",
+		"exampleValue": "MySystemVariable"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -32602,
+		"description": "name is longer than 250 characters."
+	}]
+}
