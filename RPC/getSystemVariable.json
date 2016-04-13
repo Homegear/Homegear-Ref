@@ -1,0 +1,25 @@
+{
+	"name": "getSystemVariable",
+	"category": "System Variables",
+	"shortDescription": "Gets the value of a system variable.",
+	"description": "This method returns a system variable's value previously stored with <a href=\"#setSystemVariable\">setSystemVariable</a>.",
+	"signatures": ["Variant getSystemVariable(String name)"],
+	"parameters": [{
+		"name": "name",
+		"type": "String",
+		"description": "The name as defined in <a href=\"#setSystemVariable\">setSystemVariable</a>.",
+		"exampleValue": "myVariable"
+	}],
+	"returnValue": "Returns the value of the system variable.",
+	"errors": [{
+		"code": -1,
+		"description": "Variable not found."
+	}, {
+		"code": -32602,
+		"description": "name is longer than 250 characters."
+	}],
+	"exampleOutput": [{
+		"call": "getSystemVariable(\"SYSTEM_TEMPERATURE\")",
+		"output": "KEZsb2F0KSA0NS40Ng=="
+	}]
+}
