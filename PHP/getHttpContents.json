@@ -30,5 +30,5 @@
 		"description": "Enable certificate verification. Only disable this for testing purposes.",
 		"exampleValue": "true"
 	}],
-	"returnValue": "Returns the source of the specified web page as string. Returns \"false\" on errors.",
+	"returnValue": "Returns the source of the specified web page as string. Returns \"false\" on errors."
 }
