@@ -1,8 +1,8 @@
 {
 	"name": "setInstallMode",
 	"category": "Pairing",
-	"shortDescription": "Enables pairing mode.",
-	"description": "This method enables or disables the pairing mode for all device families if supported by the device family.",
+	"shortDescription": "Enables pairing mode",
+	"description": "This method enables or disables pairing mode for all device families if it is supported by the device family.",
 	"signatures": [
 		"Void setInstallMode(Boolean on)",
 		"Void setInstallMode(Boolean on, Integer duration)",
@@ -12,18 +12,18 @@
 	"parameters": [{
 		"name": "on",
 		"type": "Boolean",
-		"description": "When true pairing mode will be enabled, otherwise disabled.",
+		"description": "When this is true, pairing mode is enabled. Otherwise, pairing mode is disabled.",
 		"exampleValue": "1"
 	}, {
 		"name": "duration",
 		"type": "Integer",
-		"description": "The duration in seconds the central should stay in pairing mode. Minimum is 5 seconds, maximum is 3600 seconds. Default is 60 seconds.",
+		"description": "This is the duration in seconds that the central should remain in pairing mode. The minimum duration is 5 seconds, and the maximum duration is 3600 seconds. The default duration is 60 seconds.",
 		"exampleValue": "120"
 	}, {
 		"name": "familyId",
 		"type": "Integer",
-		"description": "ID of the family to enable pairing mode for. If not specified pairing mode will be enabled for all device families.",
+		"description": "This is the ID of the family for which you want to enable pairing mode. If it is not specified, pairing mode will be enabled for all device families.",
 		"exampleValue": "1"
 	}],
-	"returnValue": "Returns Void on success."
+	"returnValue": "Returns Void upon success"
 }

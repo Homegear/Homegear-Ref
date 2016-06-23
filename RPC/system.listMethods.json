@@ -1,10 +1,10 @@
 {
 	"name": "system.listMethods",
 	"category": "Defined by XML-RPC Standard",
-	"shortDescription": "Lists all supported RPC methods.",
-	"description": "This method lists all RPC methods, the Homegear RPC server knows or, when being sent by Homegear's RPC client, requests all methods the RPC event server knows.",
+	"shortDescription": "Lists all supported RPC methods",
+	"description": "This method either lists all RPC methods that the Homegear RPC server knows or, if it is sent by Homegear's RPC client, requests all methods that the RPC event server knows.",
 	"signatures": ["Array system.listMethods()"],
-	"returnValue": "eturns an array of strings. Each element is one function name.",
+	"returnValue": "The method returns an array of strings. Each element in the array is a function name.",
 	"exampleOutput": [{
 		"call": "system.listMethods()",
 		"output": "KEFycmF5IGxlbmd0aD0zNCkNCnsNCiAgKFN0cmluZykgYWRkRGV2aWNlDQogIChTdHJpbmcpIGFkZExpbmsNCiAgKFN0cmluZykgZGVsZXRlRGV2aWNlDQogIChTdHJpbmcpIGRlbGV0ZU1ldGFkYXRhDQogIChTdHJpbmcpIGdldEFsbE1ldGFkYXRhDQogIChTdHJpbmcpIGdldERldmljZURlc2NyaXB0aW9uDQogIChTdHJpbmcpIGdldEluc3RhbGxNb2RlDQogIChTdHJpbmcpIGdldEtleU1pc21hdGNoRGV2aWNlDQogIChTdHJpbmcpIGdldExpbmtJbmZvDQogIChTdHJpbmcpIGdldExpbmtQZWVycw0KICAoU3RyaW5nKSBnZXRMaW5rcw0KICAoU3RyaW5nKSBnZXRNZXRhZGF0YQ0KICAoU3RyaW5nKSBnZXRQYXJhbXNldA0KICAoU3RyaW5nKSBnZXRQYXJhbXNldERlc2NyaXB0aW9uDQogIChTdHJpbmcpIGdldFBhcmFtc2V0SWQNCiAgKFN0cmluZykgZ2V0U2VydmljZU1lc3NhZ2VzDQogIChTdHJpbmcpIGdldFZhbHVlDQogIChTdHJpbmcpIGluaXQNCiAgKFN0cmluZykgbGlzdEJpZGNvc0ludGVyZmFjZXMNCiAgKFN0cmluZykgbGlzdERldmljZXMNCiAgKFN0cmluZykgbGlzdFRlYW1zDQogIChTdHJpbmcpIGxvZ0xldmVsDQogIChTdHJpbmcpIHB1dFBhcmFtc2V0DQogIChTdHJpbmcpIHJlbW92ZUxpbmsNCiAgKFN0cmluZykgc2V0SW5zdGFsbE1vZGUNCiAgKFN0cmluZykgc2V0TGlua0luZm8NCiAgKFN0cmluZykgc2V0TWV0YWRhdGENCiAgKFN0cmluZykgc2V0VGVhbQ0KICAoU3RyaW5nKSBzZXRWYWx1ZQ0KICAoU3RyaW5nKSBzeXN0ZW0uZ2V0Q2FwYWJpbGl0aWVzDQogIChTdHJpbmcpIHN5c3RlbS5saXN0TWV0aG9kcw0KICAoU3RyaW5nKSBzeXN0ZW0ubWV0aG9kSGVscA0KICAoU3RyaW5nKSBzeXN0ZW0ubWV0aG9kU2lnbmF0dXJlDQogIChTdHJpbmcpIHN5c3RlbS5tdWx0aWNhbGwNCn0="

@@ -1,31 +1,31 @@
 {
 	"name": "Homegear::checkLicense",
 	"category": "Licensing",
-	"shortDescription": "Checks if a device or module is licensed or registers a new license key.",
+	"shortDescription": "Checks if a device or module is licensed or registers a new license key",
 	"description": "This method checks if a device or module is licensed or registers a new license key.",
 	"signatures": ["int checkLicense(int $licenseModuleId, int $familyId, int $deviceId [, string $licenseKey])"],
 	"parameters": [{
 		"name": "licenseModuleId",
 		"type": "int",
-		"description": "The id of the license module to use",
+		"description": "The ID of the license module to be used",
 		"exampleValue": "0x7000"
 	}, {
 		"name": "familyId",
 		"type": "int",
-		"description": "The id of the family to check or to register a license key for",
+		"description": "The ID of the family to be checked or for which a license key is to be registered",
 		"exampleValue": "12"
 	}, {
 		"name": "deviceId",
 		"type": "int",
-		"description": "The id of the device to check or to register a license key for. Set to \"-1\" to check the whole family.",
+		"description": "This is the ID of the device to be checked or for which a license key is to be registered. Set it to \"-1\" to check the whole family.",
 		"exampleValue": "216"
 	}, {
 		"name": "licenseKey",
 		"type": "string",
-		"description": "The license key to register",
+		"description": "The license key to be registered",
 		"exampleValue": "ABCDEF-GHIJKL-MNOPQR"
 	}],
-	"returnValue": "Returns \"0\" on success and if the license key is already known. Return \"1\" on new activation.",
+	"returnValue": "It returns \"0\" if successful and if the license key is already known. It returns \"1\" in the case of a new activation.",
 	"errors": [{
 		"code": -1,
 		"description": "Application error"
@@ -43,16 +43,16 @@
 		"description": "License key is invalid"
 	}, {
 		"code": -6,
-		"description": "License key valid but blocked"
+		"description": "License key is valid but blocked"
 	}, {
 		"code": -7,
-		"description": "Activation key validation failed"
+		"description": "Activation key validation has failed"
 	}, {
 		"code": -8,
-		"description": "Parameter license key is empty and no activation data found in database"
+		"description": "Parameter license key is empty, and no activation data was found in the database"
 	}, {
 		"code": -9,
-		"description": "Parameter license key is empty and activation key validation from database failed"
+		"description": "Parameter license key is empty, and activation key validation via database has failed"
 	}],
 	"throws": [{
 		"exception": "HomegearException",

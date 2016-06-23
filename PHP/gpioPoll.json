@@ -1,8 +1,8 @@
 {
 	"name": "HomegearGpio::poll",
 	"category": "GPIO Operations",
-	"shortDescription": "Waits for a GPIO state change to occur.",
-	"description": "Waits for a GPIO state change to occur. Before calling this method, the GPIO needs to be opened by calling HomegearGpio::open(). This method blocks until the configured edge is detected on the GPIO (see <a href=\"#HomegearGpiopoll\">setEdge()</a>). It only works, when the GPIO is configured as input. If no state change occurs the method needs close to no system resources.",
+	"shortDescription": "Waits for a GPIO state change to occur",
+	"description": "This method waits for a GPIO state change to occur. Before it is called, the GPIO needs to be opened by calling HomegearGpio::open(). This method blocks until the configured edge is detected on the GPIO (see <a href=\"#HomegearGpiopoll\">setEdge()</a>). It works only if the GPIO is configured as input. If no state change occurs, this method requires almost no system resources.",
 	"signatures": ["int poll(int $index, int $timeout [, bool $debounce = false])"],
 	"parameters": [{
 		"name": "index",
@@ -12,15 +12,15 @@
 	}, {
 		"name": "timeout",
 		"type": "int",
-		"description": "The maximum time in milliseconds to wait for a state change.",
+		"description": "The maximum time (in milliseconds) the system should wait for a state change",
 		"exampleValue": ""
 	}, {
 		"name": "debounce",
 		"type": "bool",
-		"description": "When set Homegear waits for 20 ms after receiving an interrupt. Set this if the GPIO is connected to an analog input like a switch.",
+		"description": "When this is set, Homegear waits for 20 ms after receiving an interrupt. Set it if the GPIO is connected to an analog input, such as a switch.",
 		"exampleValue": "true"
 	}],
-	"returnValue": "Returns the state (0 or 1) on success.",
+	"returnValue": "Returns the state (0 or 1) if successful",
 	"errors": [{
 		"code": -1,
 		"description": "Error reading the GPIO"

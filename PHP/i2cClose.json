@@ -1,8 +1,8 @@
 {
 	"name": "HomegearI2c::close",
 	"category": "I²C Communication",
-	"shortDescription": "Closes an I²C device.",
-	"description": "This method closes an I²C device previously opened with HomegearI2c::open().",
+	"shortDescription": "Closes an I²C device",
+	"description": "This method closes an I²C device that was previously opened with HomegearI2c::open().",
 	"signatures": ["bool close(resource $handle)"],
 	"parameters": [{
 		"name": "handle",
@@ -10,9 +10,9 @@
 		"description": "The file pointer resource returned by HomegearI2c::open()",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns \"true\" on sucsess.",
+	"returnValue": "Returns \"true\" if successful",
 	"errors": [{
 		"code": "false",
-		"description": "Device could not be closed."
+		"description": "The device could not be closed."
 	}]
 }

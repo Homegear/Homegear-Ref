@@ -1,8 +1,8 @@
 {
 	"name": "HomegearSerial::readline",
 	"category": "Serial Communication (TTY)",
-	"shortDescription": "Reads data from a serial device.",
-	"description": "This method reads one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") from a serial device previously opened with HomegearSerial::open().",
+	"shortDescription": "Reads data from a serial device",
+	"description": "This method reads one line of data (terminated by a new line character: 0x0A, \"\\n\" or 0x0D0A, \"\\r\\n\") from a serial device that was previously opened with HomegearSerial::open().",
 	"signatures": ["string readline(resource $handle, int $timeout)"],
 	"parameters": [{
 		"name": "handle",
@@ -12,10 +12,10 @@
 	}, {
 		"name": "timeout",
 		"type": "int",
-		"description": "The maximum amount of time to wait for data in milliseconds.",
+		"description": "The maximum amount of time that the system should wait for data (in milliseconds)",
 		"exampleValue": "5000"
 	}],
-	"returnValue": "Returns the read data as string on success.",
+	"returnValue": "Returns the read data as string if successful",
 	"errors": [{
 		"code": -1,
 		"description": "Error reading from device"

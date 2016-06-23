@@ -1,8 +1,8 @@
 {
 	"name": "listClientServers",
 	"category": "Event Server",
-	"shortDescription": "Returns information about all RPC servers registered to Homegear by clients.",
-	"description": "This method returns an Array of type <a href=\"#serverInfo\">ServerInfo</a> with one entry for each RPC server registered to Homegear by calling <a href=\"#init\">init</a>.",
+	"shortDescription": "Returns information about all RPC servers registered with Homegear by clients",
+	"description": "This method returns an array of type <a href=\"#serverInfo\">ServerInfo</a> with one entry for each RPC server registered with Homegear and does so by calling <a href=\"#init\">init</a>.",
 	"signatures": [
 		"ServerInfo listClientServers()",
 		"ServerInfo listClientServers(String interfaceId)"
@@ -10,13 +10,13 @@
 	"parameters": [{
 		"name": "interfaceId",
 		"type": "String",
-		"description": "The interface ID of the RPC server as it was passed to <a href=\"#init\">init</a>. When specified only the <a href=\"#serverInfo\">ServerInfo</a> for this server is returned.",
+		"description": "This is the interface ID of the RPC server as it was passed to <a href=\"#init\">init</a>. If it is specified, only the <a href=\"#serverInfo\">ServerInfo</a> for this server is returned.",
 		"exampleValue": "MyTotallyAwesomeHomegearClient"
 	}],
-	"returnValue": "Returns an array of type <a href=\"#serverInfo\">ServerInfo</a>.",
+	"returnValue": "Returns an array of type <a href=\"#serverInfo\">ServerInfo</a>",
 	"errors": [{
 		"code": -32602,
-		"description": "An interface ID was passed as an argument but the server was not found."
+		"description": "An interface ID was passed as an argument, but the server was not found."
 	}],
 	"exampleOutput": [{
 		"call": "listClientServers()",

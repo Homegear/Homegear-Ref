@@ -1,10 +1,10 @@
 {
 	"name": "Homegear::listModules",
 	"category": "Modules",
-	"shortDescription": "Lists all Homegear modules.",
-	"description": "This method lists all Homegear modules (loaded and not loaded) in the module directory (/var/lib/homegear/modules by default) .",
+	"shortDescription": "Lists all Homegear modules",
+	"description": "This method lists all Homegear modules (loaded and not loaded) located in the module directory (/var/lib/homegear/modules by default).",
 	"signatures": ["array listModules()"],
-	"returnValue": "Returns an array with one entry for each module. Each entry again is an associative array with information about the module.",
+	"returnValue": "It returns an array with one entry for each module. Each of these entries is in turn an associative array containing information about the module.",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": ""
