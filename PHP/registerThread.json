@@ -1,16 +1,16 @@
 {
 	"name": "Homegear::registerThread",
 	"category": "General",
-	"shortDescription": "Makes a new thread known to Homegear.",
-	"description": "This method makes a new thread known to Homegear. This is needed to be able to receive events.",
+	"shortDescription": "Makes a new thread known to Homegear",
+	"description": "This method makes a new thread known to Homegear. It is required so that the system can receive events.",
 	"signatures": ["bool registerThread(string $scriptId)"],
 	"parameters": [{
 		"name": "scriptId",
 		"type": "string",
-		"description": "The script id and token as returned by \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\". Note that \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\" only can be called in main thread or after registerThread() has been called.",
+		"description": "This is the script ID and token as returned by \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\". Note that \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\" can be called only in the main thread or after registerThread() has been called.",
 		"exampleValue": "3,MTIzNDU2Nzg5MDEyMzQ1Ng=="
 	}],
-	"returnValue": "Returns true on success and false if no matching thread could be found.",
+	"returnValue": "It returns true if successful and false if no matching thread could be found.",
 	"exampleOutput": [{
 		"call": "registerThread(\"3,MTIzNDU2Nzg5MDEyMzQ1Ng==\")",
 		"output": "dHJ1ZQ=="

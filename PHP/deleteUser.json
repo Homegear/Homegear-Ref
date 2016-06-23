@@ -1,23 +1,23 @@
 {
 	"name": "Homegear::deleteUser",
 	"category": "Users",
-	"shortDescription": "Deletes an existing user.",
+	"shortDescription": "Deletes an existing user",
 	"description": "This method deletes an existing user from Homegear.",
 	"signatures": ["bool deleteUser($username)"],
 	"parameters": [{
 		"name": "username",
 		"type": "string",
-		"description": "The name of the user to delete",
+		"description": "The name of the user to be deleted",
 		"exampleValue": "will"
 	}],
-	"returnValue": "Returns \"true\" on success.",
+	"returnValue": "Returns \"true\" if successful",
 	"errors": [{
 		"code": "false",
-		"description": "Something went wrong (e. g. the user doesn't exist)"
+		"description": "An error has occurred (e. g. the user does not exist)."
 	}],
 	"throws": [{
 		"exception": "HomegearException",
-		"description": "Returned if parameters are invalid."
+		"description": "Returned if parameters are invalid"
 	}],
 	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmRlbGV0ZVVzZXIoImZvbyIpKTsn"
 }

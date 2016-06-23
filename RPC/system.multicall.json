@@ -2,25 +2,25 @@
 	"name": "system.multicall",
 	"category": "Defined by XML-RPC Standard",
 	"shortDescription": "Use this method to call multiple RPC methods at once in order to reduce traffic.",
-	"description": "This method can be used to call multiple methods at the same time. This can speed up RPC communication as there is no latency between the RPC calls.",
+	"description": "This method can be used to call multiple RPC methods at the same time. Doing so can speed up RPC communication because there is no latency between the RPC calls.",
 	"signatures": ["Array system.multicall(Array methods)"],
 	"parameters": [{
 		"name": "methods",
 		"type": "Array",
-		"description": "An array of structs. Each struct represents one method and has two fields: <b>methodName</b> and <b>params</b>",
+		"description": "This is an array of structs. Each struct represents one method and has two fields: <b>methodName</b> and <b>params</b>",
 		"exampleValue": "Array\n( \n  Struct\n  ( \n    [methodName]\n    (\n      (String) getValue\n    )\n    [params]\n    (\n      Array\n      ( \n        (String) JEQ0551288:2\n        (String) SETPOINT\n      )\n    )\n  )\n  Struct\n  ( \n    [methodName]\n    (\n      (String) getValue\n    )\n    [params]\n    (\n      Array\n      ( \n        (String) JEQ0552109:2\n        (String) SETPOINT\n      )\n    )\n  )\n)"
 	}, {
 		"name": "methodName",
 		"type": "String",
-		"description": "The name of the method to call",
+		"description": "The name of the method you want to call",
 		"exampleValue": "getValue"
 	}, {
 		"name": "params",
 		"type": "Array",
-		"description": "Array of the parameters which should be passed to the method",
+		"description": "Array of the parameters that should be passed to the method",
 		"exampleValue": "Array\n(\n  (String) JEQ0551288:2\n  (String) SETPOINT\n)"
 	}],
-	"returnValue": "Returns an Array of the method responses. Each element is one response.",
+	"returnValue": "It returns an array consisting of the method responses. Each element is one response.",
 	"exampleOutput": [{
 		"call": "system.multicall(\n	(Array length=2)\n	{\n	  (Struct length=2)\n	  {\n		[methodName]\n		{\n		  (String) getValue\n		}\n		[params]\n		{\n		  (Array length=2)\n		  {\n			(String) JEQ0551288:2\n			(String) SETPOINT\n		  }\n		}\n	  }\n	  (Struct length=2)\n	  {\n		[methodName]\n		{\n		  (String) getValue\n		}\n		[params]\n		{\n		  (Array length=2)\n		  {\n			(String) JEQ0534326:2\n			(String) SETPOINT\n		  }\n		}\n	  }\n	}\n)",
 		"output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoRmxvYXQpIDIxDQogIChGbG9hdCkgMjENCn0="

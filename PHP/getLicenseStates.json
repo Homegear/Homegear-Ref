@@ -1,16 +1,16 @@
 {
 	"name": "Homegear::getLicenseStates",
 	"category": "Licensing",
-	"shortDescription": "Returns license information.",
+	"shortDescription": "Returns license information",
 	"description": "This method returns all license information known to a license module.",
 	"signatures": ["array getLicenseStates(int $licenseModuleId)"],
 	"parameters": [{
 		"name": "licenseModuleId",
 		"type": "int",
-		"description": "The id of the license module to use",
+		"description": "The ID of the license module to be used",
 		"exampleValue": "0x7000"
 	}],
-	"returnValue": "Returns an array with one element for each license entry. Each element is an associative array with information about the family, activation state and license.",
+	"returnValue": "It returns an array with one element for each license entry. Each element is an associative array with information about the family, activation state, and license.",
 	"errors": [{
 		"code": "false",
 		"description": "License module not found"

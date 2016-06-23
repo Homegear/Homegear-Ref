@@ -1,10 +1,10 @@
 {
 	"name": "getAllSystemVariables",
 	"category": "System Variables",
-	"shortDescription": "Returns all system variables.",
+	"shortDescription": "Returns all system variables",
 	"description": "This method returns all system variables.",
 	"signatures": ["Struct getAllSystemVariables()"],
-	"returnValue": "Returns a struct with one element for each variable containing the previously stored value. The name of the element is the variable name.",
+	"returnValue": "This returns a struct with one element for each variable containing the previously stored value. The name of the element is the variable name.",
 	"exampleOutput": [{
 		"call": "getAllSystemVariables()",
 		"output": "KFN0cnVjdCBsZW5ndGg9MykNCnsNCiAgW0dhdGVMYXN0QWN0aW9uXQ0KICB7DQogICAgKEludGVnZXIpIDE0NjA0Nzk4MDANCiAgfQ0KICBbR2F0ZVN0YXRlXQ0KICB7DQogICAgKEJvb2xlYW4pIDANCiAgfQ0KICBbU1lTVEVNX1RFTVBFUkFUVVJFXQ0KICB7DQogICAgKEZsb2F0KSA0NC45Mw0KICB9DQp9DQo="

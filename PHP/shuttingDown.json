@@ -1,9 +1,9 @@
 {
 	"name": "Homegear::shuttingDown",
 	"category": "General",
-	"shortDescription": "Checks if Homegear is shuttingDown.",
-	"description": "This method check if Homegear is shutting down. When it returns \"true\" the script should exit.",
+	"shortDescription": "Checks if Homegear is shuttingDown",
+	"description": "This method checks whether Homegear is shutting down. If it returns \"true\", the script should exit.",
 	"signatures": ["bool shuttingDown()"],
-	"returnValue": "Returns \"true\" if Homegear is shutting down, \"false\" otherwise.",
+	"returnValue": "It returns \"true\" if Homegear is shutting down and \"false\" otherwise.",
 	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnNodXR0aW5nRG93bigpKTsn"
 }

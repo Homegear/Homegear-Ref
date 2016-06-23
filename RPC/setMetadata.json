@@ -1,43 +1,43 @@
 {
 	"name": "setMetadata",
 	"category": "Metadata",
-	"shortDescription": "Store metadata for a peer.",
-	"description": "This method can be used to store meta data for devices in Homegear's database which can later be retrieved by calling <a href=\"#getMetadata\">getMetadata</a>.",
+	"shortDescription": "Stores metadata for a peer",
+	"description": "This method can be used to store metadata for devices in Homegear's database. You can retrieve this metadata later by calling <a href=\"#getMetadata\">getMetadata</a>.",
 	"signatures": ["Void setMetadata(Integer peerId, String dataId, Variant value)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The id of the peer to store the metadata for.",
+		"description": "The ID of the peer for which you want to store metadata",
 		"exampleValue": "131"
 	}, {
 		"name": "address",
 		"type": "String",
-		"description": "The serial number and channel of the device to store the metadata for (separated by colon).",
+		"description": "The serial number and channel of the device for which you want to store metadata (separated by a colon)",
 		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
 	}, {
 		"name": "dataId",
 		"type": "String",
-		"description": "An arbitrary name.",
+		"description": "A name of your choice",
 		"exampleValue": "\"myData\""
 	}, {
 		"name": "value",
 		"type": "Variant",
-		"description": "The value to store.",
+		"description": "The value you want to store",
 		"exampleValue": "43"
 	}],
 	"deprecatedSignatures": ["Void setMetadata(String address, String dataId, Variant value)"],
-	"returnValue": "Returns Void on success.",
+	"returnValue": "Returns Void upon success",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."
 	}, {
 		"code": -32700,
-		"description": "Data couldn't be encoded to binary format."
+		"description": "Data could not be encoded to binary format."
 	}, {
 		"code": -32602,
-		"description": "dataId is longer than 250 characters or the encoded value is larger than 1 KiB."
+		"description": "dataId is longer than 250 characters, or the encoded value is larger than 1 KB."
 	}, {
 		"code": -32500,
-		"description": "Limit of 1 million metadata entries reached."
+		"description": "The limit of 1 million metadata entries has been reached."
 	}]
 }

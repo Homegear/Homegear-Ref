@@ -1,10 +1,10 @@
 {
 	"name": "Homegear::listUsers",
 	"category": "Users",
-	"shortDescription": "Returns all user names.",
+	"shortDescription": "Returns all user names",
 	"description": "This method returns an array with all user names known to Homegear.",
 	"signatures": ["array listUsers()"],
-	"returnValue": "Returns a string array with all user names.",
+	"returnValue": "Returns a string array with all user names",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": ""

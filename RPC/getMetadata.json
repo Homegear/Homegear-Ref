@@ -1,27 +1,27 @@
 {
 	"name": "getMetadata",
 	"category": "Metadata",
-	"shortDescription": "Retrieves previously stored metadata.",
-	"description": "This method returns metadata previously stored with <a href=\"#setMetadata\">setMetadata</a>.",
+	"shortDescription": "Retrieves previously stored metadata",
+	"description": "This method returns metadata that was previously stored with <a href=\"#setMetadata\">setMetadata</a>.",
 	"signatures": ["Variant getMetadata(Integer peerId, String dataId)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The id of the peer to get the metadata for.",
+		"description": "The ID of the peer for which you want to get the metadata",
 		"exampleValue": "131"
 	}, {
 		"name": "address",
 		"type": "String",
-		"description": "The serial number and channel of the device to get the metadata for (separated by colon).",
+		"description": "The serial number and channel of the device for which you want to get the metadata (separated by a colon)",
 		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
 	}, {
 		"name": "dataId",
 		"type": "String",
-		"description": "The data id as defined in <a href=\"#setMetadata\">setMetadata</a>.",
+		"description": "The data ID as defined in <a href=\"#setMetadata\">setMetadata</a>",
 		"exampleValue": "myData"
 	}],
 	"deprecatedSignatures": ["Variant getMetadata(String address, String dataId)"],
-	"returnValue": "Returns the stored element.",
+	"returnValue": "Returns the stored element",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

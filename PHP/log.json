@@ -1,24 +1,24 @@
 {
 	"name": "Homegear::log",
 	"category": "General",
-	"shortDescription": "Writes a message to the script engine log file.",
-	"description": "This method writes a message to the script engine log and (on errors) error log file (/var/log/homegear/homegear-scriptengine.log and /var/log/homegear/homegear-scriptengine.err by default).",
+	"shortDescription": "Writes a message to the script engine log file",
+	"description": "This method writes a message to the script engine log and (if there are errors) to the error log file (/var/log/homegear/homegear-scriptengine.log and /var/log/homegear/homegear-scriptengine.err by default).",
 	"signatures": ["bool log(int $logLevel, string $message)"],
 	"parameters": [{
 		"name": "logLevel",
 		"type": "int",
-		"description": "The log level of the message. If Homegear's log level value is lower than this value, no message is logged. Valid values are:<ul><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
+		"description": "This is the log level of the message. If Homegear's log level value is lower than this value, no message is logged. Valid values are:<ul><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
 		"exampleValue": "4"
 	}, {
 		"name": "message",
 		"type": "string",
-		"description": "The message to write to the log file. The date will be automatically prepended.",
-		"exampleValue": "My message."
+		"description": "This is the message that will be written to the log file. The date is prepended automatically.",
+		"exampleValue": "My message"
 	}],
-	"returnValue": "Returns \"true\" on success.",
+	"returnValue": "Returns \"true\" if successful",
 	"errors": [{
 		"code": "false",
-		"description": "Message was empty."
+		"description": "The message was empty."
 	}],
 	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmxvZygzLCAiSGVsbG8gSG9tZWdlYXIhIikpOyc="
 }

@@ -1,13 +1,13 @@
 {
 	"name": "HomegearI2c::open",
 	"category": "I²C Communication",
-	"shortDescription": "Opens an I²C device.",
-	"description": "This method opens and I²C device and returns a device handle needed for HomegearI²C::read() and HomegearI²C::write().",
+	"shortDescription": "Opens an I²C device",
+	"description": "This method opens an I²C device and returns a device handle that is needed for HomegearI²C::read() and HomegearI²C::write().",
 	"signatures": ["resource open(string $device, int $address)"],
 	"parameters": [{
 		"name": "device",
 		"type": "string",
-		"description": "The device to open",
+		"description": "The device to be opened",
 		"exampleValue": "/dev/ttyAMA0"
 	}, {
 		"name": "address",
@@ -15,9 +15,9 @@
 		"description": "The I²C device address",
 		"exampleValue": "0x28"
 	}],
-	"returnValue": "Returns the file pointer resource handle of the I²C device.",
+	"returnValue": "Returns the file pointer resource handle of the I²C device",
 	"errors": [{
 		"code": "false",
-		"description": "Could not open device."
+		"description": "Could not open device"
 	}]
 }

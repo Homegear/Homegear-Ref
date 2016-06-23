@@ -1,10 +1,10 @@
 {
 	"name": "Homegear::listRpcClients",
 	"category": "General",
-	"shortDescription": "Returns information about all registered RPC event servers.",
-	"description": "This method returns information about all registered RPC event servers (all servers that called <h href=\"rpc.html#init\">init()</a>).",
+	"shortDescription": "Returns information about all registered RPC event servers",
+	"description": "This method returns information about all registered RPC event servers (all servers that have called <h href=\"rpc.html#init\">init()</a>).",
 	"signatures": ["array listRpcClients()"],
-	"returnValue": "Returns an array with one entry for each registered server. Eeach entry is an associative array containing the client information.",
+	"returnValue": "It returns an array that contains one entry for each registered server. Each of these entries is an associative array containing the client information.",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": ""

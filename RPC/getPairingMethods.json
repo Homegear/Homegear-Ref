@@ -1,16 +1,16 @@
 {
 	"name": "getPairingMethods",
 	"category": "Pairing",
-	"shortDescription": "Returns the pairing methods supported by a device family.",
-	"description": "This method returns all pairint methods supported by the specified device family.",
+	"shortDescription": "Returns the pairing methods supported by a device family",
+	"description": "This method returns all pairing methods supported by the specified device family.",
 	"signatures": ["Array<String> getPairingMethods(Integer familyId)"],
 	"parameters": [{
 		"name": "familyId",
 		"type": "Integer",
-		"description": "The ID of the family to get the supported pairing methods for.",
+		"description": "The ID of the family for which you want to get the supported pairing methods",
 		"exampleValue": "1"
 	}],
-	"returnValue": "Returns the supported RPC pairing methods as a string array.",
+	"returnValue": "Returns the supported RPC pairing methods as a string array",
 	"exampleOutput": [{
 		"call": "getPairingMethods(0)",
 		"output": "QXJyYXkNCigNCiAgICBbMF0gPT4gYWRkRGV2aWNlDQogICAgWzFdID0+IHNldEluc3RhbGxNb2RlDQopDQo="

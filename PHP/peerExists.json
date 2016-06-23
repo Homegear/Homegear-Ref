@@ -1,19 +1,19 @@
 {
 	"name": "Homegear::peerExists",
 	"category": "General",
-	"shortDescription": "Checks if a peers exists.",
+	"shortDescription": "Checks if a peers exists",
 	"description": "This method checks if a peer is known to Homegear.",
 	"signatures": ["bool peerExists(int peerId)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "int",
-		"description": "The peer id to check.",
+		"description": "The peer ID to be checked",
 		"exampleValue": "43"
 	}],
-	"returnValue": "\"true\" if the peer exists, \"false\" otherwise.",
+	"returnValue": "\"true\" if the peer exists, \"false\" if not",
 	"throws": [{
 		"exception": "HomegearException",
-		"description": "On parameter errors"
+		"description": "Occurs if there are parameter errors"
 	}],
 	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnBlZXJFeGlzdHMoMTIpKTsn"
 }

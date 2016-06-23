@@ -1,16 +1,16 @@
 {
 	"name": "getServiceMessages",
 	"category": "General",
-	"shortDescription": "Returns all service messages.",
-	"description": "This method returns all service messages currently active in Homegear (device unreachable, config pending, low battery, sabotage, ...).",
+	"shortDescription": "Returns all service messages",
+	"description": "This method returns all service messages that are currently active in Homegear (device unreachable, config pending, low battery, sabotage, ...).",
 	"signatures": ["Array<Array<Variant>> getServiceMessages(bool returnID)"],
 	"parameters": [{
 		"name": "returnID",
 		"type": "Boolean",
-		"description": "Recommended. When true Homegear returns the peer id instead of the \"address\" (serial number and channel separated by colon). By default the address is returned for compatibility reasons.",
+		"description": "Recommended. If true, Homegear returns the peer ID instead of the \"address\" (serial number and channel separated by a colon). By default, the address is returned for compatibility reasons.",
 		"exampleValue": "True"
 	}],
-	"returnValue": "<p>Returns an array. Each element in the array is one service message.<br>When returnID is true, the element again is an array with four elements:</p><ol><li> Integer: The id of the peer</li><li> Integer: The channel the service message is set for</li><li> String: The id of the service message (LOWBAT, UNREACH, ...)</li><li> Boolean or Integer: The value of the service message</li></ol><p>When returnID is false or not set, the element is an array with three elements:</p><ol><li> String: The address of the device (serial number and channel separated by colon)</li><li> String: The id of the service message (LOWBAT, UNREACH, ...)</li><li> Boolean or Integer: The value of the service message</li></ol><h5>Types of Service Messages</h5><p>There are four service messages available for all devices:<ol><li> UNREACH (Boolean): A device is currently unreachable.</li><li> STICKY_UNREACH (Boolean): A device was unreachable at some point.</li><li> CONFIG_PENDING (Boolean): There are configuration parameters which need to be sent to the device.</li><li> LOWBAT (Boolean): Low battery.</li></ol>",
+	"returnValue": "<p>This returns an array, and each element in the array is a service message.<br>If returnID is true, the element is, in turn, an array with four elements:</p><ol><li> Integer: The ID of the peer</li><li> Integer: The channel for which the service message is set</li><li> String: The ID of the service message (LOWBAT, UNREACH, ...)</li><li> Boolean or integer: The value of the service message</li></ol><p>If returnID is false or not set, the element is an array with three elements:</p><ol><li> String: The address of the device (serial number and channel separated by a colon)</li><li> String: The ID of the service message (LOWBAT, UNREACH, ...)</li><li> Boolean or integer: The value of the service message</li></ol><h5>Types of Service Messages</h5><p>There are four service messages available for all devices:<ol><li> UNREACH (Boolean): A device is currently unreachable.</li><li> STICKY_UNREACH (Boolean): A device was unreachable at some point.</li><li> CONFIG_PENDING (Boolean): There are configuration parameters that need to be sent to the device.</li><li> LOWBAT (Boolean): Low battery.</li></ol>",
 	"exampleOutput": [{
 		"call": "getServiceMessages(true)",
 		"output": "KEFycmF5IGxlbmd0aD0zKQ0Kew0KICAoQXJyYXkgbGVuZ3RoPTMpDQogIHsNCiAgICAoSW50ZWdlcikgNDMNCiAgICAoSW50ZWdlcikgMA0KICAgIChTdHJpbmcpIExPV0JBVA0KICAgIChCb29sZWFuKSAxDQogIH0NCiAgKEFycmF5IGxlbmd0aD0zKQ0KICB7DQogICAgKEludGVnZXIpIDE2DQogICAgKEludGVnZXIpIDANCiAgICAoU3RyaW5nKSBVTlJFQUNIDQogICAgKEJvb2xlYW4pIDENCiAgfQ0KICAoQXJyYXkgbGVuZ3RoPTMpDQogIHsNCiAgICAoSW50ZWdlcikgNjcNCiAgICAoSW50ZWdlcikgMA0KICAgIChTdHJpbmcpIEVSUk9SDQogICAgKEludGVnZXIpIDcNCiAgfQ0KfQ=="

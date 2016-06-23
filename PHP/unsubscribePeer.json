@@ -1,17 +1,17 @@
 {
 	"name": "Homegear::unsubscribePeer",
 	"category": "General",
-	"shortDescription": "Disables reception of events.",
-	"description": "This method disables reception of events for a device previously enabled by calling <a href=\"#HomegearsubscribePeer\">subscribePeer()</a>. If you are calling unsubscribePeer() from a different thread than the main thread you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first.",
+	"shortDescription": "Disables reception of events",
+	"description": "This method disables the reception of events for a device that was previously enabled via the call of <a href=\"#HomegearsubscribePeer\">subscribePeer()</a>. If you call unsubscribePeer() from a thread that is not the main thread, you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first.",
 	"signatures": ["void unsubscribePeer(int $peerId)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "int",
-		"description": "The id of the peer to unsubscribe",
+		"description": "The ID of the peer to be unsubscribed",
 		"exampleValue": "32"
 	}],
 	"throws": [{
 		"exception": "HomegearException",
-		"description": "Thrown only when not in main thread and when script id registered with registerThread() is invalid or registerThread() was not called."
+		"description": "This is thrown only if it is not in main thread and if the script ID registered with registerThread() is invalid or registerThread() was not called."
 	}]
 }

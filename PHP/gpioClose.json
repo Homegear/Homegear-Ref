@@ -1,13 +1,13 @@
 {
 	"name": "HomegearGpio::close",
 	"category": "GPIO Operations",
-	"shortDescription": "Closes a GPIO.",
-	"description": "This method closes a GPIO previously opened with HomegearGpio::open().",
+	"shortDescription": "Closes a GPIO",
+	"description": "This method closes a GPIO that was previously opened with HomegearGpio::open().",
 	"signatures": ["void close(int $index)"],
 	"parameters": [{
 		"name": "index",
 		"type": "int",
-		"description": "The index of the GPIO to close",
+		"description": "The index of the GPIO to be closed",
 		"exampleValue": "18"
 	}]
 }
