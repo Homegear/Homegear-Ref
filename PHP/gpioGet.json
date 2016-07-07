@@ -1,8 +1,8 @@
 {
 	"name": "HomegearGpio::get",
 	"category": "GPIO Operations",
-	"shortDescription": "Gets the current state of a GPIO.",
-	"description": "This method gets the current state of a GPIO. Before calling this method, the GPIO needs to be opened with HomegearGpio::open().",
+	"shortDescription": "Gets the current state of a GPIO",
+	"description": "This method gets the current state of a GPIO. Before this method is called, the GPIO needs to be opened with HomegearGpio::open().",
 	"signatures": ["void get(int $index)"],
 	"parameters": [{
 		"name": "index",

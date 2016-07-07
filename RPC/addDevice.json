@@ -1,8 +1,8 @@
 {
 	"name": "addDevice",
 	"category": "Pairing",
-	"shortDescription": "Pairs a device without enabling pairing mode.",
-	"description": "This method pairs a device by it's serial number. This doesn't work for all devices.",
+	"shortDescription": "Pairs a device without enabling pairing mode",
+	"description": "This method pairs a device by its serial number, but this does not work for all devices.",
 	"signatures": [
 		"DeviceDescription addDevice(String serialNumber)",
 		"DeviceDescription addDevice(Integer familyId, String serialNumber)"
@@ -10,15 +10,15 @@
 	"parameters": [{
 		"name": "serialNumber",
 		"type": "String",
-		"description": "The serial number of the device to pair",
+		"description": "The serial number of the device to be paired",
 		"exampleValue": "JEQ0095288"
 	}, {
 		"name": "familyId",
 		"type": "Integer",
-		"description": "ID of the family to add the device to. If not specified \"addDevice\" is executed for all device families supporting it.",
+		"description": "ID of the family you want to add the device to; if not specified, \"addDevice\" is executed for all device families that support it.",
 		"exampleValue": "1"
 	}],
-	"returnValue": "Returns the device description of the newly paired device when the pairing was successful.",
+	"returnValue": "Returns the device description of the newly paired device if the pairing was successful",
 	"errors": [{
 		"code": -1,
 		"description": "Pairing was unsuccessful."

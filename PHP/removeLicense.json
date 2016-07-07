@@ -1,26 +1,26 @@
 {
 	"name": "Homegear::removeLicense",
 	"category": "Licensing",
-	"shortDescription": "Removes a license key previously registered with checkLicense().",
+	"shortDescription": "Removes a license key previously registered with checkLicense()",
 	"description": "This method removes a license key and activation data previously registered with checkLicense().",
 	"signatures": ["int removeLicense(int $licenseModuleId, int $familyId, int $deviceId)"],
 	"parameters": [{
 		"name": "licenseModuleId",
 		"type": "int",
-		"description": "The id of the license module to use",
+		"description": "The ID of the license module to be used",
 		"exampleValue": "0x7000"
 	}, {
 		"name": "familyId",
 		"type": "int",
-		"description": "The id of the family to remove the license key for",
+		"description": "The ID of the family whose license key is to be removed",
 		"exampleValue": "12"
 	}, {
 		"name": "deviceId",
 		"type": "int",
-		"description": "The id of the device to remove the license key for. Set to \"-1\" if the license key was registered for the whole family.",
+		"description": "The ID of the device whose license key is to be removed. It is set to \"-1\" if the license key was registered for the whole family.",
 		"exampleValue": "216"
 	}],
-	"returnValue": "Returns \"0\" on success and if the license key is already known. Return \"1\" on new activation.",
+	"returnValue": "It returns \"0\" if successful and if the license key is already known. It returns \"1\" in the case of a new activation.",
 	"errors": [{
 		"code": -1,
 		"description": "Application error"

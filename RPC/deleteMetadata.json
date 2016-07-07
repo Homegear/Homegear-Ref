@@ -1,7 +1,7 @@
 {
 	"name": "deleteMetadata",
 	"category": "Metadata",
-	"shortDescription": "Deletes previously stored metadata.",
+	"shortDescription": "Deletes previously stored metadata",
 	"description": "This method deletes previously stored metadata.",
 	"signatures": [
 		"Void deleteMetadata(Integer peerId)",
@@ -10,24 +10,24 @@
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The id of the peer the metadata is stored for.",
+		"description": "The ID of the peer for which the metadata is stored.",
 		"exampleValue": "131"
 	}, {
 		"name": "address",
 		"type": "String",
-		"description": "The serial number and channel of the device the metadata is stored for (separated by colon).",
+		"description": "The serial number and channel of the device for which the metadata is stored (separated by colon)",
 		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
 	}, {
 		"name": "dataId",
 		"type": "String",
-		"description": "The dataId as defined in <a href=\"#setMetadata\">setMetadata</a>.",
+		"description": "The dataId as defined in <a href=\"#setMetadata\">setMetadata</a>",
 		"exampleValue": "myData"
 	}],
 	"deprecatedSignatures": [
 		"Void deleteMetadata(String address)",
 		"Void deleteMetadata(String address, String dataId)"
 	],
-	"returnValue": "Returns Void on success.",
+	"returnValue": "Returns Void if successful",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

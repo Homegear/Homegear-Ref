@@ -1,22 +1,22 @@
 {
 	"name": "getAllMetadata",
 	"category": "Metadata",
-	"shortDescription": "Returns all metadata of one peer.",
-	"description": "This method returns all metadata of one peer.",
+	"shortDescription": "Returns all the metadata of one peer",
+	"description": "This method returns all the metadata of one peer.",
 	"signatures": ["Struct getAllMetadata(Integer peerId)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The id of the peer to get the metadata for.",
+		"description": "The ID of the peer for which you want to get metadata",
 		"exampleValue": "131"
 	}, {
 		"name": "address",
 		"type": "String",
-		"description": "The serial number and channel of the device to get the metadata for (separated by colon).",
+		"description": "The serial number and channel of the device for which you want to get metadata (separated by a colon)",
 		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
 	}],
 	"deprecatedSignatures": ["Struct getAllMetadata(String address)"],
-	"returnValue": "Returns a struct with one element for each dataId containing the previously stored value. The name of the element is the dataId.",
+	"returnValue": "This returns a struct with one element for each dataId containing the previously stored value. The name of the element is the dataId.",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

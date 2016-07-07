@@ -1,7 +1,7 @@
 {
 	"name": "listFamilies",
 	"category": "Families",
-	"shortDescription": "Returns information about all device families (ID, name, pairing methods).",
+	"shortDescription": "Returns information about all device families (ID, name, pairing methods)",
 	"description": "This method returns information about all available device families. Use this method to get the ID of a family if you only have the name or the name if you only have the ID. Also use this method to get the pairing methods the family supports.",
 	"signatures": [
 		"Array<Struct> listFamilies()"

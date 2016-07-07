@@ -1,8 +1,8 @@
 {
 	"name": "HomegearSerial::close",
 	"category": "Serial Communication (TTY)",
-	"shortDescription": "Closes a serial device.",
-	"description": "This method closes a serial device previously opened with HomegearSerial::open().",
+	"shortDescription": "Closes a serial device",
+	"description": "This method closes a serial device that was previously opened with HomegearSerial::open().",
 	"signatures": ["bool close(resource $handle)"],
 	"parameters": [{
 		"name": "handle",
@@ -10,9 +10,9 @@
 		"description": "The file pointer resource returned by HomegearSerial::open()",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns \"true\" on sucess.",
+	"returnValue": "Returns \"true\" if sucessful",
 	"errors": [{
 		"code": "false",
-		"description": "Device could not be closed."
+		"description": "Device could not be closed"
 	}]
 }

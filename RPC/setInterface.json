@@ -2,21 +2,21 @@
 	"name": "setInterface",
 	"category": "Physical Interfaces",
 	"minHomegearVersion": "0.5.0",
-	"shortDescription": "Sets the physical interface Homegear should use to communicate with a peer.",
-	"description": "This method sets the physical interface Homegear should use to communicate with a peer.",
+	"shortDescription": "Sets the physical interface Homegear uses to communicate with a peer",
+	"description": "This method sets the physical interface that Homegear is to use to communicate with a peer.",
 	"signatures": ["Void setInterface(Integer peerId, String interfaceId)"],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The id of the peer to set the interface for.",
+		"description": "The ID of the peer you want to set the interface for",
 		"exampleValue": "131"
 	}, {
 		"name": "interfaceId",
 		"type": "String",
-		"description": "The id of the physical interface as defined in the family interface settings. If empty, the physical interface is reset to the default interface.",
+		"description": "This is the ID of the physical interface as defined in the family interface settings. If it is empty, the physical interface is reset to the default interface.",
 		"exampleValue": "MyInterface"
 	}],
-	"returnValue": "Returns Void on success.",
+	"returnValue": "Returns Void upon success",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

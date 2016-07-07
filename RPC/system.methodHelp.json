@@ -1,8 +1,8 @@
 {
 	"name": "system.methodHelp",
 	"category": "Defined by XML-RPC Standard",
-	"shortDescription": "Returns a short description of a RPC method.",
-	"description": "This method returns the description text of a RPC method.",
+	"shortDescription": "Returns the short description of an RPC method",
+	"description": "This method returns the description text of an RPC method.",
 	"signatures": ["String system.methodHelp(String methodName)"],
 	"parameters": [{
 		"name": "methodName",
@@ -10,7 +10,7 @@
 		"description": "The name of the RPC method",
 		"exampleValue": "createDevice"
 	}],
-	"returnValue": "Returns a description string or error -32602 when the method was not found.",
+	"returnValue": "It returns a description string or error -32602 if the method was not found.",
 	"exampleOutput": [{
 		"call": "system.methodHelp(\"system.getCapabilities\")",
 		"output": "KFN0cmluZykgTGlzdHMgc2VydmVyJ3MgUlBDIGNhcGFiaWxpdGllcy4="

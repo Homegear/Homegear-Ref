@@ -1,10 +1,10 @@
 {
 	"name": "system.getCapabilities",
 	"category": "Defined by XML-RPC Standard",
-	"shortDescription": "Lists Homegear's RPC capabilities.",
+	"shortDescription": "Lists Homegear's RPC capabilities",
 	"description": "This method lists the RPC capabilities of the Homegear RPC server.",
 	"signatures": ["Struct system.getCapabilities()"],
-	"returnValue": "<p>Returns a struct. Each element describes one capability.</p><p>The element again is a struct with two fields:</p><ul><li><b>specUrl (String):</b> URL to a description of the capability</li><li><b>specVersion (Integer):</b> Version used</li></ul>",
+	"returnValue": "<p>The method returns a struct, and each element in this struct describes one capability.</p><p>Each element is, in turn, a struct with two fields:</p><ul><li><b>specUrl (string):</b> The URL leading to a description of the capability</li><li><b>specVersion (integer):</b> The version used</li></ul>",
 	"exampleOutput": [{
 		"call": "system.getCapabilities",
 		"output": "KFN0cnVjdCBsZW5ndGg9MykNCnsNCiAgW3htbHJwY10NCiAgew0KICAgIChTdHJ1Y3QgbGVuZ3RoPTIpDQogICAgew0KICAgICAgW3NwZWNVcmxdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIGh0dHA6Ly93d3cueG1scnBjLmNvbS9zcGVjDQogICAgICB9DQogICAgICBbc3BlY1ZlcnNpb25dDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSAxDQogICAgICB9DQogICAgfQ0KICB9DQogIFtmYXVsdHNfaW50ZXJvcF0NCiAgew0KICAgIChTdHJ1Y3QgbGVuZ3RoPTIpDQogICAgew0KICAgICAgW3NwZWNVcmxdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIGh0dHA6Ly94bWxycGMtZXBpLnNvdXJjZWZvcmdlLm5ldC9zcGVjcy9yZmMuZmF1bHRfY29kZXMucGhwDQogICAgICB9DQogICAgICBbc3BlY1ZlcnNpb25dDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSAyMDAxMDUxNg0KICAgICAgfQ0KICAgIH0NCiAgfQ0KICBbaW50cm9zcGVjdGlvbl0NCiAgew0KICAgIChTdHJ1Y3QgbGVuZ3RoPTIpDQogICAgew0KICAgICAgW3NwZWNVcmxdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIGh0dHA6Ly9zY3JpcHRzLmluY3V0aW8uY29tL3htbHJwYy9pbnRyb3NwZWN0aW9uLmh0bWwNCiAgICAgIH0NCiAgICAgIFtzcGVjVmVyc2lvbl0NCiAgICAgIHsNCiAgICAgICAgKEludGVnZXIpIDENCiAgICAgIH0NCiAgICB9DQogIH0NCn0="

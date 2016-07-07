@@ -1,26 +1,26 @@
 {
 	"name": "Homegear::unloadModule",
 	"category": "Modules",
-	"shortDescription": "Unloads a Homegear module.",
+	"shortDescription": "Unloads a Homegear module",
 	"description": "This method unloads a Homegear module.",
 	"signatures": ["int unloadModule(string $filename)"],
 	"parameters": [{
 		"name": "filename",
 		"type": "string",
-		"description": "The filename of the module to unload",
+		"description": "The filename of the module to be unloaded",
 		"exampleValue": "mod_insteon.so"
 	}],
-	"returnValue": "Returns \"0\" on success and \"1\" if the module is not loaded.",
+	"returnValue": "It returns \"0\" if successful and \"1\" if the module is not loaded.",
 	"errors": [{
 		"code": -1,
 		"description": "Unknown error"
 	}, {
 		"code": -2,
-		"description": "A module with the provided filename does not exist."
+		"description": "A module with the specified filename does not exist."
 	}],
 	"throws": [{
 		"exception": "HomegearException",
-		"description": "Thrown on parameter errors."
+		"description": "Thrown if parameter errors occur"
 	}],
 	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnVubG9hZE1vZHVsZSgibW9kX21pc2NlbGxhbmVvdXMuc28iKSk7Jw=="
 }
