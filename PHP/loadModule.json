@@ -18,6 +18,9 @@
 		"code": -2,
 		"description": "A module with the provided filename does not exist."
 	}, {
+		"code": -3,
+		"description": "Module was compiled for wrong base library version."
+	}, {
 		"code": -4,
 		"description": "Device family initialization was not successful"
 	}],

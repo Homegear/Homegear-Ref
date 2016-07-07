@@ -1,5 +1,5 @@
 {
-	"name": "getHttpContents",
+	"name": "Homegear::getHttpContents",
 	"category": "General",
 	"shortDescription": "Returns the source of a web page.",
 	"description": "This method returns the source of a web page as string. It was implemented to add the possibility to access web pages SSL encrypted on embedded systems when OpenSSL certificate verification is not working.",
