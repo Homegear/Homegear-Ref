@@ -1,6 +1,6 @@
 {
 	"name": "getAllConfig",
-	"category": "Device",
+	"category": "Devices",
 	"shortDescription": "Returns all peer configuration parameters and some additional metadata",
 	"description": "This method returns all configuration parameter values and information about all configuration parameters for one or all peers. Variables are not returned. To get all variables, call <a href=\"#getAllValues\">getAllValues</a>.",
 	"signatures": [
