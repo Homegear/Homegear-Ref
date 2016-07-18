@@ -1,7 +1,7 @@
 {
 	"name": "Homegear::raiseDeleteDevice",
 	"category": "General",
-	"shortDescription": "Sends the deleteDevices() to all RPC event servers",
+	"shortDescription": "Sends deleteDevices() to all RPC event servers",
 	"description": "This method sends deleteDevices() to all RPC event servers registered to Homegear to force the deletion of a device.",
 	"signatures": ["void raiseDeleteDevice(array $serialNumbers)"],
 	"parameters": [{
