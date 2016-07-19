@@ -1,0 +1,33 @@
+{
+	"name": "Homegear::setFamilySetting",
+	"category": "Settings",
+	"shortDescription": "Sets a family setting",
+	"description": "This method sets a family setting and stores it in the database. Database settings take precedence over the family's settings file.",
+	"signatures": ["void setFamilySetting(int $familyId, string $name, mixed $value)"],
+	"parameters": [{
+		"name": "familyId",
+		"type": "int",
+		"description": "The family ID to set the setting for",
+		"exampleValue": "6"
+	}, {
+		"name": "name",
+		"type": "string",
+		"description": "The name of the setting. Use lower case characters only.",
+		"exampleValue": ""
+	}, {
+		"name": "value",
+		"type": "mixed",
+		"description": "The value of the setting. Supported types are string, integer and binary.",
+		"exampleValue": ""
+	}],
+	"errors": [{
+		"code": -1,
+		"description": "Parameter error"
+	}, {
+		"code": -2,
+		"description": "Device family not found"
+	}, {
+		"code": -3,
+		"description": "Unsupported variable type"
+	}]
+}

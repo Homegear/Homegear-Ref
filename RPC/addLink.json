@@ -1,0 +1,60 @@
+{
+	"name": "addLink",
+	"category": "Devices",
+	"shortDescription": "Creates a link between two devices",
+	"description": "This method links two devices so that they can send commands to each other directly.",
+	"signatures": [
+		"Void addLink(Integer senderId, Integer senderChannel, Integer receiverId, Integer receiverChannel)",
+		"Void addLink(Integer senderId, Integer senderChannel, Integer receiverId, Integer, receiverChannel, String name, String description)"
+	],
+	"deprecatedSignatures": [
+		"Void addLink(String senderAddress, String receiverAddress)",
+		"Void addLink(String senderAddress, String receiverAddress, String name, String description)"
+	],
+	"parameters": [{
+		"name": "senderId",
+		"type": "Integer",
+		"description": "The id of the sending peer (e. g. a remote)",
+		"exampleValue": "12"
+	}, {
+		"name": "senderChannel",
+		"type": "Integer",
+		"description": "The channel of the sending peer or \"-1\"",
+		"exampleValue": "1"
+	}, {
+		"name": "receiverId",
+		"type": "Integer",
+		"description": "The id of the receiving peer (e. g. a switch)",
+		"exampleValue": "1"
+	}, {
+		"name": "receiverChannel",
+		"type": "Integer",
+		"description": "The channel of the receiving peer or \"-1\"",
+		"exampleValue": "1"
+	}, {
+		"name": "senderAddress",
+		"type": "String",
+		"description": "The serial number and channel of the sending device (e. g. a remote) seperated by colon",
+		"exampleValue": "JEQ0304693:7"
+	}, {
+		"name": "receiverAddress",
+		"type": "String",
+		"description": "The serial number and channel of the receiving device (e. g. a switch) seperated by colon",
+		"exampleValue": "JEQ0098488:1"
+	}, {
+		"name": "name",
+		"type": "String",
+		"description": "A descriptive name for the link",
+		"exampleValue": "Living Room - Light"
+	}, {
+		"name": "description",
+		"type": "String",
+		"description": "A short description of the link",
+		"exampleValue": "This is supposed to be a short description. I have no idea what to write here."
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -2,
+		"description": "At least one of the devices or channels is unknown."
+	}]
+}

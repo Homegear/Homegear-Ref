@@ -1,0 +1,14 @@
+{
+	"name": "listFamilies",
+	"category": "Families",
+	"shortDescription": "Returns information about all device families (ID, name, pairing methods)",
+	"description": "This method returns information about all available device families. Use this method to get the ID of a family if you only have the name or the name if you only have the ID. Also use this method to get the pairing methods the family supports.",
+	"signatures": [
+		"Array<Struct> listFamilies()"
+	],
+	"returnValue": "Returns an array of structs with information about all available device families. Each struct has the elements \"ID\" (Integer), \"NAME\" (String) and \"PAIRING_METHODS\" (Array<String>).",
+	"exampleOutput": [{
+		"call": "listFamilies()",
+		"output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoU3RydWN0IGxlbmd0aD0zKQ0KICB7DQogICAgW0lEXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSA2DQogICAgfQ0KICAgIFtOQU1FXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIFNvbm9zDQogICAgfQ0KICAgIFtQQUlSSU5HX01FVEhPRFNdDQogICAgew0KICAgICAgKEFycmF5IGxlbmd0aD0xKQ0KICAgICAgew0KICAgICAgICAoU3RyaW5nKSBzZWFyY2hEZXZpY2VzDQogICAgICB9DQogICAgfQ0KICB9DQogIChTdHJ1Y3QgbGVuZ3RoPTMpDQogIHsNCiAgICBbSURdDQogICAgew0KICAgICAgKEludGVnZXIpIDI1NA0KICAgIH0NCiAgICBbTkFNRV0NCiAgICB7DQogICAgICAoU3RyaW5nKSBNaXNjZWxsYW5lb3VzDQogICAgfQ0KICAgIFtQQUlSSU5HX01FVEhPRFNdDQogICAgew0KICAgICAgKEFycmF5IGxlbmd0aD0xKQ0KICAgICAgew0KICAgICAgICAoU3RyaW5nKSBjcmVhdGVEZXZpY2UNCiAgICAgIH0NCiAgICB9DQogIH0NCn0="
+	}]
+}

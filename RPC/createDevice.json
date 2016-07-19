@@ -29,6 +29,11 @@
 		"type": "Integer",
 		"description": "This is the firmware version of the new device. Depending on the device family, this parameter might be optional. If the firmware version is \"1.2\", set this variable to 0x12 = 18. If it is not needed, set it to \"-1\".",
 		"exampleValue": "18"
+	}, {
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The id of the interface as defined in the family configuration file to associate the newly created device to.",
+		"exampleValue": "My-Interface"
 	}],
 	"returnValue": "Returns the ID of the new device in case of success",
 	"errors": [{
