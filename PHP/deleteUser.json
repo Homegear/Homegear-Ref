@@ -10,7 +10,7 @@
 		"description": "The name of the user to be deleted",
 		"exampleValue": "will"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "An error has occurred (e. g. the user does not exist)."

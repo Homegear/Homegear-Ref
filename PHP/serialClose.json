@@ -10,7 +10,7 @@
 		"description": "The file pointer resource returned by HomegearSerial::open()",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns \"true\" if sucessful",
+	"returnValue": "Returns \"true\" on sucess",
 	"errors": [{
 		"code": "false",
 		"description": "Device could not be closed"

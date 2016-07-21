@@ -2,7 +2,7 @@
 	"name": "HomegearGpio::setEdge",
 	"category": "GPIO Operations",
 	"shortDescription": "Sets the edge of a GPIO for which interrupts are to be generated",
-	"description": "This method sets the edge of a GPIO for which interrupts are to be generated. Before this method is called, the GPIO needs to be opened with HomegearGpio::open().",
+	"description": "This method sets the edge of a GPIO for which you want to generate interrupts. Before this method is called, the GPIO needs to be opened with HomegearGpio::open().",
 	"signatures": ["void setEdge(int $index, int $edge)"],
 	"parameters": [{
 		"name": "index",
@@ -12,7 +12,7 @@
 	}, {
 		"name": "edge",
 		"type": "int",
-		"description": "This is the edge for which interrupts need to be generated. Possible values are HomegearGpio::EDGE_RISING (0), HomegearGpio::EDGE_FALLING (1), and HomegearGpio::EDGE_BOTH (2).",
+		"description": "This is the edge for which you want to generate interrupts. Possible values are HomegearGpio::EDGE_RISING (0), HomegearGpio::EDGE_FALLING (1), and HomegearGpio::EDGE_BOTH (2).",
 		"exampleValue": "HomegearGpio::EDGE_FALLING"
 	}]
 }

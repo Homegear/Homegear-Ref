@@ -15,7 +15,7 @@
 		"description": "The value to be stored",
 		"exampleValue": "43"
 	}],
-	"returnValue": "Returns Void upon success",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -32700,
 		"description": "Data could not be encoded to binary format."

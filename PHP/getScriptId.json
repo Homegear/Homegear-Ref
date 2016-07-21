@@ -4,7 +4,7 @@
 	"shortDescription": "Returns the ID and token of the current script",
 	"description": "Homegear assigns a unique ID to each script. This ID is used to identify the script in different threads. Additionally, a password token is generated, which means that any given script cannot accidently register as a different script. getScriptId() returns the ID and the token for the current script. The string that is returned can then be used to register new threads using \"<a href=\"#HomegearregisterThread\">registerThread()</a>\". getScriptId() returns valid data only if this method is called in the main thread or after \"<a href=\"#HomegearregisterThread\">registerThread()</a>\" has been called.",
 	"signatures": ["string getScriptId()"],
-	"returnValue": "Returns the script id as string",
+	"returnValue": "Returns the script ID as string",
 	"exampleOutput": [{
 		"call": "Homegear::getScriptId()",
 		"output": "NDI0MQ=="

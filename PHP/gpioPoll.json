@@ -20,7 +20,7 @@
 		"description": "When this is set, Homegear waits for 20 ms after receiving an interrupt. Set it if the GPIO is connected to an analog input, such as a switch.",
 		"exampleValue": "true"
 	}],
-	"returnValue": "Returns the state (0 or 1) if successful",
+	"returnValue": "Returns the state (0 or 1) on success",
 	"errors": [{
 		"code": -1,
 		"description": "Error reading the GPIO"

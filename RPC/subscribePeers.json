@@ -15,7 +15,7 @@
 		"description": "This is an integer array containing the peer IDs to be subscribed. There is no check to see whether a peer ID is valid.",
 		"exampleValue": "(Array length=3)\n{\n  (Integer) 13\n  (Integer) 22\n  (Integer) 31\n}"
 	}],
-	"returnValue": "Returns Void upon success",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -1,
 		"description": "Event server is unknown."

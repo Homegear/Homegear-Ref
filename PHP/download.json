@@ -1,39 +1,39 @@
 {
 	"name": "Homegear::download",
 	"category": "General",
-	"shortDescription": "Downloads a file from a web server.",
-	"description": "This method downloads a file from a web server. It was implemented to add the possibility to download files SSL encrypted on embedded systems when OpenSSL certificate verification is not working. Don't use it to download large files, as the download is fully saved to memory before writing it to the disk.",
+	"shortDescription": "Downloads a file from a web server",
+	"description": "This method downloads a file from a web server. It was implemented so you can download files (SSL encrypted) on embedded systems when OpenSSL certificate verification is not working. You should not use it to download large files because the download is fully saved to the memory before it is written to the disk.",
 	"signatures": ["string getHttpContents(string $hostname, int $port, string $path, string $filename, string $caFile, bool $verifyCertificate)"],
 	"parameters": [{
 		"name": "hostname",
 		"type": "string",
-		"description": "The hostname of the web server to get the source from.",
+		"description": "The hostname of the web server you want to get the source from",
 		"exampleValue": "www.example.com"
 	}, {
 		"name": "port",
 		"type": "int",
-		"description": "The port number the web server listens on.",
+		"description": "The port number the web server listens on",
 		"exampleValue": "443"
 	}, {
 		"name": "path",
 		"type": "string",
-		"description": "The path of the file to return.",
+		"description": "The path of the file to be returned",
 		"exampleValue": "/path/to/file.dat"
 	}, {
 		"name": "filename",
 		"type": "string",
-		"description": "The filename to save the file to.",
+		"description": "The filename to which you want to save the file",
 		"exampleValue": "/local/path/to/file.dat"
 	}, {
 		"name": "caFile",
 		"type": "string",
-		"description": "The path to the certificate file to verify the web server certificate against.",
+		"description": "The path to the certificate file you want to use to verify the web server certificate",
 		"exampleValue": "/path/to/my/ca-certificates.pem"
 	}, {
 		"name": "verifyCertificate",
 		"type": "bool",
-		"description": "Enable certificate verification. Only disable this for testing purposes.",
+		"description": "Enables certificate verification; disable it only for testing purposes.",
 		"exampleValue": "true"
 	}],
-	"returnValue": "Returns \"true\" on success and \"false\" on errors."
+	"returnValue": "Returns \"true\" on success and \"false\" on errors"
 }

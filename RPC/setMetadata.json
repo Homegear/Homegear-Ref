@@ -26,7 +26,7 @@
 		"exampleValue": "43"
 	}],
 	"deprecatedSignatures": ["Void setMetadata(String address, String dataId, Variant value)"],
-	"returnValue": "Returns Void upon success",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

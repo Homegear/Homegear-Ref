@@ -12,12 +12,12 @@
 	}, {
 		"name": "familyId",
 		"type": "int",
-		"description": "The ID of the family to be checked or for which a license key is to be registered",
+		"description": "The ID of the family to be checked or for which you want to register a license key",
 		"exampleValue": "12"
 	}, {
 		"name": "deviceId",
 		"type": "int",
-		"description": "This is the ID of the device to be checked or for which a license key is to be registered. Set it to \"-1\" to check the whole family.",
+		"description": "This is the ID of the device to be checked or for which you want to register a license key. Set it to \"-1\" to check the whole family.",
 		"exampleValue": "216"
 	}, {
 		"name": "licenseKey",
@@ -25,7 +25,7 @@
 		"description": "The license key to be registered",
 		"exampleValue": "ABCDEF-GHIJKL-MNOPQR"
 	}],
-	"returnValue": "It returns \"0\" if successful and if the license key is already known. It returns \"1\" in the case of a new activation.",
+	"returnValue": "It returns \"0\" on success and if the license key is already known. It returns \"1\" in the case of a new activation.",
 	"errors": [{
 		"code": -1,
 		"description": "Application error"
@@ -46,7 +46,7 @@
 		"description": "License key is valid but blocked"
 	}, {
 		"code": -7,
-		"description": "Activation key validation has failed"
+		"description": "Activation key validation failed"
 	}, {
 		"code": -8,
 		"description": "Parameter license key is empty, and no activation data was found in the database"

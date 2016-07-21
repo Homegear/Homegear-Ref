@@ -2,20 +2,20 @@
 	"name": "Homegear::getFamilySetting",
 	"category": "Settings",
 	"shortDescription": "Returns a family setting",
-	"description": "This method returns a family setting from the family settings file or the database. If the same setting exists in the database and the settings file, the database value is returned.",
+	"description": "This method returns a family setting from the family settings file or the database. The database value is returned if the same setting exists in the database and in the settings file.",
 	"signatures": ["mixed getFamilySetting(int $familyId, string $name)"],
 	"parameters": [{
 		"name": "familyId",
 		"type": "int",
-		"description": "The family ID to get the setting for",
+		"description": "The family ID you want to get the setting for",
 		"exampleValue": "6"
 	}, {
 		"name": "name",
 		"type": "string",
-		"description": "The name of the setting to return. Setting names from the configuration files are converted to lower case characters. So to get \"mySetting\" pass \"mysetting\" here.",
+		"description": "The name of the setting you want to return. Setting names from the configuration files are converted to lower-case characters. Therefore, to get \"mySetting\", you need to pass \"mysetting\" here.",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns the setting. Possible types are integer, string and binary.",
+	"returnValue": "This returns the setting. Possible types are integer, string, and binary.",
 	"errors": [{
 		"code": -1,
 		"description": "Parameter error"

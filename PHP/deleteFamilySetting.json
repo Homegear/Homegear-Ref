@@ -1,18 +1,18 @@
 {
 	"name": "Homegear::deleteFamilySetting",
 	"category": "Settings",
-	"shortDescription": "Deletes a family setting from database",
-	"description": "This method deletes a family setting from the database. The family settings files are not modified. If the setting doesn't exist, nothing happens.",
+	"shortDescription": "Deletes a family setting from the database",
+	"description": "This method deletes a family setting from the database. The files for the family settings are not modified. If the setting does not exist, nothing happens.",
 	"signatures": ["void deleteFamilySetting(int $familyId, string $name)"],
 	"parameters": [{
 		"name": "familyId",
 		"type": "int",
-		"description": "The family ID to delete the setting for",
+		"description": "The family ID for which you want to delete the setting",
 		"exampleValue": "6"
 	}, {
 		"name": "name",
 		"type": "string",
-		"description": "The name of the setting to delete. Use lower characters only here.",
+		"description": "The name of the setting you want to delete; use only lower-case characters here.",
 		"exampleValue": ""
 	}],
 	"errors": [{
