@@ -15,7 +15,7 @@
 		"description": "The password of the new user",
 		"exampleValue": "secret"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": "Returned if parameters are invalid"

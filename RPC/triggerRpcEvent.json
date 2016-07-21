@@ -17,7 +17,7 @@
 		"description": "The parameters you want to pass to the event method <ul><li><b>deleteDevices:</b>Array<String> deviceAddresses, Array<Struct> deviceInfo</li><li><b>newDevices:</b>Array<DeviceDescription> devices</li><li><b>deleteDevices:</b>Integer peerId, integer channel, string address, integer flags</li></ul>Please see the method's documentation for more information about the parameters.",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns Void upon success",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -1,
 		"description": "Unknown method"

@@ -10,7 +10,7 @@
 		"description": "The file pointer resource returned by HomegearI2c::open()",
 		"exampleValue": ""
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "The device could not be closed."

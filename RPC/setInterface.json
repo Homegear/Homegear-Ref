@@ -16,7 +16,7 @@
 		"description": "This is the ID of the physical interface as defined in the family interface settings. If it is empty, the physical interface is reset to the default interface.",
 		"exampleValue": "MyInterface"
 	}],
-	"returnValue": "Returns Void upon success",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

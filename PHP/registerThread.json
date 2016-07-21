@@ -10,7 +10,7 @@
 		"description": "This is the script ID and token as returned by \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\". Note that \"<a href=\"#HomegeargetScriptId\">getScriptId()</a>\" can be called only in the main thread or after registerThread() has been called.",
 		"exampleValue": "3,MTIzNDU2Nzg5MDEyMzQ1Ng=="
 	}],
-	"returnValue": "It returns true if successful and false if no matching thread could be found.",
+	"returnValue": "It returns true on success and false if no matching thread could be found.",
 	"exampleOutput": [{
 		"call": "registerThread(\"3,MTIzNDU2Nzg5MDEyMzQ1Ng==\")",
 		"output": "dHJ1ZQ=="

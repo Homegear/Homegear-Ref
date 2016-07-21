@@ -15,7 +15,7 @@
 		"description": "This is the message that will be written to the log file. The date is prepended automatically.",
 		"exampleValue": "My message"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "The message was empty."

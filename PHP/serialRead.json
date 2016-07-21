@@ -15,7 +15,7 @@
 		"description": "The maximum amount of time that the system waits for data (in milliseconds)",
 		"exampleValue": "5000"
 	}],
-	"returnValue": "Returns the read character if successful",
+	"returnValue": "Returns the read character on success",
 	"errors": [{
 		"code": -1,
 		"description": "Error reading from device"

@@ -27,7 +27,7 @@
 		"Void deleteMetadata(String address)",
 		"Void deleteMetadata(String address, String dataId)"
 	],
-	"returnValue": "Returns Void if successful",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -2,
 		"description": "Peer is unknown."

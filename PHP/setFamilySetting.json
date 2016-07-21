@@ -7,17 +7,17 @@
 	"parameters": [{
 		"name": "familyId",
 		"type": "int",
-		"description": "The family ID to set the setting for",
+		"description": "The family ID for which you want to make the setting",
 		"exampleValue": "6"
 	}, {
 		"name": "name",
 		"type": "string",
-		"description": "The name of the setting. Use lower case characters only.",
+		"description": "The name of the setting; use lower-case characters only.",
 		"exampleValue": ""
 	}, {
 		"name": "value",
 		"type": "mixed",
-		"description": "The value of the setting. Supported types are string, integer and binary.",
+		"description": "This is the value of the setting. Supported types are string, integer, and binary.",
 		"exampleValue": ""
 	}],
 	"errors": [{

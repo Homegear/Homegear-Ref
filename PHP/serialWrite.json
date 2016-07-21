@@ -15,7 +15,7 @@
 		"description": "The data to be written; if you omit the new line character, it is automatically appended.",
 		"exampleValue": "Hello world!\\n"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "Error writing to device"
