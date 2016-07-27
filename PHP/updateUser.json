@@ -15,7 +15,7 @@
 		"description": "The new password of the user",
 		"exampleValue": "new_secret"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "Something has gone wrong (e. g. the user does not exist)"

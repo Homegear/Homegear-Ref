@@ -10,7 +10,7 @@
 		"description": "The filename of the module to be reloaded",
 		"exampleValue": "mod_insteon.so"
 	}],
-	"returnValue": "Returns \"0\" if successful",
+	"returnValue": "Returns \"0\" on success",
 	"errors": [{
 		"code": -1,
 		"description": "Unknown error"

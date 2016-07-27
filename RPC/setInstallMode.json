@@ -25,5 +25,5 @@
 		"description": "This is the ID of the family for which you want to enable pairing mode. If it is not specified, pairing mode will be enabled for all device families.",
 		"exampleValue": "1"
 	}],
-	"returnValue": "Returns Void upon success"
+	"returnValue": "Returns Void on success"
 }

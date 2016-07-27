@@ -20,7 +20,7 @@
 		"description": "Data is in raw binary format instead of a hexadecimal string",
 		"exampleValue": "true"
 	}],
-	"returnValue": "Returns \"true\" if successful",
+	"returnValue": "Returns \"true\" on success",
 	"errors": [{
 		"code": "false",
 		"description": "Error writing to device"

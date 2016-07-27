@@ -12,7 +12,7 @@
 		"description": "The name of the system variable to be deleted",
 		"exampleValue": "MySystemVariable"
 	}],
-	"returnValue": "Returns Void if successful",
+	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -32602,
 		"description": "Name is longer than 250 characters."

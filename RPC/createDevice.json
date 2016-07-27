@@ -32,10 +32,10 @@
 	}, {
 		"name": "interfaceId",
 		"type": "String",
-		"description": "The id of the interface as defined in the family configuration file to associate the newly created device to.",
+		"description": "The ID of the interface as defined in the family configuration file with which you want to associate the newly created device",
 		"exampleValue": "My-Interface"
 	}],
-	"returnValue": "Returns the ID of the new device in case of success",
+	"returnValue": "Returns the ID of the new device on success",
 	"errors": [{
 		"code": -2,
 		"description": "The device family is unknown or unavailable."

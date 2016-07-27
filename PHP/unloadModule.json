@@ -10,7 +10,7 @@
 		"description": "The filename of the module to be unloaded",
 		"exampleValue": "mod_insteon.so"
 	}],
-	"returnValue": "It returns \"0\" if successful and \"1\" if the module is not loaded.",
+	"returnValue": "It returns \"0\" on success and \"1\" if the module is not loaded.",
 	"errors": [{
 		"code": -1,
 		"description": "Unknown error"

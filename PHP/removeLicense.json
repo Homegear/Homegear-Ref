@@ -20,7 +20,7 @@
 		"description": "The ID of the device whose license key is to be removed. It is set to \"-1\" if the license key was registered for the whole family.",
 		"exampleValue": "216"
 	}],
-	"returnValue": "It returns \"0\" if successful and if the license key is already known. It returns \"1\" in the case of a new activation.",
+	"returnValue": "It returns \"0\" on success and if the license key is already known. It returns \"1\" in the case of a new activation.",
 	"errors": [{
 		"code": -1,
 		"description": "Application error"

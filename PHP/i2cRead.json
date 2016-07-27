@@ -20,7 +20,7 @@
 		"description": "Returns raw binary data instead of hexadecimal string",
 		"exampleValue": "false"
 	}],
-	"returnValue": "Returns the read hexadecimal string in successful or raw binary data if \"returnBinary\" is set to \"true\".",
+	"returnValue": "Returns the read hexadecimal string on success or raw binary data if \"returnBinary\" is set to \"true\".",
 	"errors": [{
 		"code": "false",
 		"description": "Error reading from device"
