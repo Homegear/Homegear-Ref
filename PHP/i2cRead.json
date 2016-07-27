@@ -3,17 +3,22 @@
 	"category": "I²C Communication",
 	"shortDescription": "Reads data from an I²C device",
 	"description": "This method reads data from an I²C device that was previously opened with HomegearI2c::open().",
-	"signatures": ["string read(resource $handle, bool $returnBinary)"],
+	"signatures": ["string read(resource $handle, int length, bool $returnBinary)"],
 	"parameters": [{
 		"name": "handle",
 		"type": "resource",
 		"description": "The file pointer resource returned by HomegearI2c::open()",
 		"exampleValue": ""
 	}, {
+		"name": "length",
+		"type": "int",
+		"description": "The number of bytes to read.",
+		"exampleValue": "5"
+	}, {
 		"name": "returnBinary",
 		"type": "bool",
 		"description": "Returns raw binary data instead of hexadecimal string",
-		"exampleValue": ""
+		"exampleValue": "false"
 	}],
 	"returnValue": "Returns the read hexadecimal string in successful or raw binary data if \"returnBinary\" is set to \"true\".",
 	"errors": [{

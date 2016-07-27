@@ -11,7 +11,7 @@
 		"exampleValue": ""
 	}, {
 		"name": "data",
-		"type": "bool",
+		"type": "string",
 		"description": "The data as a hexadecimal string",
 		"exampleValue": "8F727ACC3022"
 	}, {
