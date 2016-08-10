@@ -16,7 +16,8 @@
 		"name": "familyId",
 		"type": "Integer",
 		"description": "ID of the family you want to add the device to; if not specified, \"addDevice\" is executed for all device families that support it.",
-		"exampleValue": "1"
+		"exampleValue": "1",
+		"default": "void"
 	}],
 	"returnValue": "Returns the device description of the newly paired device if the pairing was successful",
 	"errors": [{

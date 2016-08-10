@@ -45,12 +45,14 @@
 		"name": "name",
 		"type": "String",
 		"description": "A descriptive name for the link",
-		"exampleValue": "Living Room - Light"
+		"exampleValue": "Living Room - Light",
+		"default": ""
 	}, {
 		"name": "description",
 		"type": "String",
 		"description": "A short description of the link",
-		"exampleValue": "This is supposed to be a short description, but I have no idea what to write here..."
+		"exampleValue": "This is supposed to be a short description, but I have no idea what to write here...",
+		"default": ""
 	}],
 	"returnValue": "Returns Void on success",
 	"errors": [{

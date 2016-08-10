@@ -12,7 +12,8 @@
 		"name": "level",
 		"type": "Integer",
 		"description": "This is the log level that you want to set. The following are valid values:<ul><li>0: Log nothing</li><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>Do not use \"debug\" for normal operation because it makes Homegear perform more slowly.",
-		"exampleValue": "4"
+		"exampleValue": "4",
+		"default": "void"
 	}],
 	"returnValue": "Returns the current log level as an integer",
 	"exampleOutput": [{

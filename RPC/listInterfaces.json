@@ -12,7 +12,8 @@
 		"name": "familyId",
 		"type": "Integer",
 		"description": "The ID of the family for which you want to get interfaces",
-		"exampleValue": "4"
+		"exampleValue": "4",
+		"default": "void"
 	}],
 	"returnValue": "Returns an array of type <a href=\"#interfaceDescription\">InterfaceDescription</a>",
 	"exampleOutput": [{

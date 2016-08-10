@@ -11,7 +11,8 @@
 		"name": "",
 		"type": "",
 		"description": "",
-		"exampleValue": ""
+		"exampleValue": "",
+		"default": ""
 	}],
 	"deprecatedSignatures": [""],
 	"returnValue": "",

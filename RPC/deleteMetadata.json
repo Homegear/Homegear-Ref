@@ -21,7 +21,8 @@
 		"name": "dataId",
 		"type": "String",
 		"description": "The dataId as defined in <a href=\"#setMetadata\">setMetadata</a>",
-		"exampleValue": "myData"
+		"exampleValue": "myData",
+		"default": "void"
 	}],
 	"deprecatedSignatures": [
 		"Void deleteMetadata(String address)",

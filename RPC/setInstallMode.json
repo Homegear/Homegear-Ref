@@ -18,12 +18,14 @@
 		"name": "duration",
 		"type": "Integer",
 		"description": "This is the duration in seconds that the central should remain in pairing mode. The minimum duration is 5 seconds, and the maximum duration is 3600 seconds. The default duration is 60 seconds.",
-		"exampleValue": "120"
+		"exampleValue": "120",
+		"default": "60"
 	}, {
 		"name": "familyId",
 		"type": "Integer",
 		"description": "This is the ID of the family for which you want to enable pairing mode. If it is not specified, pairing mode will be enabled for all device families.",
-		"exampleValue": "1"
+		"exampleValue": "1",
+		"default": "void"
 	}],
 	"returnValue": "Returns Void on success"
 }

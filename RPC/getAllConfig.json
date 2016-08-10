@@ -11,7 +11,8 @@
 		"name": "peerId",
 		"type": "Integer",
 		"description": "When specified, only variables of this peer are returned.",
-		"exampleValue": "12"
+		"exampleValue": "12",
+		"default": "void"
 	}],
 	"returnValue": "This returns an array of structs. One struct is returned for each device. The struct has the following elements:<ul><li><b>ADDRESS:</b> The serial number of the device (e. g. JEQ0471872)</li><li><b>ID:</b> The ID of the device (e. g. 12)</li><li><b>FAMILIY:</b> The ID of the device family (e. g. 0 for HomeMatic BidCoS)</li><li><b>TYPE:</b> The type string of the device (e. g. HMW-LC-Dim1L-DR)</li><li><b>TYPE_ID:</b> The type ID of the device (e. g. 25)</li><li><b>NAME:</b> The user-defined name of the device (e. g. \"Living room - light\")</li><li><b>CHANNELS:</b> This is an array containing one element for each channel of the device. Each element is a struct with the following items:<ul><li><b>INDEX:</b> The channel index</li><li><b>TYPE:</b> The channel type (e. g. KEY)</li><li><b>PARAMSET:</b> This is a struct with one element for each parameter. The name of each item is the name of the parameter. The parameter struct has the following elements:<ul><li><b>VALUE:</b> The value of the parameter</li><li><b>TYPE:</b> The parameter type (BOOL, ACTION, INTEGER, ENUM, STRING, FLOAT)</li><li><b>MIN:</b> The minimum possible numeric value (only for INTEGER, ENUM, or FLOAT)</li><li><b>MAX:</b> The maximum possible numeric value (only for INTEGER, ENUM, or FLOAT)</li><li><b>VALUE_LIST:</b> It is an array with string descriptions of all possible values and is only for ENUM.</li><li><b>SPECIAL:</b> This is only for INTEGER or FLOAT and is an array of structs. Each struct has two elements:<ul><li><b>ID:</b> A string description of the special value</li><li><b>VALUE:</b> The special value</li></ul></li></ul></li></ul></li></ul>",
 	"errors": [{

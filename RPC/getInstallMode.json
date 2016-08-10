@@ -10,8 +10,9 @@
 	"parameters": [{
 		"name": "familyId",
 		"type": "Integer",
-		"description": "Thsi is the ID of the family for which you want to get the remaining time in pairing mode. If not specified, the remaining time in pairing mode of the first central for which pairing mode enabled is returned.",
-		"exampleValue": "1"
+		"description": "This is the ID of the family for which you want to get the remaining time in pairing mode. If not specified, the remaining time in pairing mode of the first central for which pairing mode enabled is returned.",
+		"exampleValue": "1",
+		"default": "void"
 	}],
 	"returnValue": "This returns the remaining time in pairing mode (in seconds or \"0\") when the central is not in pairing mode."
 }
