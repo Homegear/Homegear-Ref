@@ -11,7 +11,8 @@
 		"name": "interfaceId",
 		"type": "String",
 		"description": "This is the interface ID of the RPC server as it was passed to <a href=\"#init\">init</a>. If it is specified, only the <a href=\"#serverInfo\">ServerInfo</a> for this server is returned.",
-		"exampleValue": "MyTotallyAwesomeHomegearClient"
+		"exampleValue": "MyTotallyAwesomeHomegearClient",
+		"default": "void"
 	}],
 	"returnValue": "Returns an array of type <a href=\"#serverInfo\">ServerInfo</a>",
 	"errors": [{

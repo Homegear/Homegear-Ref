@@ -11,7 +11,8 @@
 		"name": "familyId",
 		"type": "Integer",
 		"description": "This is the ID of the family that you want to search for devices.",
-		"exampleValue": "1"
+		"exampleValue": "1",
+		"default": "void"
 	}],
 	"returnValue": "Returns the number of devices that the method found"
 }

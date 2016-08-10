@@ -45,7 +45,8 @@
 		"name": "longPress",
 		"type": "Boolean",
 		"description": "Set to \"true\" to simulate a long key press. The default setting is \"false\".",
-		"exampleValue": "true"
+		"exampleValue": "true",
+		"default": "false"
 	}],
 	"returnValue": "Returns Void on success.",
 	"errors": [{
