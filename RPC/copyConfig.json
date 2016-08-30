@@ -1,0 +1,51 @@
+{
+	"name": "copyConfig",
+	"category": "Devices",
+	"shortDescription": "Copies configuration parameters from one channel to another",
+	"description": "This method copies configuration data (the MASTER parameter set) from one channel to another. If a parameter doesn't exist in the target parameter set, it is ignored.",
+	"signatures": [
+		"Void copyConfig(Integer sourcePeerId, Integer sourceChannel, Integer targetPeerId, Integer targetChannel)",
+	],
+	"deprecatedSignatures": [
+		"Void copyConfig(String sourceAddress, String targetAddress)",
+	],
+	"parameters": [{
+		"name": "sourcePeerId",
+		"type": "Integer",
+		"description": "The id of the peer to copy the parameter set from",
+		"exampleValue": "131"
+	}, {
+		"name": "sourceChannel",
+		"type": "Integer",
+		"description": "The channel to copy the parameter set from",
+		"exampleValue": "3"
+	}, {
+		"name": "targetPeerId",
+		"type": "Integer",
+		"description": "The id of the peer to copy the parameter set to",
+		"exampleValue": "135"
+	}, {
+		"name": "targetChannel",
+		"type": "Integer",
+		"description": "The channel to copy the parameter set to",
+		"exampleValue": "2"
+	}, {
+		"name": "sourceAddress",
+		"type": "String",
+		"description": "The serial number and channel of the device to copy the parameter set from (separated by colon)",
+		"exampleValue": "JEQ0578372:1"
+	}, {
+		"name": "targetAddress",
+		"type": "String",
+		"description": "The serial number and channel of the device to copy the parameter set to (separated by colon)",
+		"exampleValue": "LEQ0053372:1"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel is unknown."
+	}, {
+		"code": -3,
+		"description": "At least one of the parameter sets is unknown."
+	}]
+}

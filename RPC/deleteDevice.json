@@ -1,0 +1,33 @@
+{
+	"name": "deleteDevice",
+	"category": "Devices",
+	"shortDescription": "Unpairs a peer or resets it to factory defaults",
+	"description": "This method unpairs a device from Homegear or resets it to factory defaults. Some devices need to be in pairing mode for this to succeed - except the flag \"DEFER\" is used.",
+	"signatures": [
+		"Void deleteDevice(Integer peerId, Integer flags)",
+	],
+	"deprecatedSignatures": [
+		"Void deleteDevice(String address, Integer flags)",
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The id of the peer to delete",
+		"exampleValue": "51"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number of the device to delete",
+		"exampleValue": "JEQ0578372"
+	}, {
+		"name": "flags",
+		"type": "Integer",
+		"description": "The following flags are available:<ul><li><b>1 (RESET):</b> Resets the device to factory defaults (if possible). If this flag is not set the device is just unpaired without being reset.</li><li><b>2 (FORCE):</b> Removes the device from Homegear. Homegear will try once to unpair or reset the device. If that fails the device is just removed from the central without any further attempts to unpair it.</li><li><b>4 (DEFER):</b> Unpair the device when the next packet is received that can trigger unpairing.</li></ul>",
+		"exampleValue": "5 (RESET and DEFER)"
+	}],
+	"returnValue": "Returns Void on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel is unknown."
+	}]
+}
