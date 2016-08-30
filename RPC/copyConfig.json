@@ -4,10 +4,10 @@
 	"shortDescription": "Copies configuration parameters from one channel to another",
 	"description": "This method copies configuration data (the MASTER parameter set) from one channel to another. If a parameter doesn't exist in the target parameter set, it is ignored.",
 	"signatures": [
-		"Void copyConfig(Integer sourcePeerId, Integer sourceChannel, Integer targetPeerId, Integer targetChannel)",
+		"Void copyConfig(Integer sourcePeerId, Integer sourceChannel, Integer targetPeerId, Integer targetChannel)"
 	],
 	"deprecatedSignatures": [
-		"Void copyConfig(String sourceAddress, String targetAddress)",
+		"Void copyConfig(String sourceAddress, String targetAddress)"
 	],
 	"parameters": [{
 		"name": "sourcePeerId",

@@ -4,10 +4,10 @@
 	"shortDescription": "Unpairs a peer or resets it to factory defaults",
 	"description": "This method unpairs a device from Homegear or resets it to factory defaults. Some devices need to be in pairing mode for this to succeed - except the flag \"DEFER\" is used.",
 	"signatures": [
-		"Void deleteDevice(Integer peerId, Integer flags)",
+		"Void deleteDevice(Integer peerId, Integer flags)"
 	],
 	"deprecatedSignatures": [
-		"Void deleteDevice(String address, Integer flags)",
+		"Void deleteDevice(String address, Integer flags)"
 	],
 	"parameters": [{
 		"name": "peerId",
