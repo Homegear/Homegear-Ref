@@ -3,7 +3,10 @@
 	"category": "Pairing",
 	"shortDescription": "Manually creates a device",
 	"description": "This method manually creates a new device. It is not supported by all device families, and it is also not supported for all devices. createDevice can be used to create virtual devices in the family \"Miscellaneous\".",
-	"signatures": ["Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion)"],
+	"signatures": [
+		"Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion)",
+		"Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion, String interfaceId)"
+	],
 	"parameters": [{
 		"name": "familyId",
 		"type": "Integer",

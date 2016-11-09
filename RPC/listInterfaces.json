@@ -5,8 +5,8 @@
 	"shortDescription": "Lists all physical interfaces with status information",
 	"description": "This method returns a list of all physical interfaces. It can be used to determine if an interface is available.",
 	"signatures": [
-		"Array<InterfaceDescription> listInterfaces()",
-		"Array<InterfaceDescription> listInterfaces(Integer familyId)"
+		"Array&lt;InterfaceDescription&gt; listInterfaces()",
+		"Array&lt;InterfaceDescription&gt; listInterfaces(Integer familyId)"
 	],
 	"parameters": [{
 		"name": "familyId",

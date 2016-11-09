@@ -3,7 +3,7 @@
 	"category": "Pairing",
 	"shortDescription": "Returns the pairing methods supported by a device family",
 	"description": "This method returns all pairing methods supported by the specified device family.",
-	"signatures": ["Array<String> getPairingMethods(Integer familyId)"],
+	"signatures": ["Array&lt;String&gt; getPairingMethods(Integer familyId)"],
 	"parameters": [{
 		"name": "familyId",
 		"type": "Integer",

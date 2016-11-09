@@ -3,7 +3,7 @@
 	"category": "Physical Interfaces",
 	"shortDescription": "This method exists only for compatibility reasons.",
 	"description": "This method exists only for reasons of backward compatibility with the CCU and has no real function.",
-	"signatures": ["Array<Struct> listBidcosInterfaces()"],
+	"signatures": ["Array&lt;Struct&gt; listBidcosInterfaces()"],
 	"returnValue": "It returns an array with one element. This element is a struct with four fields:<ul><li><b>ADDRESS (String):</b> The serial number of your central device</li><li><b>DESCRIPTION (String):</b> Always: \"Homegear default interface\"</li><li><b>CONNECTED (Boolean):</b> State of the RF device; if it is false, the RF device is not working.</li><li><b>DEFAULT (Boolean):</b> Always true</li></ul>",
 	"exampleOutput": [{
 		"call": "listBidcosInterfaces()",

@@ -3,7 +3,7 @@
 	"category": "Event Server",
 	"shortDescription": "Unsubscribes peer events after subscribing them with <a href=\"#subscribePeers\">subscribePeers</a>",
 	"description": "This method is used to unsubscribe peer events after \"<a href=\"#subscribePeers\">subscribePeers</a>\" has been called.",
-	"signatures": ["Void unsubscribePeers(String eventServerId, Array<Integer> peerIds)"],
+	"signatures": ["Void unsubscribePeers(String eventServerId, Array&lt;Integer&gt; peerIds)"],
 	"parameters": [{
 		"name": "eventServerId",
 		"type": "String",
@@ -11,7 +11,7 @@
 		"exampleValue": "http://192.168.0.4:3344"
 	}, {
 		"name": "peerIds",
-		"type": "Array<Integer>",
+		"type": "Array&lt;Integer&gt;",
 		"description": "This is an integer array with the peer IDs you want to unsubscribe. There is no check for whether a peer ID is valid.",
 		"exampleValue": "(Array length=3)\n{\n  (Integer) 13\n  (Integer) 22\n  (Integer) 31\n}"
 	}],

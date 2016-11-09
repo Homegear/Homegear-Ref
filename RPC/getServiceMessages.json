@@ -3,7 +3,7 @@
 	"category": "General",
 	"shortDescription": "Returns all service messages",
 	"description": "This method returns all service messages that are currently active in Homegear (device unreachable, config pending, low battery, sabotage, ...).",
-	"signatures": ["Array<Array<Variant>> getServiceMessages(bool returnID)"],
+	"signatures": ["Array&lt;Array&lt;Variant&gt;&gt; getServiceMessages(bool returnID)"],
 	"parameters": [{
 		"name": "returnID",
 		"type": "Boolean",

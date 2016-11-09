@@ -1,0 +1,37 @@
+{
+	"name": "getDeviceDescription",
+	"category": "Devices",
+	"shortDescription": "Returns static information about a device",
+	"description": "This method returns the a struct of type <a href=\"#deviceDescription\">DeviceDescription</a> of the specified device or channel.",
+	"signatures": [
+		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel)"
+	],
+	"deprecatedSignatures": [
+		"DeviceDescription getDeviceDescription(String address)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to return the device description for.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to return the device description for.",
+		"exampleValue": "1"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serialnumber and channel of the device seperated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}],
+	"returnValue": "Returns a struct of type <a href=\"#deviceDescription\">DeviceDescription</a>",
+	"errors": [{
+		"code": -2,
+		"description": "Peer or channel is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getDeviceDescription(89, 0)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MTUpDQp7DQogIFtBRERSRVNTXQ0KICB7DQogICAgKFN0cmluZykgSVREMDAwMDAxMkY6MA0KICB9DQogIFtBRVNfQUNUSVZFXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbQ0hBTk5FTF0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0RJUkVDVElPTl0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0ZBTUlMWV0NCiAgew0KICAgIChJbnRlZ2VyKSAxNg0KICB9DQogIFtGTEFHU10NCiAgew0KICAgIChJbnRlZ2VyKSAzDQogIH0NCiAgW0lEXQ0KICB7DQogICAgKEludGVnZXIpIDMNCiAgfQ0KICBbSU5ERVhdDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtMSU5LX1NPVVJDRV9ST0xFU10NCiAgew0KICAgIChTdHJpbmcpIA0KICB9DQogIFtMSU5LX1RBUkdFVF9ST0xFU10NCiAgew0KICAgIChTdHJpbmcpIA0KICB9DQogIFtQQVJBTVNFVFNdDQogIHsNCiAgICAoQXJyYXkgbGVuZ3RoPTIpDQogICAgew0KICAgICAgKFN0cmluZykgTUFTVEVSDQogICAgICAoU3RyaW5nKSBWQUxVRVMNCiAgICB9DQogIH0NCiAgW1BBUkVOVF0NCiAgew0KICAgIChTdHJpbmcpIElURDAwMDAwMTJGDQogIH0NCiAgW1BBUkVOVF9UWVBFXQ0KICB7DQogICAgKFN0cmluZykgSVQtU3dpdGNoDQogIH0NCiAgW1RZUEVdDQogIHsNCiAgICAoU3RyaW5nKSBNQUlOVEVOQU5DRQ0KICB9DQogIFtWRVJTSU9OXQ0KICB7DQogICAgKEludGVnZXIpIDENCiAgfQ0KfQ=="
+	}]
+}

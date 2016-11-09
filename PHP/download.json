@@ -3,7 +3,7 @@
 	"category": "General",
 	"shortDescription": "Downloads a file from a web server",
 	"description": "This method downloads a file from a web server. It was implemented so you can download files (SSL encrypted) on embedded systems when OpenSSL certificate verification is not working. You should not use it to download large files because the download is fully saved to the memory before it is written to the disk.",
-	"signatures": ["string getHttpContents(string $hostname, int $port, string $path, string $filename, string $caFile, bool $verifyCertificate)"],
+	"signatures": ["bool download(string $hostname, int $port, string $path, string $filename, string $caFile, bool $verifyCertificate)"],
 	"parameters": [{
 		"name": "hostname",
 		"type": "string",

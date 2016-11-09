@@ -4,7 +4,7 @@
 	"shortDescription": "Returns information about all device families (ID, name, pairing methods)",
 	"description": "This method returns information about all available device families. Use this method to get the ID of a family if you have only the name or only the ID. You can also use this method to get the pairing methods supported by the family.",
 	"signatures": [
-		"Array<Struct> listFamilies()"
+		"Array&lt;Struct&gt; listFamilies()"
 	],
 	"returnValue": "Returns an array of structs containing information about all available device families. Each struct has the elements \"ID\" (integer), \"NAME\" (string) and \"PAIRING_METHODS\" (array<string>).",
 	"exampleOutput": [{

@@ -3,7 +3,7 @@
 	"category": "Event Server",
 	"shortDescription": "Subscribes peer events that are to be sent to an event server when the <a href=\"#init\">init</a> flag \"subscribePeers\" is used",
 	"description": "This method is used to subscribe peer events after calling \"<a href=\"#init\">init</a>\" with the \"subscribePeers\" flag set.",
-	"signatures": ["Void subscribePeers(String eventServerId, Array<Integer> peerIds)"],
+	"signatures": ["Void subscribePeers(String eventServerId, Array&lt;Integer&gt; peerIds)"],
 	"parameters": [{
 		"name": "eventServerId",
 		"type": "String",
@@ -11,7 +11,7 @@
 		"exampleValue": "http://192.168.0.4:3344"
 	}, {
 		"name": "peerIds",
-		"type": "Array<Integer>",
+		"type": "Array&lt;Integer&gt;",
 		"description": "This is an integer array containing the peer IDs to be subscribed. There is no check to see whether a peer ID is valid.",
 		"exampleValue": "(Array length=3)\n{\n  (Integer) 13\n  (Integer) 22\n  (Integer) 31\n}"
 	}],

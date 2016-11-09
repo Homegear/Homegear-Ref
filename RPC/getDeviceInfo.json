@@ -1,0 +1,34 @@
+{
+	"name": "getDeviceInfo",
+	"category": "Devices",
+	"shortDescription": "Returns dynamic information about a device",
+	"description": "This method returns an array of structs with one entry for each device paired to Homegear. In contrast to <a href=\"#listDevices\">listDevices</a>, this method contains non static information.",
+	"signatures": [
+		"Array&lt;Struct&gt; getDeviceInfo()",
+		"Struct getDeviceInfo(Integer peerId)",
+		"Struct getDeviceInfo(Integer peerId, Array&lt;String&gt; fields)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to return the device information for.",
+		"exampleValue": "12"
+	}, {
+		"name": "fields",
+		"type": "Array&lt;String&gt;",
+		"description": "When fields is not empty, only the struct elements defined in the array (e. g. \"INTERFACE\" or \"NAME\") are returned. This saves ressources.",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns an array of structs. Each struct has the elemends \"ID\", \"INTERFACE\", \"NAME\" and \"RSSI\". In case getDeviceInfo() is called with the peer ID specified, only one struct is returned.",
+	"errors": [{
+		"code": -2,
+		"description": "Peer is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getDeviceInfo()",
+		"output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoU3RydWN0IGxlbmd0aD00KQ0KICB7DQogICAgW0lEXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSA0DQogICAgfQ0KICAgIFtJTlRFUkZBQ0VdDQogICAgew0KICAgICAgKFN0cmluZykgQ1JDDQogICAgfQ0KICAgIFtOQU1FXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIDEuIE9HIEZsdXINCiAgICB9DQogICAgW1JTU0ldDQogICAgew0KICAgICAgKEludGVnZXIpIC03Nw0KICAgIH0NCiAgfQ0KICAoU3RydWN0IGxlbmd0aD00KQ0KICB7DQogICAgW0lEXQ0KICAgIHsNCiAgICAgIChJbnRlZ2VyKSA3DQogICAgfQ0KICAgIFtJTlRFUkZBQ0VdDQogICAgew0KICAgICAgKFN0cmluZykgQ1VMDQogICAgfQ0KICAgIFtOQU1FXQ0KICAgIHsNCiAgICAgIChTdHJpbmcpIDEuIE9HIFNjaGxhZnppbW1lcg0KICAgIH0NCiAgICBbUlNTSV0NCiAgICB7DQogICAgICAoSW50ZWdlcikgLTY1DQogICAgfQ0KICB9DQp9"
+	}, {
+		"call": "getDeviceInfo(3)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MykNCnsNCiAgW0lEXQ0KICB7DQogICAgKEludGVnZXI2NCkgMw0KICB9DQogIFtOQU1FXQ0KICB7DQogICAgKFN0cmluZykgDQogIH0NCiAgW1JTU0ldDQogIHsNCiAgICAoSW50ZWdlcjY0KSAwDQogIH0NCn0="
+	}]
+}

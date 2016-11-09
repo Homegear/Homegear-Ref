@@ -1,0 +1,52 @@
+{
+	"name": "getLinkInfo",
+	"category": "Devices",
+	"shortDescription": "Returns name and description of a direct device link",
+	"description": "This method returns the name and description of a direct device link.",
+	"signatures": [
+		"Struct getLinkInfo(Integer senderId, Integer senderChannel, Integer receiverId, Integer receiverChannel)"
+	],
+	"deprecatedSignatures": [
+		"Struct getLinkInfo(String senderAddress, String receiverAddress)"
+	],
+	"parameters": [{
+		"name": "senderId",
+		"type": "Integer",
+		"description": "The ID of the sending peer (e. g. a remote).",
+		"exampleValue": "12"
+	}, {
+		"name": "senderChannel",
+		"type": "Integer",
+		"description": "The channel of the sending peer or \"-1\".",
+		"exampleValue": "1"
+	}, {
+		"name": "receiverId",
+		"type": "Integer",
+		"description": "The ID of the receiving peer (e. g. a switch).",
+		"exampleValue": "14"
+	}, {
+		"name": "receiverChannel",
+		"type": "Integer",
+		"description": "The channel of the receiving peer or \"-1\".",
+		"exampleValue": "1"
+	}, {
+		"name": "senderAddress",
+		"type": "String",
+		"description": "The serial number and channel of the sending peer separated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}, {
+		"name": "remoteAddress",
+		"type": "String",
+		"description": "The serial number and channel of the receiving peer separated by colon.",
+		"exampleValue": "LEQ0053372:1"
+	}],
+	"returnValue": "Returns a struct with two elements of type String: \"NAME\" and \"DESCRIPTION\".",
+	"errors": [{
+		"code": -2,
+		"description": "Link is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getLinkInfo(89, 1, 114, 1)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MikNCnsNCiAgW0RFU0NSSVBUSU9OXQ0KICB7DQogICAgKFN0cmluZykgTXkgbGluayBkZXNjcmlwdGlvbg0KICB9DQogIFtOQU1FXQ0KICB7DQogICAgKFN0cmluZykgTXkgbGluayBuYW1lDQogIH0NCn0="
+	}]
+}

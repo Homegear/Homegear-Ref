@@ -29,17 +29,17 @@
 	}, {
 		"name": "remoteChannel",
 		"type": "Integer",
-		"description": "The channel of a remote peer linked to the peer; use the same \"channel\" value if a virtual peer is specified.",
+		"description": "The channel of a remote peer; use the same \"channel\" value if a virtual peer is specified.",
 		"exampleValue": "1"
 	}, {
 		"name": "address",
 		"type": "String",
-		"description": "The serial number and channel of the actuator, separated by colon",
+		"description": "The serial number and channel of the actuator separated by colon.",
 		"exampleValue": "JEQ0578372:1"
 	}, {
 		"name": "remoteAddress",
 		"type": "String",
-		"description": "The serial number and channel of a remote peer linked to the peer, separated by colon",
+		"description": "The serial number and channel of a remote peer separated by colon.",
 		"exampleValue": "LEQ0053372:1"
 	}, {
 		"name": "longPress",
