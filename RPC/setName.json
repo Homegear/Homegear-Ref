@@ -1,0 +1,23 @@
+{
+	"name": "setName",
+	"category": "Devices",
+	"shortDescription": "Sets the name of a peer",
+	"description": "This method sets the name of a peer. The name makes it easier to identify the peer.",
+	"signatures": ["Void setName(Integer peerId, String name)"],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer you want to set the name for",
+		"exampleValue": "131"
+	}, {
+		"name": "name",
+		"type": "String",
+		"description": "The name to assign to the device",
+		"exampleValue": "Living Room - Light"
+	}],
+	"returnValue": "Returns Void on success",
+	"errors": [{
+		"code": -2,
+		"description": "Peer is unknown."
+	}]
+}
