@@ -17,7 +17,7 @@
 		"name": "fields",
 		"type": "Array&lt;String&gt;",
 		"description": "When fields is not empty, only the struct elements defined in the array (e. g. \"INTERFACE\" or \"NAME\") are returned. This saves ressources.",
-		"exampleValue": "1"
+		"exampleValue": "[ \"INTERFACE\", \"NAME\" ]"
 	}],
 	"returnValue": "Returns an array of structs. Each struct has the elemends \"ID\", \"INTERFACE\", \"NAME\" and \"RSSI\". In case getDeviceInfo() is called with the peer ID specified, only one struct is returned.",
 	"errors": [{

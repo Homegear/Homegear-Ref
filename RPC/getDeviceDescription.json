@@ -4,10 +4,12 @@
 	"shortDescription": "Returns static information about a device",
 	"description": "This method returns the a struct of type <a href=\"#deviceDescription\">DeviceDescription</a> of the specified device or channel.",
 	"signatures": [
-		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel)"
+		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel)",
+		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel, Array<String> fields)"
 	],
 	"deprecatedSignatures": [
-		"DeviceDescription getDeviceDescription(String address)"
+		"DeviceDescription getDeviceDescription(String address)",
+		"DeviceDescription getDeviceDescription(String address, Array<String> fields)"
 	],
 	"parameters": [{
 		"name": "peerId",
@@ -24,6 +26,11 @@
 		"type": "String",
 		"description": "The serialnumber and channel of the device seperated by colon.",
 		"exampleValue": "JEQ0578372:1"
+	}, , {
+		"name": "fields",
+		"type": "Array<String>",
+		"description": "When fields is not empty, only the struct elements defined in the array (e. g. \"ID\" or \"TYPE\") are returned. This saves ressources.",
+		"exampleValue": "[ \"ID\", \"TYPE\" ]"
 	}],
 	"returnValue": "Returns a struct of type <a href=\"#deviceDescription\">DeviceDescription</a>",
 	"errors": [{
