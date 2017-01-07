@@ -1,0 +1,56 @@
+{
+	"name": "getParamset",
+	"category": "Devices",
+	"shortDescription": "Returns a peer's configuration parameters",
+	"description": "This method returns the configuration parameters of a peer's channel.",
+	"signatures": [
+		"Paramset getParamset(Integer peerId, Integer channel, String type)",
+    "Paramset getParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel)"
+	],
+	"deprecatedSignatures": [
+		"Paramset getParamset(String address, String paramsetKey)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel to get the configuration parameters for.",
+		"exampleValue": "1"
+	}, {
+		"name": "remotePeerId",
+		"type": "Integer",
+		"description": "An ID of a peer the peer is linked to. Used to return configuration parameters of a direct link between two peers.",
+		"exampleValue": "14"
+	}, {
+		"name": "remoteChannel",
+		"type": "Integer",
+		"description": "The channel of peer \"remotePeerId\" the peer is linked to.",
+		"exampleValue": "1"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the peer separated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}, {
+		"name": "paramsetKey",
+		"type": "String",
+		"description": "\"MASTER\", \"VALUES\" or \"LINK\".",
+		"exampleValue": "MASTER"
+	}],
+	"returnValue": "Returns a struct of type <a href=\"#paramset\">Paramset</a>.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel unknown."
+	}, {
+		"code": -3,
+		"description": "Parameter set is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getParamset(23, 1, 58, 1)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MzYpDQp7DQogIFtVSV9ISU5UXQ0KICB7DQogICAgKFN0cmluZykgMg0KICB9DQogIFtTSE9SVF9DVF9PRkZERUxBWV0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW1NIT1JUX0NUX09OREVMQVldDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtTSE9SVF9DVF9PRkZdDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtTSE9SVF9DVF9PTl0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW1NIT1JUX0NPTkRfVkFMVUVfTE9dDQogIHsNCiAgICAoSW50ZWdlcikgNTANCiAgfQ0KICBbU0hPUlRfQ09ORF9WQUxVRV9ISV0NCiAgew0KICAgIChJbnRlZ2VyKSAxODANCiAgfQ0KICBbU0hPUlRfT05ERUxBWV9USU1FXQ0KICB7DQogICAgKEZsb2F0KSAwDQogIH0NCiAgW1NIT1JUX09OX1RJTUVdDQogIHsNCiAgICAoRmxvYXQpIDEyMA0KICB9DQogIFtTSE9SVF9PRkZERUxBWV9USU1FXQ0KICB7DQogICAgKEZsb2F0KSAwDQogIH0NCiAgW1NIT1JUX09GRl9USU1FXQ0KICB7DQogICAgKEZsb2F0KSAxMTE2MDANCiAgfQ0KICBbU0hPUlRfT05fVElNRV9NT0RFXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbU0hPUlRfT0ZGX1RJTUVfTU9ERV0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW1NIT1JUX0FDVElPTl9UWVBFXQ0KICB7DQogICAgKEludGVnZXIpIDENCiAgfQ0KICBbU0hPUlRfSlRfT0ZGXQ0KICB7DQogICAgKEludGVnZXIpIDENCiAgfQ0KICBbU0hPUlRfSlRfT05dDQogIHsNCiAgICAoSW50ZWdlcikgMg0KICB9DQogIFtTSE9SVF9KVF9PRkZERUxBWV0NCiAgew0KICAgIChJbnRlZ2VyKSAyDQogIH0NCiAgW1NIT1JUX0pUX09OREVMQVldDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtMT05HX0NUX09GRkRFTEFZXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbTE9OR19DVF9PTkRFTEFZXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbTE9OR19DVF9PRkZdDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtMT05HX0NUX09OXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbTE9OR19DT05EX1ZBTFVFX0xPXQ0KICB7DQogICAgKEludGVnZXIpIDUwDQogIH0NCiAgW0xPTkdfQ09ORF9WQUxVRV9ISV0NCiAgew0KICAgIChJbnRlZ2VyKSAxMDANCiAgfQ0KICBbTE9OR19PTkRFTEFZX1RJTUVdDQogIHsNCiAgICAoRmxvYXQpIDANCiAgfQ0KICBbTE9OR19PTl9USU1FXQ0KICB7DQogICAgKEZsb2F0KSAxMTE2MDANCiAgfQ0KICBbTE9OR19PRkZERUxBWV9USU1FXQ0KICB7DQogICAgKEZsb2F0KSAwDQogIH0NCiAgW0xPTkdfT0ZGX1RJTUVdDQogIHsNCiAgICAoRmxvYXQpIDExMTYwMA0KICB9DQogIFtMT05HX09OX1RJTUVfTU9ERV0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0xPTkdfT0ZGX1RJTUVfTU9ERV0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0xPTkdfTVVMVElFWEVDVVRFXQ0KICB7DQogICAgKEludGVnZXIpIDENCiAgfQ0KICBbTE9OR19BQ1RJT05fVFlQRV0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0xPTkdfSlRfT0ZGXQ0KICB7DQogICAgKEludGVnZXIpIDQNCiAgfQ0KICBbTE9OR19KVF9PTl0NCiAgew0KICAgIChJbnRlZ2VyKSA0DQogIH0NCiAgW0xPTkdfSlRfT0ZGREVMQVldDQogIHsNCiAgICAoSW50ZWdlcikgNA0KICB9DQogIFtMT05HX0pUX09OREVMQVldDQogIHsNCiAgICAoSW50ZWdlcikgNA0KICB9DQp9"
+	}]
+}
