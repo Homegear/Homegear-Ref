@@ -1,0 +1,40 @@
+{
+	"name": "getLinkPeers",
+	"category": "Devices",
+	"shortDescription": "Returns all peers and channels a channel is linked to",
+	"description": "This method returns an array of all peers a channel or peer is linked to.",
+	"signatures": [
+		"Array<String> getLinkPeers(Integer peerId, Integer channel)"
+	],
+	"deprecatedSignatures": [
+		"Array<String> getLinkPeers(String address)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to get links for.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel to get the links for. If \"-1\" the links of all channels are returned.",
+		"exampleValue": "1"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the peer to get the links for. When no channel is specified, the function returns the peers for all channels.",
+		"exampleValue": "JEQ0578372:1"
+	}],
+	"returnValue": "Returns an array with one element for each peer. Each element again is an array containing the remote's peer id and channel.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel are unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getLinkPeers(27, 1)",
+		"output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoQXJyYXkgbGVuZ3RoPTIpDQogIHsNCiAgICAoSW50ZWdlcikgMzYNCiAgICAoSW50ZWdlcikgMQ0KICB9DQogIChBcnJheSBsZW5ndGg9MikNCiAgew0KICAgIChJbnRlZ2VyKSAzNg0KICAgIChJbnRlZ2VyKSAyDQogIH0NCn0="
+	}, {
+		"call": "getLinkPeers(\"JEQ0739619:1\")",
+		"output": "KEFycmF5IGxlbmd0aD0xKQ0Kew0KICAoU3RyaW5nKSBKRVEwMDk1Njc2OjENCn0="
+	}]
+}
