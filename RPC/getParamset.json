@@ -4,11 +4,11 @@
 	"shortDescription": "Returns a peer's configuration parameters",
 	"description": "This method returns the configuration parameters of a peer's channel.",
 	"signatures": [
-		"Paramset getParamset(Integer peerId, Integer channel, String type)",
+		"Paramset getParamset(Integer peerId, Integer channel)",
     "Paramset getParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel)"
 	],
 	"deprecatedSignatures": [
-		"Paramset getParamset(String address, String paramsetKey)"
+		"Paramset getParamset(String address, String paramsetType)"
 	],
 	"parameters": [{
 		"name": "peerId",
@@ -36,7 +36,7 @@
 		"description": "The serial number and channel of the peer separated by colon.",
 		"exampleValue": "JEQ0578372:1"
 	}, {
-		"name": "paramsetKey",
+		"name": "paramsetType",
 		"type": "String",
 		"description": "\"MASTER\", \"VALUES\" or \"LINK\".",
 		"exampleValue": "MASTER"
