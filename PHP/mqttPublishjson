@@ -1,0 +1,22 @@
+{
+	"name": "Homegear::mqttPublish",
+	"category": "General",
+	"shortDescription": "Disables reception of events",
+	"description": "This method publishes to a MQTT topic. For this to work, make sure, MQTT is enabled in \"mqtt.conf\".",
+	"signatures": ["void mqttPublish(string $topic, string $payload)"],
+	"parameters": [{
+		"name": "topic",
+		"type": "string",
+		"description": "The topic to publish to. The topic is prefixed with Homegear's root topic (\"homegear\") and the MQTT ID defined in \"mqtt.conf\" (e. g. \"homegear/1234-5678-9abc/\").",
+		"exampleValue": "MyTopic"
+	}, {
+		"name": "payload",
+		"type": "string",
+		"description": "The payload to publish. Empty payloads are not allowed.",
+		"exampleValue": "{\"value\": 5}"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Thrown if the topic or payload are empty."
+	}]
+}

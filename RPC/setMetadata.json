@@ -35,7 +35,7 @@
 		"description": "Data could not be encoded to binary format."
 	}, {
 		"code": -32602,
-		"description": "dataId is longer than 250 characters, or the encoded value is larger than 1 KB."
+		"description": "dataId is longer than 250 characters."
 	}, {
 		"code": -32500,
 		"description": "The limit of 1 million metadata entries has been reached."
