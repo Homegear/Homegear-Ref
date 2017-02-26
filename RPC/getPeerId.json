@@ -1,0 +1,28 @@
+{
+	"name": "getPeerId",
+	"category": "Devices",
+	"shortDescription": "Returns all peers matching a filter condition",
+	"description": "This method returns an array of all peer ID's matching the passed filter conditions.",
+	"signatures": [
+		"Array<Integer> getPeerId(Integer filterType, String filterValue)"
+	],
+	"parameters": [{
+		"name": "filterType",
+		"type": "Integer",
+		"description": "<table class=\"table table-striped\"><thead><tr><th>Filter Type</th><th>Description</th><th>Filter Value</th></tr></thead><tbody><tr><th>1</th><td>Filter by serial number</td><td>Serial number (e. g. JEQ0478327)</td></tr><tr><th>2</th><td>Filter by physical address</td><td>Physical address in decimal or hexadecimal format (e. g. 0x47a2b6 or 12748275)</td></tr><tr><th>3</th><td>Filter by device type ID</td><td>The device type ID in decimal or hexadecimal format (e. g. 0x8b or 59)</td></tr><tr><th>4</th><td>Filter by device type string</td><td>The type string of the device (e. g. HM-CC-RT-DN)</td></tr><tr><th>5</th><td>Filter by device name</td><td>The name as returned by <a href=\"#getDeviceInfo\">getDeviceInfo</a> (e. g. 1st Floor Light). Partial values are allowed.</td></tr><tr><th>6</th><td>All peers with pending config</td><td>Empty</td></tr><tr><th>7</th><td>All unreachable peers</td><td>Empty</td></tr><tr><th>8</th><td>All reachable peers</td><td>Empty</td></tr><tr><th>9</th><td>All peers with low battery</td><td>Empty</td></tr></tbody></table>",
+		"exampleValue": "2"
+	}, {
+		"name": "filterValue",
+		"type": "String",
+		"description": "See table above. Make sure the type is \"String\".",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns an array with the ID's of all matching peers.",
+	"exampleOutput": [{
+		"call": "getPeerId(1, \"JEQ0098588\")",
+		"output": "KEFycmF5IGxlbmd0aD0xKQ0Kew0KICAoSW50ZWdlcikgMTcNCn0="
+	},{
+    "call": "getPeerId(2, 0x0000CF44)",
+    "output": "KEFycmF5IGxlbmd0aD0yKQ0Kew0KICAoSW50ZWdlcikgMzkNCiAgKEludGVnZXIpIDUyDQp9"
+  }]
+}

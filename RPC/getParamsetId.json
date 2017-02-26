@@ -1,0 +1,56 @@
+{
+	"name": "getParamsetId",
+	"category": "Devices",
+	"shortDescription": "Returns the ID of a parameter set",
+	"description": "This method returns the ID of a device's or channel's parameter set as defined in the device's XML file.",
+	"signatures": [
+		"String getParamsetId(Integer peerId, Integer channel, String paramsetType)",
+		"String getParamsetId(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel)"
+	],
+	"deprecatedSignatures": [
+		"String getParamset(String address, String paramsetType)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel to get the parameter set ID for.",
+		"exampleValue": "1"
+	}, {
+		"name": "remotePeerId",
+		"type": "Integer",
+		"description": "An ID of a peer the peer is linked to. Used to get the ID of a link parameter set which is used to configure parameters of a direct link between two peers.",
+		"exampleValue": "14"
+	}, {
+		"name": "remoteChannel",
+		"type": "Integer",
+		"description": "The channel of peer \"remotePeerId\" the peer is linked to.",
+		"exampleValue": "1"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the peer separated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}, {
+		"name": "paramsetType",
+		"type": "String",
+		"description": "\"MASTER\", \"VALUES\" or \"LINK\".",
+		"exampleValue": "MASTER"
+	}],
+	"returnValue": "Returns a string with the ID of the parameter set as defined in the device's XML file.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel unknown."
+	}, {
+		"code": -3,
+		"description": "Parameter set is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getParamsetId(12, 1, \"VALUES\")",
+		"output": "KFN0cmluZykgc2NfY2hfdmFsdWVz"
+	}]
+}
