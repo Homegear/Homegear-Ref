@@ -1,0 +1,57 @@
+{
+	"name": "getValue",
+	"category": "Devices",
+	"shortDescription": "Returns the value of a device variable",
+	"description": "This method returns a parameter value of the VALUES parameter set.",
+	"signatures": [
+		"Variant getValue(Integer peerId, Integer channel, String parameterName)",
+    "Variant getValue(Integer peerId, Integer channel, String parameterName, Boolean requestFromDevice)",
+    "Variant getValue(Integer peerId, Integer channel, String parameterName, Boolean requestFromDevice, Boolean asynchronous)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to get the value for.",
+		"exampleValue": "131"
+	},{
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to get the value for.",
+		"exampleValue": "1"
+	},{
+		"name": "parameterName",
+		"type": "Integer",
+		"description": "The name of the variable as defined in the device's XML file.",
+		"exampleValue": "1"
+	},{
+		"name": "requestFromDevice",
+		"type": "Boolean",
+		"description": "When set to \"true\" Homegear tries to read the value from the device instead of returning the cached value. This is not possible for all devices.",
+		"exampleValue": "true"
+	},{
+		"name": "requestFromDevice",
+		"type": "Boolean",
+		"description": "Only relevant when \"requestFromDevice\" is \"true\". When set to \"true\" the method returns immediately without waiting for the new value. The new value is sent as an event as soon as it is returned from the device.",
+		"exampleValue": "true"
+	},{
+		"name": "address",
+		"type": "string",
+		"description": "The serial number and channel of the device to get the value for (separated by colon).",
+		"exampleValue": "JEQ0123456:1"
+	}],
+	"returnValue": "Returns the value of the parameter. The type of the value is defined in the device's XML file.",
+  "errors": [{
+		"code": -2,
+		"description": "Device or channel unknown."
+	}, {
+		"code": -5,
+		"description": "Parameter is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getValue(131, 1, \"STATE\")",
+		"output": "KEJvb2xlYW4pIDE="
+	},{
+    "call": "getValue(98, 4, \"TEMPERATURE\")",
+    "output": "KEZsb2F0KSAyMi4x"
+  }]
+}
