@@ -26,7 +26,7 @@
 		"type": "String",
 		"description": "The serialnumber and channel of the device seperated by colon.",
 		"exampleValue": "JEQ0578372:1"
-	}, , {
+	}, {
 		"name": "fields",
 		"type": "Array<String>",
 		"description": "When fields is not empty, only the struct elements defined in the array (e. g. \"ID\" or \"TYPE\") are returned. This saves ressources.",
