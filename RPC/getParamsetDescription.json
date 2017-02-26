@@ -1,0 +1,72 @@
+{
+	"name": "getParamsetDescription",
+	"category": "Devices",
+	"shortDescription": "Returns information about a peer's parameter set",
+	"description": "This method returns information about a device's or channel's parameter set. Signature (1), (2) and (4) return <a href=\"#paramsetDescription\">paramsetDescription</a> of paired peers. Signature (3) returns <a href=\"#paramsetDescription\">paramsetDescription</a> of devices known but not paired to Homegear.",
+	"signatures": [
+		"(1) ParamsetDescription getParamsetDescription(Integer peerId, Integer channel, String paramsetType)",
+    "(2) ParamsetDescription getParamsetDescription(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel)",
+    "(3) ParamsetDescription getParamsetDescription(Integer familyId, Integer deviceTypeId, Integer firmwareVersion, Integer channel, String paramsetType)"
+	],
+	"deprecatedSignatures": [
+		"(4) ParamsetDescription getParamsetDescription(String address, String paramsetType)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel to get the parameter set description for.",
+		"exampleValue": "1"
+	}, {
+		"name": "remotePeerId",
+		"type": "Integer",
+		"description": "An ID of a peer the peer is linked to. Used to return the description of a link parameter set, which contains configuration parameters specific to direct links.",
+		"exampleValue": "14"
+	}, {
+		"name": "remoteChannel",
+		"type": "Integer",
+		"description": "The channel of peer \"remotePeerId\" the peer is linked to.",
+		"exampleValue": "1"
+	}, {
+		"name": "paramsetType",
+		"type": "String",
+		"description": "\"MASTER\", \"VALUES\" or \"LINK\". \"MASTER\" contains configuration parameters, \"VALUES\" contains variables and \"LINK\" contains configuration parameters for direct links with the specified channel.",
+		"exampleValue": "MASTER"
+	}, {
+		"name": "familyId",
+		"type": "Integer",
+		"description": "The ID of the device family the device to get the parameter set for belongs to.",
+		"exampleValue": "4"
+	}, {
+		"name": "deviceTypeId",
+		"type": "Integer",
+		"description": "The type number of the device as defined in the device description file.",
+		"exampleValue": "25"
+	}, {
+		"name": "firmwareVersion",
+		"type": "Integer",
+		"description": "The firmware version of the device to get the parameter set for. For some devices there are multiple device descriptions depending on the firmware version.",
+		"exampleValue": "16"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the peer separated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}],
+	"returnValue": "Returns a struct of type <a href=\"#paramsetDescription\">paramsetDescription</a>.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel unknown."
+	}, {
+		"code": -3,
+		"description": "Parameter set is unknown."
+	}],
+	"exampleOutput": [{
+		"call": "getParamsetDescription(27, 1, \"VALUES\")",
+		"output": "KFN0cnVjdCBsZW5ndGg9MykNCnsNCiAgW1NUQVRFXQ0KICB7DQogICAgKFN0cnVjdCBsZW5ndGg9OSkNCiAgICB7DQogICAgICBbQ09OVFJPTF0NCiAgICAgIHsNCiAgICAgICAgKFN0cmluZykgRE9PUl9TRU5TT1IuU1RBVEUNCiAgICAgIH0NCiAgICAgIFtGTEFHU10NCiAgICAgIHsNCiAgICAgICAgKEludGVnZXIpIDENCiAgICAgIH0NCiAgICAgIFtJRF0NCiAgICAgIHsNCiAgICAgICAgKFN0cmluZykgU1RBVEUNCiAgICAgIH0NCiAgICAgIFtNQVhdDQogICAgICB7DQogICAgICAgIChCb29sZWFuKSAxDQogICAgICB9DQogICAgICBbTUlOXQ0KICAgICAgew0KICAgICAgICAoQm9vbGVhbikgMA0KICAgICAgfQ0KICAgICAgW09QRVJBVElPTlNdDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSA1DQogICAgICB9DQogICAgICBbVEFCX09SREVSXQ0KICAgICAgew0KICAgICAgICAoSW50ZWdlcikgMA0KICAgICAgfQ0KICAgICAgW1RZUEVdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIEJPT0wNCiAgICAgIH0NCiAgICAgIFtVTklUXQ0KICAgICAgew0KICAgICAgICAoU3RyaW5nKQ0KICAgICAgfQ0KICAgIH0NCiAgfQ0KICBbTE9XQkFUXQ0KICB7DQogICAgKFN0cnVjdCBsZW5ndGg9OSkNCiAgICB7DQogICAgICBbQ09OVFJPTF0NCiAgICAgIHsNCiAgICAgICAgKFN0cmluZykgTk9ORQ0KICAgICAgfQ0KICAgICAgW0ZMQUdTXQ0KICAgICAgew0KICAgICAgICAoSW50ZWdlcikgMQ0KICAgICAgfQ0KICAgICAgW0lEXQ0KICAgICAgew0KICAgICAgICAoU3RyaW5nKSBMT1dCQVQNCiAgICAgIH0NCiAgICAgIFtNQVhdDQogICAgICB7DQogICAgICAgIChCb29sZWFuKSAxDQogICAgICB9DQogICAgICBbTUlOXQ0KICAgICAgew0KICAgICAgICAoQm9vbGVhbikgMA0KICAgICAgfQ0KICAgICAgW09QRVJBVElPTlNdDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSA1DQogICAgICB9DQogICAgICBbVEFCX09SREVSXQ0KICAgICAgew0KICAgICAgICAoSW50ZWdlcikgMQ0KICAgICAgfQ0KICAgICAgW1RZUEVdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIEJPT0wNCiAgICAgIH0NCiAgICAgIFtVTklUXQ0KICAgICAgew0KICAgICAgICAoU3RyaW5nKQ0KICAgICAgfQ0KICAgIH0NCiAgfQ0KICBbSU5TVEFMTF9URVNUXQ0KICB7DQogICAgKFN0cnVjdCBsZW5ndGg9OCkNCiAgICB7DQogICAgICBbRkxBR1NdDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSAyDQogICAgICB9DQogICAgICBbSURdDQogICAgICB7DQogICAgICAgIChTdHJpbmcpIElOU1RBTExfVEVTVA0KICAgICAgfQ0KICAgICAgW01BWF0NCiAgICAgIHsNCiAgICAgICAgKEJvb2xlYW4pIDENCiAgICAgIH0NCiAgICAgIFtNSU5dDQogICAgICB7DQogICAgICAgIChCb29sZWFuKSAwDQogICAgICB9DQogICAgICBbT1BFUkFUSU9OU10NCiAgICAgIHsNCiAgICAgICAgKEludGVnZXIpIDQNCiAgICAgIH0NCiAgICAgIFtUQUJfT1JERVJdDQogICAgICB7DQogICAgICAgIChJbnRlZ2VyKSAyDQogICAgICB9DQogICAgICBbVFlQRV0NCiAgICAgIHsNCiAgICAgICAgKFN0cmluZykgQUNUSU9ODQogICAgICB9DQogICAgICBbVU5JVF0NCiAgICAgIHsNCiAgICAgICAgKFN0cmluZykNCiAgICAgIH0NCiAgICB9DQogIH0NCn0="
+	}]
+}
