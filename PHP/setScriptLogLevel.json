@@ -1,0 +1,18 @@
+{
+	"name": "Homegear::setScriptLogLevel",
+	"category": "General",
+	"shortDescription": "Sets the log level for the current script",
+	"description": "This method sets the log level for the current script overwriting the global settings. It must be called from the main thread to work for all script threads. If called from a child thread it only sets the log level for this thread.",
+	"signatures": ["void setScriptLogLevel(int $logLevel)"],
+	"parameters": [{
+		"name": "logLevel",
+		"type": "int",
+		"description": "The new log level to set. If the log level value of the message to print is higher than this value, no message is logged. You can use values between 0 and 10. The log level values used by Homegear are:<ul><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
+		"exampleValue": "4"
+	}],
+	"returnValue": "Returns \"true\" on success.",
+	"errors": [{
+		"code": "false",
+		"description": "The value for \"logLevel\" is invalid."
+	}]
+}
