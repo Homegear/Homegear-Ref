@@ -2,7 +2,7 @@
 	"name": "Homegear::log",
 	"category": "General",
 	"shortDescription": "Writes a message to the script engine log file",
-	"description": "This method writes a message to the script engine log and (if there are errors) to the error log file (/var/log/homegear/homegear-scriptengine.log and /var/log/homegear/homegear-scriptengine.err by default).",
+	"description": "This method writes a message to the script engine log and (if there are errors) to the error log file (/var/log/homegear/homegear-scriptengine.log and /var/log/homegear/homegear-scriptengine.err by default). To write to the main log file (homegear.log and homegear.err), use the RPC method <a href=\"rpc.html#deviceDescription\">writeLog()</a>.",
 	"signatures": ["bool log(int $logLevel, string $message)"],
 	"parameters": [{
 		"name": "logLevel",

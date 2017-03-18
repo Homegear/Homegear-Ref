@@ -2,13 +2,26 @@
 	"name": "Homegear::unsubscribePeer",
 	"category": "General",
 	"shortDescription": "Disables reception of events",
-	"description": "This method disables the reception of events for a device that was previously enabled via the call of <a href=\"#HomegearsubscribePeer\">subscribePeer()</a>. If you call unsubscribePeer() from a thread that is not the main thread, you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first.",
-	"signatures": ["void unsubscribePeer(int $peerId)"],
+	"signatures": [
+		"(1) void unsubscribePeer(int $peerId)",
+		"(2) void unsubscribePeer(int $peerId, int $channel, string $variableName)"
+	],
+	"description": "This method disables the reception of events for a device that was previously enabled via the call of <a href=\"#HomegearsubscribePeer\">subscribePeer()</a>. If you call unsubscribePeer() from a thread that is not the main thread, you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first. (1) unsubscribes from all events of that peer, (2) unsubscribes from the event of a single variable. (2) can only be used when the variable to unsubscribe from was explicetly subscribed.",
 	"parameters": [{
 		"name": "peerId",
 		"type": "int",
 		"description": "The ID of the peer to be unsubscribed",
 		"exampleValue": "32"
+	}, {
+		"name": "channel",
+		"type": "int",
+		"description": "The channel to get events for. If $channel and $variableName are ommitted, all events for that peer are unsubscribed.",
+		"exampleValue": "2"
+	}, {
+		"name": "variableName",
+		"type": "string",
+		"description": "The variable to get events for",
+		"exampleValue": "2"
 	}],
 	"throws": [{
 		"exception": "HomegearException",
