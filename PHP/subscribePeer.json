@@ -6,7 +6,7 @@
 		"(1) void subscribePeer(int $peerId)",
 		"(2) void subscribePeer(int $peerId, int $channel, string $variableName)"
 	],
-	"description": "This method enables the reception of events for a device. You need to call subscribePeer() for <a href=\"#HomegearpollEvent\">pollEvent()</a> to return events for a device. If you are calling subscribePeer() from a thread that is not the main thread, you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first.\n(1) subscribes to all events of a peer, (2) subscribes to the events of a single variable. (2) can be called to subscribe to multiple variables.",
+	"description": "This method enables the reception of events for a device. You need to call subscribePeer() for <a href=\"#HomegearpollEvent\">pollEvent()</a> to return events for a device. If you are calling subscribePeer() from a thread that is not the main thread, you need to call <a href=\"#HomegearregisterThread\">registerThread()</a> first. (1) subscribes to all events of a peer, (2) subscribes to the events of a single variable. (2) can be called to subscribe to multiple variables.",
 	"parameters": [{
 		"name": "peerId",
 		"type": "int",
