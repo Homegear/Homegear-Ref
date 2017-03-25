@@ -2,7 +2,7 @@
 	"name": "putParamset",
 	"category": "Devices",
 	"shortDescription": "Sets device configuration parameters",
-	"description": "This method is used to set one or more static device configuration parameters. In contrast to <a href=\"#setValue\">setValue</a> <em>putParamset</em> can set multiple parameters with one call. This is necessary to avoid sending unnecessary packets and therefore cause unnecessary (RF) traffic in some device families.",
+	"description": "This method is used to set one or more static device configuration parameters. In contrast to <a href=\"#setValue\"><em>setValue()</em></a> <em>putParamset()</em> can set multiple parameters with one call. This is necessary to avoid sending unnecessary packets and therefore cause unnecessary (RF) traffic in some device families.",
 	"signatures": [
 		"Void putParamset(Integer peerId, Integer channel, Paramset values)",
     "Void putParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel, Paramset values)"
@@ -43,7 +43,7 @@
 	}, {
 		"name": "paramsetKey",
 		"type": "String",
-		"description": "\"MASTER\", \"VALUES\" or the address of a linked peer to set the \"LINK\" parameter set.",
+		"description": "<em>MASTER</em>, <em>VALUES</em> or the address of a linked peer to set the <em>LINK</em> parameter set.",
 		"exampleValue": "MASTER"
 	}],
 	"returnValue": "Returns <em>Void</em> on success.",
