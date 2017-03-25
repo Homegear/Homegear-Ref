@@ -1,0 +1,31 @@
+{
+	"name": "listDevices",
+	"category": "Devices",
+	"shortDescription": "Lists information about all existing peers",
+	"description": "This method returns an array of type <a href=\"#deviceDescription\">DeviceDescription</a> with one entry for each channel of each device paired to Homegear.",
+	"signatures": [
+		"Array&lt;DeviceDescription&gt; listDevices()",
+		"Array&lt;DeviceDescription&gt; listDevices(Boolean channels, Array&lt;String&gt; fields)",
+    "Array&lt;DeviceDescription&gt; listDevices(Boolean channels, Array&lt;String&gt; fields, Integer familyId)"
+	],
+	"parameters": [{
+		"name": "channels",
+		"type": "Boolean",
+		"description": "When set to \"false\", only the description of the device without the channel descriptions is returned. This saves a lot of ressources. For compatability reasons, \"channels\" only works when \"fields\" is set, too.",
+		"exampleValue": "false",
+		"default": "void"
+	}, {
+		"name": "fields",
+		"type": "Array&lt;String&gt;",
+		"description": "When fields is not empty, only the <a href=\"#deviceDescription\">DeviceDescription</a> elements defined in the array (\"ID\", \"PHYSICAL_ADDRESS\", ...) are returned. This also saves ressources.",
+		"exampleValue": "[ \"ID\", \"FAMILY\", \"TYPE_ID\" ]",
+		"default": "void"
+	}, {
+		"name": "familyId",
+		"type": "Integer",
+		"description": "If set only devices for this family are returned",
+		"exampleValue": "4",
+		"default": "void"
+	}],
+	"returnValue": "Returns an array of type <a href=\"#deviceDescription\">DeviceDescription</a>"
+}

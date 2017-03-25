@@ -1,0 +1,67 @@
+{
+	"name": "putParamset",
+	"category": "Devices",
+	"shortDescription": "Sets device configuration parameters",
+	"description": "This method is used to set one or more static device configuration parameters. In contrast to <a href=\"#setValue\">setValue</a> <code>putParamset</code> can set multiple parameters with one call. This is necessary to avoid sending unnecessary packets and therefore cause unnecessary (RF) traffic in some device families.",
+	"signatures": [
+		"Void putParamset(Integer peerId, Integer channel, Paramset values)",
+    "Void putParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel, Paramset values)"
+	],
+	"deprecatedSignatures": [
+		"Void putParamset(String address, String paramsetKey, Paramset values)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel to set the configuration parameters in.",
+		"exampleValue": "1"
+	}, {
+		"name": "remotePeerId",
+		"type": "Integer",
+		"description": "The id of a remote peer linked to the peer. The function sets the corresponding link parameter set.",
+		"exampleValue": "14"
+	}, {
+		"name": "remoteChannel",
+		"type": "Integer",
+		"description": "The channel of a remote peer linked to the peer or \"-1\".",
+		"exampleValue": "(Struct length=2)
+{
+  [EVENT_DELAYTIME]
+  {
+    (Float) 0
+  }
+  [TRANSMIT_TRY_MAX]
+  {
+    (Integer) 10
+  }
+}"
+	}, {
+		"name": "values",
+		"type": "<a href=\"#Paramset\">Paramset</a>",
+		"description": "The parameter set containing the values to set. It does not have to contain all parameters of the parameter set, just the ones you want to set.",
+		"exampleValue": "MASTER"
+	}, {
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the peer separated by colon.",
+		"exampleValue": "JEQ0578372:1"
+	}, {
+		"name": "paramsetKey",
+		"type": "String",
+		"description": "\"MASTER\", \"VALUES\" or the address of a linked peer to set the \"LINK\" parameter set.",
+		"exampleValue": "MASTER"
+	}],
+	"returnValue": "Returns <code>Void</code> on success.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel unknown."
+	}, {
+		"code": -3,
+		"description": "Parameter set is unknown."
+	}]
+}
