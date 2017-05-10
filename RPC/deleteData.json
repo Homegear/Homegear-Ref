@@ -1,0 +1,23 @@
+{
+	"name": "deleteData",
+	"category": "Database",
+	"shortDescription": "Deletes previously stored data from Homegear's key-value database",
+	"description": "This method deletes previously stored data from Homegear's key-value database.",
+	"signatures": [
+		"Void deleteData(String component)",
+		"Void deleteData(String component, String key)"
+	],
+	"parameters": [{
+		"name": "component",
+		"type": "String",
+		"description": "The name of the component to get values for as used in <a href=\"#setData\">setData</a>.",
+		"exampleValue": "myaddon"
+	}, {
+		"name": "key",
+		"type": "String",
+		"description": "The key as defined in <a href=\"#setData\">setData</a>. If ommited all values for the component are returned.",
+		"exampleValue": "mydata",
+		"default": "void"
+	}],
+	"returnValue": "Returns Void on success"
+}

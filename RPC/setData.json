@@ -1,0 +1,31 @@
+{
+	"name": "setData",
+	"category": "Database",
+	"shortDescription": "Stores data in Homegear's key-value database",
+	"description": "This method can be used to store data in Homegear's key-value database.",
+	"signatures": ["Void setData(String component, String key, Variant value)"],
+	"parameters": [{
+		"name": "component",
+		"type": "String",
+		"description": "The name of the component to store data for. Make sure it is unique. The maximum length are 250 characters.",
+		"exampleValue": "myaddon"
+	}, {
+		"name": "key",
+		"type": "String",
+		"description": "A name of your choice to access your data. The maximum length are 250 characters.",
+		"exampleValue": "\"mydata\""
+	}, {
+		"name": "value",
+		"type": "Variant",
+		"description": "The value you want to store",
+		"exampleValue": "43"
+	}],
+	"returnValue": "Returns Void on success",
+	"errors": [{
+		"code": -32602,
+		"description": "component or key are longer than 250 characters."
+	}, {
+		"code": -32500,
+		"description": "The limit of 1 million data entries has been reached."
+	}]
+}

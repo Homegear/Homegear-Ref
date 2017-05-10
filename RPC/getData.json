@@ -1,0 +1,29 @@
+{
+	"name": "getData",
+	"category": "Database",
+	"shortDescription": "Retrieves previously stored data from Homegear's key-value database",
+	"description": "This method returns data that was previously stored in Homegear's key-value database with <a href=\"#setData\">setData</a>.",
+	"signatures": [
+    "Variant getData(String component)",
+    "Variant getData(String component, String dataId)"
+  ],
+	"parameters": [{
+		"name": "component",
+		"type": "String",
+		"description": "The name of the component to get values for as used in <a href=\"#setData\">setData</a>.",
+		"exampleValue": "myaddon"
+	}, {
+		"name": "key",
+		"type": "String",
+		"description": "The key as defined in <a href=\"#setData\">setData</a>. If ommited all values for the component are returned.",
+		"exampleValue": "myData"
+	}],
+	"returnValue": "When <em>key</em> is specified the method returns the stored element. When only <em>component</em> is specified and <em>key</em> ommited the method returns a struct with the key-value pairs.",
+	"exampleOutput": [{
+		"call": "getData(\"mycomponent\", \"mykey\")",
+		"output": "KEludGVnZXI2NCkgMTI="
+	}, {
+		"call": "getData(\"mycomponent\")",
+		"output": "KFN0cnVjdCBsZW5ndGg9MikKewogIFtteWtleV0KICB7CiAgICAoSW50ZWdlcjY0KSAxMgogIH0KICBbbXlrZXkyXQogIHsKICAgIChBcnJheSBsZW5ndGg9MikKICAgIHsKICAgICAgKFN0cmluZykgSGVsbG8KICAgICAgKFN0cmluZykgV29ybGQKICAgIH0KICB9Cn0="
+	}]
+}
