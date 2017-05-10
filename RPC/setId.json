@@ -1,0 +1,29 @@
+{
+	"name": "setId",
+	"category": "Devices",
+	"shortDescription": "Changes the ID of a peer",
+	"description": "This method changes the ID of a peer. This can be used for example to replace a device. The new ID has to be unused in order for this method to work.",
+	"signatures": ["Void setId(Integer currentPeerId, Integer newPeerId)"],
+	"parameters": [{
+		"name": "currentPeerId",
+		"type": "Integer",
+		"description": "The current ID of the peer",
+		"exampleValue": "131"
+	}, {
+		"name": "newPeerId",
+		"type": "Integer",
+		"description": "The new ID of the peer",
+		"exampleValue": "79"
+	}],
+	"returnValue": "Returns Void on success",
+	"errors": [{
+		"code": -2,
+		"description": "The device is unknown."
+	},{
+		"code": -100,
+		"description": "Current or new peer ID are invalid."
+	},{
+		"code": -101,
+		"description": "New peer ID is already in use."
+	}]
+}

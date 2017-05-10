@@ -1,16 +1,10 @@
 {
-	"name": "addLink",
+	"name": "removeLink",
 	"category": "Devices",
-	"shortDescription": "Creates a direct link between two devices",
-	"description": "This method links two devices so that they can send commands to each other directly. This only works if supported by the device family.",
-	"signatures": [
-		"Void addLink(Integer senderId, Integer senderChannel, Integer receiverId, Integer receiverChannel)",
-		"Void addLink(Integer senderId, Integer senderChannel, Integer receiverId, Integer, receiverChannel, String name, String description)"
-	],
-	"deprecatedSignatures": [
-		"Void addLink(String senderAddress, String receiverAddress)",
-		"Void addLink(String senderAddress, String receiverAddress, String name, String description)"
-	],
+	"shortDescription": "Removes a direct link between two devices",
+	"description": "This method removes the direct link between two devices.",
+	"signatures": ["Void removeLink(Integer senderId, Integer senderChannel, Integer receiverId, Integer receiverChannel)"],
+	"deprecatedSignatures": ["Void removeLink(String senderAddress, String receiverAddress)"],
 	"parameters": [{
 		"name": "senderId",
 		"type": "Integer",
@@ -41,22 +35,13 @@
 		"type": "String",
 		"description": "The serial number and channel of the receiving device (e.g. a switch), seperated by colon",
 		"exampleValue": "JEQ0098488:1"
-	}, {
-		"name": "name",
-		"type": "String",
-		"description": "A descriptive name for the link",
-		"exampleValue": "Living Room - Light",
-		"default": ""
-	}, {
-		"name": "description",
-		"type": "String",
-		"description": "A short description of the link",
-		"exampleValue": "This is supposed to be a short description, but I have no idea what to write here...",
-		"default": ""
 	}],
 	"returnValue": "Returns Void on success",
 	"errors": [{
 		"code": -2,
 		"description": "At least one of the devices or channels is unknown."
+	},{
+		"code": -6,
+		"description": "The channels are not paired to each other."
 	}]
 }
