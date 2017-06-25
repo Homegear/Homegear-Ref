@@ -1,0 +1,25 @@
+{
+	"name": "HomegearNodeBase::invokeNodeMethod",
+	"category": "Nodes",
+	"shortDescription": "Invokes a node-specific RPC method",
+	"description": "This method is only available within a Node-BLUE node. It invokes a PHP or C++ method defined within another node and can therefore be used for inter-node communication.",
+	"signatures": ["mixed invokeNodeMethod(string nodeId, string methodName, array parameters)"],
+	"parameters": [{
+		"name": "nodeId",
+		"type": "string",
+		"description": "The ID of the node to call the method in.",
+		"exampleValue": "\"9062b368.e6068\""
+	}, {
+		"name": "methodName",
+		"type": "string",
+		"description": "The name of the method to call.",
+		"exampleValue": "myMethod"
+	}, {
+		"name": "parameters",
+		"type": "array",
+		"description": "An indexed array with the parameters to pass to the method.",
+		"exampleValue": "array(5, \"param2\")"
+	}],
+	"returnValue": "Returns the method's return value on success.",
+	"example": "JHRoaXMtPmludm9rZU5vZGVNZXRob2QoIjkwNjJiMzY4LmU2MDY4IiwgIm15TWV0aG9kIiwgYXJyYXkoNSwgInBhcmFtMiIpKTs="
+}

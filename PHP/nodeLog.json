@@ -1,0 +1,24 @@
+{
+	"name": "HomegearNodeBase::log",
+	"category": "Nodes",
+	"shortDescription": "Writes a message to the flows log file",
+	"description": "This method is only available within a Node-BLUE node. It writes a message to the flows log and (if there are errors) to the error log file (/var/log/homegear/homegear-flows.log and /var/log/homegear/homegear-flows.err by default). To write to the main log file (homegear.log and homegear.err), use the RPC method <a href=\"rpc.html#deviceDescription\">writeLog()</a>.",
+	"signatures": ["bool log(int $logLevel, string $message)"],
+	"parameters": [{
+		"name": "logLevel",
+		"type": "int",
+		"description": "This is the log level of the message. If Homegear's log level value is lower than this value, no message is logged. Valid values are:<ul><li>1: Critical</li><li>2: Error</li><li>3: Warning</li><li>4: Info</li><li>5: Debug</li></ul>",
+		"exampleValue": "4"
+	}, {
+		"name": "message",
+		"type": "string",
+		"description": "This is the message that will be written to the log file. The date is prepended automatically.",
+		"exampleValue": "My message"
+	}],
+	"returnValue": "Returns \"true\" on success",
+	"errors": [{
+		"code": "false",
+		"description": "The message was empty."
+	}],
+	"example": "JHRoaXMtPmxvZygzLCAiSGVsbG8gTm9kZS1CTFVFISIpOw=="
+}
