@@ -4,9 +4,9 @@
 	"shortDescription": "Retrieves previously stored data from Homegear's key-value database",
 	"description": "This method returns data that was previously stored in Homegear's key-value database with <a href=\"#setData\">setData</a>.",
 	"signatures": [
-    "Variant getData(String component)",
-    "Variant getData(String component, String dataId)"
-  ],
+		"Variant getData(String component)",
+		"Variant getData(String component, String dataId)"
+	],
 	"parameters": [{
 		"name": "component",
 		"type": "String",

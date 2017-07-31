@@ -1,0 +1,30 @@
+{
+	"name": "influxdbQuery",
+	"category": "InfluxDB",
+	"shortDescription": "Executes an InfluxDB query",
+	"description": "This method executes an InfluxDB query in the database connected to <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"signatures": [
+		"Struct influxdbQuery(Boolean httpPost, String query)"
+	],
+	"parameters": [{
+		"name": "httpPost",
+		"type": "Boolean",
+		"description": "When set to <em>false</em> HTTP GET is used (for <em>SELECT</em> [without <em>INTO</em>] and <em>SHOW</em>), when set to <em>true</em> HTTP POST is used (for everything else).",
+		"exampleValue": "false"
+	}, {
+		"name": "query",
+		"type": "String",
+		"description": "The query to execute.",
+		"exampleValue": "SHOW MEASUREMENTS"
+	}],
+	"returnValue": "Returns a <em>Struct</em> with the result.",
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+aW5mbHV4ZGJRdWVyeShmYWxzZSwgIlNIT1cgTUVBU1VSRU1FTlRTIikpOyc=",
+	"exampleOutput": [{
+		"call": "influxdbQuery(false, \"SHOW MEASUREMENTS\")",
+		"output": "KFN0cnVjdCBsZW5ndGg9MSkKewogIFtyZXN1bHRzXQogIHsKICAgIChBcnJheSBsZW5ndGg9MSkKICAgIHsKICAgICAgKFN0cnVjdCBsZW5ndGg9MikKICAgICAgewogICAgICAgIFtzZXJpZXNdCiAgICAgICAgewogICAgICAgICAgKEFycmF5IGxlbmd0aD0xKQogICAgICAgICAgewogICAgICAgICAgICAoU3RydWN0IGxlbmd0aD0zKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgW2NvbHVtbnNdCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgKEFycmF5IGxlbmd0aD0xKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAoU3RyaW5nKSBuYW1lCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIFtuYW1lXQogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIChTdHJpbmcpIG1lYXN1cmVtZW50cwogICAgICAgICAgICAgIH0KICAgICAgICAgICAgICBbdmFsdWVzXQogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIChBcnJheSBsZW5ndGg9MTkpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgIChBcnJheSBsZW5ndGg9MSkKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIChTdHJpbmcpIGhpc3RvcnlfMTlfMTBfVEVNUEVSQVRVUkUKICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAoQXJyYXkgbGVuZ3RoPTEpCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAoU3RyaW5nKSBoaXN0b3J5XzMwXzEwX1RFTVBFUkFUVVJFCiAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgLgogICAgICAgICAgICAgICAgICAuCiAgICAgICAgICAgICAgICAgIC4KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgW3N0YXRlbWVudF9pZF0KICAgICAgICB7CiAgICAgICAgICAoSW50ZWdlcikgMAogICAgICAgIH0KICAgICAgfQogICAgfQogIH0KfQ=="
+	}],
+	"errors": [{
+		"code": -1,
+		"description": "InfluxDB error. The error struct contains a descriptive error message."
+	}]
+}

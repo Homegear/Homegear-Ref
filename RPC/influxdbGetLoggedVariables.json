@@ -1,0 +1,21 @@
+{
+	"name": "influxdbGetLoggedVariables",
+	"category": "InfluxDB",
+	"shortDescription": "Returns all variables logged by Homegear InfluxDB",
+	"description": "This method returns all variables logged and known by <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"signatures": [
+		"Array<Struct> influxdbGetLoggedVariables()",
+		"Array<Struct> influxdbGetLoggedVariables(Integer peerId)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to get logged variables for. If not specified, all logged variables are returned.",
+		"exampleValue": "12"
+	}],
+	"returnValue": "Returns an <em>Array</em> of all logged variables. Each array element is a <em>Struct</em> with three elements: <ul><li><b>PEERID (Integer):</b> The ID of the logged variable's peer</li><li><b>CHANNEL (Integer):</b> The channel of the logged variable's peer</li><li><b>VARIABLE (String):</b> The name of the logged variable</li></ul>",
+	"exampleOutput": [{
+		"call": "influxdbGetLoggedVariables(31)",
+		"output": "KEFycmF5IGxlbmd0aD0xKQp7CiAgKFN0cnVjdCBsZW5ndGg9MykKICB7CiAgICBbQ0hBTk5FTF0KICAgIHsKICAgICAgKEludGVnZXIpIDEwCiAgICB9CiAgICBbUEVFUklEXQogICAgewogICAgICAoSW50ZWdlcikgMzEKICAgIH0KICAgIFtWQVJJQUJMRV0KICAgIHsKICAgICAgKFN0cmluZykgVEVNUEVSQVRVUkUKICAgIH0KICB9Cn0="
+	}]
+}

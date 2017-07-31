@@ -1,0 +1,26 @@
+{
+	"name": "influxdbWrite",
+	"category": "InfluxDB",
+	"shortDescription": "Executes an InfluxDB write",
+	"description": "This method executes an InfluxDB write in the database connected to <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"signatures": [
+		"Struct influxdbWrite(Boolean useLowResRetentionPolicy, String data)"
+	],
+	"parameters": [{
+		"name": "useLowResRetentionPolicy",
+		"type": "Boolean",
+		"description": "When set to <em>true</em> the data is written to the low resolution retention policy. When set to <em>false</em> the high resolution retention policy is used.",
+		"exampleValue": "false"
+	}, {
+		"name": "data",
+		"type": "String",
+		"description": "The data in InfluxDB's <em>Line Protocol</em> format.",
+		"exampleValue": "myMeasurement value=12.3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success or <em>Struct</em> on InfluxDB error.",
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+aW5mbHV4ZGJXcml0ZShmYWxzZSwgIm15TWVhc3VyZW1lbnQgdmFsdWU9MTIuMyIpKTsn",
+	"errors": [{
+		"code": -1,
+		"description": "InfluxDB error. The error struct contains a descriptive error message."
+	}]
+}
