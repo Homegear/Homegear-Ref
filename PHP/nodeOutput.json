@@ -1,0 +1,18 @@
+{
+	"name": "HomegearNodeBase::output",
+	"category": "Nodes",
+	"shortDescription": "Sends data to a node output",
+	"description": "This method is only available within a Node-BLUE node. It sends data out of the node's outputs to the next connected nodes.",
+	"signatures": ["void output(int outputIndex, array message)"],
+	"parameters": [{
+		"name": "outputIndex",
+		"type": "int",
+		"description": "The zero-based index of the output.",
+		"exampleValue": "2"
+	}, {
+		"name": "message",
+		"type": "array",
+		"description": "The associative array containing the message. There must at least be the element \"payload\"",
+		"exampleValue": "array('payload' => 21.5)"
+	}]
+}
