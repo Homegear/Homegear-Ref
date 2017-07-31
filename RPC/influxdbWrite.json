@@ -2,7 +2,7 @@
 	"name": "influxdbWrite",
 	"category": "InfluxDB",
 	"shortDescription": "Executes an InfluxDB write",
-	"description": "This method executes an InfluxDB write in the database connected to <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"description": "This method executes a manual InfluxDB write in the database connected to <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running. When logging has been enabled for a variable using <a href=\"#influxdbSetLogging\">influxdbSetLogging</a>.",
 	"signatures": [
 		"Struct influxdbWrite(Boolean useLowResRetentionPolicy, String data)"
 	],

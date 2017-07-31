@@ -1,8 +1,8 @@
 {
 	"name": "influxdbSetLogging",
 	"category": "InfluxDB",
-	"shortDescription": "Enables logging of values for a specific variable in InfluxDB",
-	"description": "This method enables logging for a specific device or system variable in InfluxDB. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"shortDescription": "Enables automatic logging of values for a specific variable in InfluxDB",
+	"description": "This method enables automatic logging for a specific device or system variable in InfluxDB. It is only available, when <em>Homegear InfluxDB</em> is installed and running. There is no need to call <a href=\"#influxdbWrite\">influxdbWrite</a>.",
 	"signatures": [
 		"Void influxdbSetLogging(Integer peerId, Integer channel, Integer variable, Variant initialValue, Boolean enableLogging)"
 	],
