@@ -1,0 +1,20 @@
+{
+	"name": "influxdbCreateContinuousQuery",
+	"category": "InfluxDB",
+	"shortDescription": "Creates a continuous query for number measurements with Homegear's default settings to store aggregated data in the low resolution table",
+	"description": "This method creates a continuous query for number measurements (<em>Integer</em> or <em>Float</em>) with Homegear's default settings to store aggregated data in the low resolution table. Use it when you manually created a measurement using <a href=\"#influxdbWrite\">influxdbWrite</a>. That only works if the field key is <em>value</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"signatures": [
+		"Struct influxdbCreateContinuousQuery(String measurement)"
+	],
+	"parameters": [{
+		"name": "measurement",
+		"type": "String",
+		"description": "The name of the measurement to create the continuous query for",
+		"exampleValue": "myMeasurement"
+	}],
+	"returnValue": "Returns <em>Void</em> on success or <em>Struct</em> on InfluxDB error.",
+	"errors": [{
+		"code": -1,
+		"description": "InfluxDB error. The error struct contains a descriptive error message."
+	}]
+}
