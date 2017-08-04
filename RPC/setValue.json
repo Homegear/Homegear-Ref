@@ -1,0 +1,69 @@
+{
+	"name": "setValue",
+	"category": "Devices",
+	"shortDescription": "Sets the value of a device variable",
+	"description": "This method sets the value of a device variable. Note that it can't be used to set configuration parameters.",
+	"signatures": [
+		"Void setValue(Integer peerId, Integer channel, String variableName, Variant value)",
+		"Void setValue(Integer peerId, Integer channel, String variableName, Variant value, Boolean, wait)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to set the value for or \"0\" to set or create a system variable.",
+		"exampleValue": "131"
+	},
+	{
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to set the value for or \"-1\" to set or create a metadata or system variable.",
+		"exampleValue": "3"
+	},
+	{
+		"name": "variableName",
+		"type": "String",
+		"description": "The name of the variable to set.",
+		"exampleValue": "SETPOINT_TEMPERATURE"
+	},
+	{
+		"name": "value",
+		"type": "Variant",
+		"description": "The new value of the variable. Please make sure the passed variable has the correct type (for languages with implied type conversions \"21.0\" for <em>Float</em> and not \"21\"). When the type of the variable is <em>Float</em> or <em>Integer</em>, instead of passing the actual new value, you can also pass the following operations, followed without space by a number. The type of the value needs to be <em>String</em>: <ul><li>\"+=\"</li><li>\"-=\"</li><li>\"*=\"</li><li>\"/=\"</li><li>\"!\"</li></ul> \"!\" toggles a Boolean value and doesn't need to be followed by number. You don't have to check for minimum or maximum values, as the new value will automatically be capped. Example value: <em>\"+=0.5\"</em>",
+		"exampleValue": "21.0"
+	},
+	{
+		"name": "wait",
+		"type": "Boolean",
+		"description": "Set to \"false\" if you don't want to wait for a response from the device. By default Homegear waits for a response when possible and returns an error when there is none. In some device families setting \"wait\" to \"false\" has no effect.",
+		"exampleValue": "true",
+		"default": "true"
+	},
+	{
+		"name": "address",
+		"type": "String",
+		"description": "The serial number and channel of the device to set the value for (separated by a colon)",
+		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
+	}],
+	"deprecatedSignatures": [
+		"Void setValue(String address, String variableName, Variant value)",
+		"Void setValue(String address, String variableName, Variant value, Boolean, wait)"
+	],
+	"returnValue": "Returns Void on success",
+	"errors": [{
+		"code": -2,
+		"description": "Peer or channel are unknown."
+	}, {
+		"code": -5,
+		"description": "Unknown parameter."
+	}, {
+		"code": -6,
+		"description": "Parameter is readonly."
+	}, {
+		"code": -100,
+		"description": "No answer from device."
+	}, {
+		"code": -101,
+		"description": "Device returned error."
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnNldFZhbHVlKDAsIC0xLCAiVEVTVCIsIDUuNSk7Jwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmdldFZhbHVlKDAsIC0xLCAiVEVTVCIpKTsn"
+}

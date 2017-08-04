@@ -1,0 +1,58 @@
+{
+	"name": "setTeam",
+	"category": "Devices",
+	"shortDescription": "Adds a device to or removes it from a team",
+	"description": "This method adds a device to or removes it from a team. A team is a group of devices directly linked to each other. E. g. Sonos speakers or HomeMatic smoke detectors.",
+	"signatures": [
+		"Void setTeam(Integer peerId, Integer channel)",
+		"Void setTeam(Integer peerId, Integer channel, Integer teamId, Integer teamChannel)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The id of the peer to add to the team.",
+		"exampleValue": "131"
+	},
+	{
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to add to the team or \"-1\" if not applicable.",
+		"exampleValue": "3"
+	},
+	{
+		"name": "teamId",
+		"type": "Integer",
+		"description": "The id of a the team. If teamID is \"0\" or not set, the peer is removed from the team.",
+		"exampleValue": "132"
+	},
+	{
+		"name": "teamChannel",
+		"type": "Integer",
+		"description": "The channel of the team to add the peer to or \"-1\" if not applicable.",
+		"exampleValue": "true",
+		"default": "true"
+	},
+	{
+		"name": "peerAddress",
+		"type": "String",
+		"description": "The serial number and channel of the peer to add to the team (separated by a colon)",
+		"exampleValue": "JEQ0123457:1\nor\nJEQ0123457"
+	},
+	{
+		"name": "teamAddress",
+		"type": "String",
+		"description": "The serial number and channel of the team to add to the peer to (separated by a colon)",
+		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
+	}],
+	"deprecatedSignatures": [
+		"Void setTeam(String peerAddress, String teamAddress)",
+	],
+	"returnValue": "Returns Void on success",
+	"errors": [{
+		"code": -2,
+		"description": "Peer/team or channel are unknown."
+	}, {
+		"code": -6,
+		"description": "The channel or device doesn't support teams or the channels are incompatible to each other."
+	}]
+}
