@@ -45,7 +45,7 @@
 		"exampleValue": "JEQ0123456:1\nor\nJEQ0123456"
 	}],
 	"deprecatedSignatures": [
-		"Void setTeam(String peerAddress, String teamAddress)",
+		"Void setTeam(String peerAddress, String teamAddress)"
 	],
 	"returnValue": "Returns Void on success",
 	"errors": [{
