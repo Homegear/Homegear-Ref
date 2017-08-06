@@ -26,12 +26,12 @@
 	},{
 		"name": "requestFromDevice",
 		"type": "Boolean",
-		"description": "When set to \"true\" Homegear tries to read the value from the device instead of returning the cached value. This is not possible for all devices.",
+		"description": "When set to <em>true</em> Homegear tries to read the value from the device instead of returning the cached value. This is not possible for all devices.",
 		"exampleValue": "true"
 	},{
 		"name": "requestFromDevice",
 		"type": "Boolean",
-		"description": "Only relevant when \"requestFromDevice\" is \"true\". When set to \"true\" the method returns immediately without waiting for the new value. The new value is sent as an event as soon as it is returned from the device.",
+		"description": "Only relevant when <em>requestFromDevice</em> is <em>true</em>. When set to <em>true</em> the method returns immediately without waiting for the new value. The new value is sent as an event as soon as it is returned from the device.",
 		"exampleValue": "true"
 	},{
 		"name": "address",
@@ -53,5 +53,6 @@
 	},{
     "call": "getValue(98, 4, \"TEMPERATURE\")",
     "output": "KEZsb2F0KSAyMi4x"
-  }]
+  }],
+  "example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnNldFZhbHVlKDAsIC0xLCAiVEVTVCIsIDUuNSk7Jwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmdldFZhbHVlKDAsIC0xLCAiVEVTVCIpKTsn"
 }
