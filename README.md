@@ -9,12 +9,13 @@ Note that a lot of the reference entries do not follow this guideline. Help woul
 ## General
 
 * Component names: `b`
+* Inline code: `em`
 
 ## Variables
 
 * Names: `em`
 * Types: `em`
-* Homegear-specific Types: `em` followed by `a` with a link to the type.
+* Homegear-specific types: `em` followed by `a` with a link to the type.
 
 ## RPC Methods:
 
