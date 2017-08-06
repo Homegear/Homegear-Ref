@@ -14,8 +14,9 @@ Note that a lot of the reference entries do not follow this guideline. Help woul
 ## Variables
 
 * Names: `em`
-* Types: `em`
+* Types: `em`. Always start with a capital letter. Types are: `Array`, `Boolean`, `Float`, `Integer`, `String`, `Struct` and `Variant`. For `Array` also specify the element type. E. g.: `Array<String>`.
 * Homegear-specific types: `em` followed by `a` with a link to the type.
+* String values in `exampleValue`: Without single or double quote `"`.
 
 ## RPC Methods:
 

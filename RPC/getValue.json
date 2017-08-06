@@ -2,7 +2,7 @@
 	"name": "getValue",
 	"category": "Devices",
 	"shortDescription": "Returns the value of a device variable",
-	"description": "This method returns a parameter value of the VALUES parameter set.",
+	"description": "This method returns the value of a device variable.",
 	"signatures": [
 		"Variant getValue(Integer peerId, Integer channel, String parameterName)",
     "Variant getValue(Integer peerId, Integer channel, String parameterName, Boolean requestFromDevice)",

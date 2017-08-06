@@ -2,20 +2,20 @@
 	"name": "setSystemVariable",
 	"category": "System Variables",
 	"shortDescription": "Creates or updates a system variable",
-	"description": "This method can be used to store arbitrary data in Homegear's database. You can retrieve this data later by calling <a href=\"#getSystemVariable\">getSystemVariable</a>.",
+	"description": "This method can be used to store arbitrary data in Homegear's database. You can retrieve this data later by calling <em><a href=\"#getSystemVariable\">getSystemVariable()</a></em>.",
 	"signatures": ["Void setSystemVariable(String name, Variant value)"],
 	"parameters": [{
 		"name": "name",
 		"type": "String",
 		"description": "A name of your choice",
-		"exampleValue": "\"myVariable\""
+		"exampleValue": "myVariable"
 	}, {
 		"name": "value",
 		"type": "Variant",
 		"description": "The value to be stored",
 		"exampleValue": "43"
 	}],
-	"returnValue": "Returns Void on success",
+	"returnValue": "Returns <em>Void</em> on success",
 	"errors": [{
 		"code": -32700,
 		"description": "Data could not be encoded to binary format."
@@ -25,5 +25,6 @@
 	}, {
 		"code": -32500,
 		"description": "The limit of 1 million metadata entries has been reached."
-	}]
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnNldFN5c3RlbVZhcmlhYmxlKCJURVNUIiwgIkhlbGxvIEhvbWVnZWFyIik7Jwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmdldFN5c3RlbVZhcmlhYmxlKCJURVNUIikpOyc="
 }
