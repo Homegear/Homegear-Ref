@@ -1,0 +1,25 @@
+{
+	"name": "enableEvent",
+	"category": "Events",
+	"shortDescription": "Enables or disables an event",
+	"description": "This method enables or disables an event previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
+	"signatures": [
+		"Void enableEvent(String id, Boolean enable)"
+	],
+	"parameters": [{
+		"name": "id",
+		"type": "String",
+		"description": "The id of the event as defined by <em><a href=\"#addEvent\">addEvent()</a></em>.",
+		"exampleValue": "MyCustomEvent"
+	}, {
+		"name": "enable",
+		"type": "Boolean",
+		"description": "<em>true</em> to enable and <em>false</em> to disable the event.",
+		"exampleValue": "true"
+	}],
+	"returnValue": "Returns <em>Void</em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}

@@ -1,0 +1,20 @@
+{
+	"name": "getEvent",
+	"category": "Events",
+	"shortDescription": "Returns <em><a href=\"#eventDescription\">EventDescription</a></em> for a single event",
+	"description": "This method returns <em><a href=\"#eventDescription\">EventDescription</a></em> of an event previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
+	"signatures": [
+		"Void getEvent(String id)"
+	],
+	"parameters": [{
+		"name": "id",
+		"type": "String",
+		"description": "The id of the event as defined by <em><a href=\"#addEvent\">addEvent()</a></em>.",
+		"exampleValue": "MyCustomEvent"
+	}],
+	"returnValue": "Returns <em><a href=\"#eventDescription\">EventDescription</a></em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}

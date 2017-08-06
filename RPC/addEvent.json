@@ -2,7 +2,7 @@
 	"name": "addEvent",
 	"category": "Events",
 	"shortDescription": "Creates an event to Homegear's event engine",
-	"description": "This method adds a triggered or timed event to Homegear. When an event is triggered, a XML-RPC method of your choice is executed (including <em><a href=\"#addEvent\">runScript()</a></em> for complex operations). Triggered events are checked when Homegear receives a packet from a device. They are raised e. g. when a device's parameter is changed. Events can also be triggered by system or metadata variable changes. Timed events can be triggered at a specific time point or recurrently (e. g. every two minutes).",
+	"description": "This method adds a triggered or timed event to Homegear. When an event is triggered, a XML-RPC method of your choice is executed (including <em><a href=\"#runScript\">runScript()</a></em> for complex operations). Triggered events are checked when Homegear receives a packet from a device. They are raised e. g. when a device's parameter is changed. Events can also be triggered by system or metadata variable changes. Timed events can be triggered at a specific time point or recurrently (e. g. every two minutes).",
 	"signatures": [
 		"Void addEvent(EventDescription event)"
 	],
