@@ -1,0 +1,20 @@
+{
+	"name": "addEvent",
+	"category": "Events",
+	"shortDescription": "Creates an event to Homegear's event engine",
+	"description": "This method adds a triggered or timed event to Homegear. When an event is triggered, a XML-RPC method of your choice is executed (including <em><a href=\"#addEvent\">runScript()</a></em> for complex operations). Triggered events are checked when Homegear receives a packet from a device. They are raised e. g. when a device's parameter is changed. Events can also be triggered by system or metadata variable changes. Timed events can be triggered at a specific time point or recurrently (e. g. every two minutes).",
+	"signatures": [
+		"Void addEvent(EventDescription event)"
+	],
+	"parameters": [{
+		"name": "event",
+		"type": "EventDescription",
+		"description": "The <em><a href=\"#eventDescription\">EventDescription</a></em> defining the event.",
+		"exampleValue": "(Struct length=12)\n{\n  [TYPE]\n  {\n    (Integer) 0\n  }\n  [ID]\n  {\n    (String) UG Treppenhaus Licht\n  }\n  [PEERID]\n  {\n    (Integer) 71\n  }\n  [PEERCHANNEL]\n  {\n    (\nInteger) 1  }\n  [VARIABLE]\n  {\n    (String) MOTION\n  }\n  [TRIGGER]\n  {\n    (Integer) 8\n  }\n  [TRIGGERVALUE]\n  {\n    (Boolean) 1\n  }\n  [EVENTMETHOD]\n  {\n    (String) \nsetValue  }\n  [EVENTMETHODPARAMS]\n  {\n    (Array length=3)\n    {\n      (String) JEQ0101518:1\n      (String) STATE\n      (Boolean) 1\n    }\n  }\n  [RESETAFTER]\n  {\n    (Struct length=5)\n    {\n      [FACTOR]\n      {\n        (Float) 2\n      }\n      [INITIALTIME]\n      {\n        (Integer) 45\n      }\n      [LIMIT]\n      {\n        (Integer) 180\n      }\n      [OPERATION]\n      {\n        (Integer) 3\n      }\n      [RESETAFTER]\n      {\n        (Integer) 240\n      }\n    }\n  }\n  [RESETMETHOD]\n  {\n    (String) setValue\n  }\n  [RESETMETHODPARAMS]\n  {\n    (Array length=3)\n    {\n      (String) JEQ0101518:1\n      (String) STATE\n      (Boolean) 0\n    }\n  }\n}"
+	}],
+	"returnValue": "Returns <em>Void</em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}

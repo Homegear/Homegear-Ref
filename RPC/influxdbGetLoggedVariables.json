@@ -2,7 +2,7 @@
 	"name": "influxdbGetLoggedVariables",
 	"category": "InfluxDB",
 	"shortDescription": "Returns all variables logged by Homegear InfluxDB",
-	"description": "This method returns all variables logged and known by <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"description": "This method returns all variables logged and known by <b>Homegear InfluxDB</b>. It is only available, when <b>Homegear InfluxDB</b> is installed and running.",
 	"signatures": [
 		"Array<Struct> influxdbGetLoggedVariables()",
 		"Array<Struct> influxdbGetLoggedVariables(Integer peerId)"

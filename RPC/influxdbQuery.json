@@ -2,7 +2,7 @@
 	"name": "influxdbQuery",
 	"category": "InfluxDB",
 	"shortDescription": "Executes an InfluxDB query",
-	"description": "This method executes an InfluxDB query in the database connected to <em>Homegear InfluxDB</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"description": "This method executes an InfluxDB query in the database connected to <b>Homegear InfluxDB</b>. It is only available, when <b>Homegear InfluxDB</b> is installed and running.",
 	"signatures": [
 		"Struct influxdbQuery(Boolean httpPost, String query)"
 	],

@@ -2,7 +2,7 @@
 	"name": "influxdbGetDatabase",
 	"category": "InfluxDB",
 	"shortDescription": "Returns the name of the InfluxDB database used by Homegear",
-	"description": "This method returns the name of the InfluxDB database used by Homegear. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"description": "This method returns the name of the InfluxDB database used by Homegear. It is only available, when <b>Homegear InfluxDB</b> is installed and running.",
 	"signatures": [
 		"String influxdbGetDatabase()"
 	],

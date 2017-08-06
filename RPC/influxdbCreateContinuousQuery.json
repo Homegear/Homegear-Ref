@@ -2,7 +2,7 @@
 	"name": "influxdbCreateContinuousQuery",
 	"category": "InfluxDB",
 	"shortDescription": "Creates a continuous query for number measurements with Homegear's default settings to store aggregated data in the low resolution table",
-	"description": "This method creates a continuous query for number measurements (<em>Integer</em> or <em>Float</em>) with Homegear's default settings to store aggregated data in the low resolution table. Use it when you manually created a measurement using <a href=\"#influxdbWrite\">influxdbWrite</a>. That only works if the field key is <em>value</em>. It is only available, when <em>Homegear InfluxDB</em> is installed and running.",
+	"description": "This method creates a continuous query for number measurements (<em>Integer</em> or <em>Float</em>) with Homegear's default settings to store aggregated data in the low resolution table. Use it when you manually created a measurement using <a href=\"#influxdbWrite\">influxdbWrite</a>. That only works if the field key is <em>value</em>. It is only available, when <b>Homegear InfluxDB</b> is installed and running.",
 	"signatures": [
 		"Struct influxdbCreateContinuousQuery(String measurement)"
 	],

@@ -2,7 +2,7 @@
 	"name": "influxdbWrite",
 	"category": "InfluxDB",
 	"shortDescription": "Executes an InfluxDB write",
-	"description": "This method executes a manual InfluxDB write in the database connected to <em>Homegear InfluxDB</em>. This can be used to log your own values e. g. from within your scripts or Node-BLUE. It is only available, when <em>Homegear InfluxDB</em> is installed and running. When logging has been enabled for a variable using <a href=\"#influxdbSetLogging\">influxdbSetLogging</a> there is no need to call <em>influxdbWrite</em>.",
+	"description": "This method executes a manual InfluxDB write in the database connected to <b>Homegear InfluxDB</b>. This can be used to log your own values e. g. from within your scripts or Node-BLUE. It is only available, when <b>Homegear InfluxDB</b> is installed and running. When logging has been enabled for a variable using <a href=\"#influxdbSetLogging\">influxdbSetLogging</a> there is no need to call <em>influxdbWrite</em>.",
 	"signatures": [
 		"Struct influxdbWrite(Boolean useLowResRetentionPolicy, String data)"
 	],
@@ -14,7 +14,7 @@
 	}, {
 		"name": "data",
 		"type": "String",
-		"description": "The data in InfluxDB's <em>Line Protocol</em> format.",
+		"description": "The data in InfluxDB's <b>Line Protocol</b> format.",
 		"exampleValue": "myMeasurement value=12.3"
 	}],
 	"returnValue": "Returns <em>Void</em> on success or <em>Struct</em> on InfluxDB error.",

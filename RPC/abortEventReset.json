@@ -1,0 +1,20 @@
+{
+	"name": "abortEventReset",
+	"category": "Events",
+	"shortDescription": "Aborts an event's reset timer",
+	"description": "In the <em><a href=\"#eventDescription\">EventDescription</a></em> you can define a reset method, which is executed some time after the event is triggered. To abort the reset timer and prevent the execution of this reset method, call <em><a href=\"#abortEventReset\">abortEventReset()</a></em>.",
+	"signatures": [
+		"Void abortEventReset(String id)"
+	],
+	"parameters": [{
+		"name": "id",
+		"type": "String",
+		"description": "The id of the event as defined by <em><a href=\"#addEvent\">addEvent()</a></em>.",
+		"exampleValue": "MyCustomEvent"
+	}],
+	"returnValue": "Returns <em>Void</em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}
