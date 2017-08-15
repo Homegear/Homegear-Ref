@@ -1,0 +1,25 @@
+{
+	"name": "updateCategory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Updates the translations of an existing category",
+	"description": "This method updates the translations of an existing category.",
+	"signatures": [
+		"Void updateCategory(Integer categoryId, Struct translations)"
+	],
+	"parameters": [{
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}, {
+		"name": "translations",
+		"type": "Struct",
+		"description": "The name of the category in different languages. The keys are the lower case ISO 639-1 language codes and the upper case ISO 3166-1 alpha-2 country codes seperated by a dash (e. g. en-US or fr-FR). The values are the category names in the different languages.",
+		"exampleValue": "(Struct length=2)\n{\n  [en-US]\n  {\n    (String) Light\n  }\n  [de-DE]\n  {\n    (String) Licht\n  }\n}"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Category unknown."
+	}]
+}

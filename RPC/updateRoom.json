@@ -1,0 +1,25 @@
+{
+	"name": "updateRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Updates the translations of an existing room",
+	"description": "This method updates the translations of an existing room.",
+	"signatures": [
+		"Void updateRoom(Integer roomId, Struct translations)"
+	],
+	"parameters": [{
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}, {
+		"name": "translations",
+		"type": "Struct",
+		"description": "The name of the room in different languages. The keys are the lower case ISO 639-1 language codes and the upper case ISO 3166-1 alpha-2 country codes seperated by a dash (e. g. en-US or fr-FR). The values are the room names in the different languages.",
+		"exampleValue": "(Struct length=2)\n{\n  [en-US]\n  {\n    (String) Living room\n  }\n  [de-DE]\n  {\n    (String) Wohnzimmer\n  }\n}"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Room unknown."
+	}]
+}

@@ -1,0 +1,21 @@
+{
+	"name": "removeCategoryFromDevice",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a category from a device",
+	"description": "This method removes a category from a device.",
+	"signatures": [
+		"Void removeCategoryFromDevice(Integer peerId, Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to remove the category from.",
+		"exampleValue": "12"
+	}, {
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success."
+}

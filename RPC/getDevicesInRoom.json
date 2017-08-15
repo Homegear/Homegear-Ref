@@ -1,0 +1,20 @@
+{
+	"name": "getDevicesInRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns all devices of a room",
+	"description": "This method returns all devices of a room.",
+	"signatures": [
+		"Array&lt;Integer&gt; getDevicesInRoom(Integer roomId)"
+	],
+	"parameters": [{
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns an <em>Array&lt;Integer&gt;</em> with all peer IDs assigned to the specified room.",
+	"errors": [{
+		"code": -1,
+		"description": "Room unknown."
+	}]
+}

@@ -1,0 +1,21 @@
+{
+	"name": "removeDeviceFromRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a device from a room",
+	"description": "This method removes a device from a room.",
+	"signatures": [
+		"Void removeDeviceFromRoom(Integer peerId, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to remove from the room.",
+		"exampleValue": "12"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success."
+}
