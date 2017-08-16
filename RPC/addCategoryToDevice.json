@@ -17,5 +17,12 @@
 		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
 		"exampleValue": "3"
 	}],
-	"returnValue": "Returns <em>Void</em> on success."
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown category."
+	}, {
+		"code": -2,
+		"description": "Unknown device."
+	}]
 }
