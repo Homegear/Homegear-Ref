@@ -1,0 +1,20 @@
+{
+	"name": "deleteRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Deletes a room",
+	"description": "This method deletes a room.",
+	"signatures": [
+		"Void deleteRoom(Integer roomId)"
+	],
+	"parameters": [{
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Room unknown."
+	}]
+}
