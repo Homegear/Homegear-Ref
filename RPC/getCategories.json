@@ -4,8 +4,8 @@
 	"shortDescription": "Returns all category IDs and one or all translations",
 	"description": "This method returns all category IDs and one or all translations.",
 	"signatures": [
-		"Struct getCategories()",
-		"Struct getCategories(String languageCode)"
+		"Array&lt;Struct&gt; getCategories()",
+		"Array&lt;Struct&gt; getCategories(String languageCode)"
 	],
 	"parameters": [{
 		"name": "languageCode",
@@ -13,5 +13,5 @@
 		"description": "A lower case ISO 639-1 language and upper case ISO 3166-1 alpha-2 country code seperated by a dash.",
 		"exampleValue": "en-GB"
 	}],
-	"returnValue": "Returns a <em>Struct</em> with all categories on success. When <em>languageCode</em> is specified each <em>Struct</em> element is again a <em>Struct</em> with two entries: The <em>ID</em> of type <em>Integer</em> and <em>NAME</em> of type <em>String</em>. If the specified translation is unknown an empty String is returned. When <em>languageCode</em> is not specified each <em>Struct</em> element is also a <em>Struct</em> with two entries: The <em>ID</em> of type <em>Integer</em> and <em>TRANSLATIONS</em> of type <em>Array&lt;String&gt;</em>."
+	"returnValue": "Returns an <em>Array&lt;Struct&gt;</em> with all categories on success. When <em>languageCode</em> is specified each <em>Array</em> element is a <em>Struct</em> with two entries: The <em>ID</em> of type <em>Integer</em> and <em>NAME</em> of type <em>String</em>. If the specified translation is unknown an empty String is returned. When <em>languageCode</em> is not specified each <em>Array</em> element is also a <em>Struct</em> with two entries: The <em>ID</em> of type <em>Integer</em> and <em>TRANSLATIONS</em> of type <em>Struct</em> with the language code as key and the name as value."
 }
