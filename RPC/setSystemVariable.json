@@ -3,7 +3,10 @@
 	"category": "System Variables",
 	"shortDescription": "Creates or updates a system variable",
 	"description": "This method can be used to store arbitrary data in Homegear's database. You can retrieve this data later by calling <em><a href=\"#getSystemVariable\">getSystemVariable()</a></em>.",
-	"signatures": ["Void setSystemVariable(String name, Variant value)"],
+	"signatures": [
+		"Void setSystemVariable(String name)",
+		"Void setSystemVariable(String name, Variant value)"
+	],
 	"parameters": [{
 		"name": "name",
 		"type": "String",
@@ -12,7 +15,7 @@
 	}, {
 		"name": "value",
 		"type": "Variant",
-		"description": "The value to be stored",
+		"description": "The value to be stored. When ommited the type of the variable is set to <em>Void</em>.",
 		"exampleValue": "43"
 	}],
 	"returnValue": "Returns <em>Void</em> on success",

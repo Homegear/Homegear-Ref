@@ -3,7 +3,10 @@
 	"category": "Metadata",
 	"shortDescription": "Stores metadata for a peer",
 	"description": "This method can be used to store metadata for devices in Homegear's database. You can retrieve this metadata later by calling <a href=\"#getMetadata\">getMetadata</a>.",
-	"signatures": ["Void setMetadata(Integer peerId, String dataId, Variant value)"],
+	"signatures": [
+		"Void setMetadata(Integer peerId, String dataId)",
+		"Void setMetadata(Integer peerId, String dataId, Variant value)"
+	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
@@ -22,7 +25,7 @@
 	}, {
 		"name": "value",
 		"type": "Variant",
-		"description": "The value you want to store",
+		"description": "The value you want to store. When ommited the type of the variable is set to <em>Void</em>.",
 		"exampleValue": "43"
 	}],
 	"deprecatedSignatures": ["Void setMetadata(String address, String dataId, Variant value)"],
