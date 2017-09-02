@@ -29,7 +29,7 @@
 	}, {
 		"name": "value",
 		"type": "Variant",
-		"description": "The new value. The type of the value is defined in the XML file, by <em><a href=\"#setSystemVariable\">setSystemVariable()</a></em> or <em><a href=\"#setMetadata\">setMetadata()</a></em>. When a system variable is deleted, value is a <em>Struct</em> with two elements: <em>TYPE</em> with the integer value </em>0</em> and <em>CODE</em> with integer value <em>1</em>. When a metadata variable is deleted, value is also a <em>Struct</em> with the same two keys, but <em>TYPE</em> has a value of <em>1</em>.",
+		"description": "The new value. The type of the value is defined in the XML file, by <em><a href=\"#setSystemVariable\">setSystemVariable()</a></em> or <em><a href=\"#setMetadata\">setMetadata()</a></em>. When a system variable is deleted, value is a <em>Struct</em> with two elements: <em>TYPE</em> with the integer value <em>0</em> and <em>CODE</em> with integer value <em>1</em>. When a metadata variable is deleted, value is also a <em>Struct</em> with the same two keys, but <em>TYPE</em> has a value of <em>1</em>.",
 		"exampleValue": "1"
 	}],
 	"returnValue": "Returns <em>Void</em> on success."
