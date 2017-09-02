@@ -1,7 +1,7 @@
 {
 	"name": "event",
 	"category": "Event Server - General",
-	"shortDescription": "Called on variable changes.",
+	"shortDescription": "Called on variable changes",
 	"description": "This method is called when a parameter of the parameter set <em>VALUES</em>, a system variable or metadata of a device is changed.",
 	"signatures": [
 		"Void event(String interfaceId, Integer peerId, Integer channel, String variable, Variant value)"

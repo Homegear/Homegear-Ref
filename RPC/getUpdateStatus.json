@@ -1,7 +1,7 @@
 {
 	"name": "getUpdateStatus",
 	"category": "Firmware Updates",
-	"shortDescription": "Returns firmware update status information.",
+	"shortDescription": "Returns firmware update status information",
 	"description": "This method returns the progress and result of one or more firmware updates.",
 	"signatures": [
 		"Struct getUpdateStatus()"

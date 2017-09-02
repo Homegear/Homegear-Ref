@@ -1,7 +1,7 @@
 {
 	"name": "listEvents",
 	"category": "Events",
-	"shortDescription": "Returns all events.",
+	"shortDescription": "Returns all events",
 	"description": "This method returns an <em>Array</em> of type <em><a href=\"#eventDescription\">EventDescription</a></em> with all events previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
 	"signatures": [
 		"Array&lt;EventDescription&gt; listEvents()",

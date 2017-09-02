@@ -1,7 +1,7 @@
 {
 	"name": "updateFirmware",
 	"category": "Firmware Updates",
-	"shortDescription": "Updates the firmware of a device.",
+	"shortDescription": "Updates the firmware of a device",
 	"description": "This method installs a firmware update on one or more devices. The firmware file has to be located in Homegear's firmware directory (default: <em>/usr/share/homegear/firmware</em>). You can use <em><a href=\"#getDeviceDescription\">getDeviceDescription()</a></em> to find out, if a firmware update is available for a device.",
 	"signatures": [
 		"(1) Void updateFirmware(Integer peerId)",
