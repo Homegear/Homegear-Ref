@@ -1,6 +1,6 @@
 {
 	"name": "error",
-	"category": "General",
+	"category": "Event Server - General",
 	"shortDescription": "Called when an error occurs in Homegear.",
 	"description": "This method is called when an error occurs within Homegear. It is raised for messages of log level 1 (critical), 2 (error) and 3 (warning).",
 	"signatures": [
