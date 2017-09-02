@@ -1,0 +1,20 @@
+{
+	"name": "removeEvent",
+	"category": "Events",
+	"shortDescription": "Removes an event",
+	"description": "This method removes an event previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
+	"signatures": [
+		"Void removeEvent(String id)"
+	],
+	"parameters": [{
+		"name": "id",
+		"type": "String",
+		"description": "The id of the event as defined by <em><a href=\"#addEvent\">addEvent()</a></em>.",
+		"exampleValue": "MyCustomEvent"
+	}],
+	"returnValue": "Returns <em>Void</em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}

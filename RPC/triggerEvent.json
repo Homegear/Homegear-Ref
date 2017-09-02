@@ -1,0 +1,20 @@
+{
+	"name": "triggerEvent",
+	"category": "Events",
+	"shortDescription": "Manually triggers an event",
+	"description": "This method Manually triggers an event previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
+	"signatures": [
+		"Void triggerEvent(String id)"
+	],
+	"parameters": [{
+		"name": "id",
+		"type": "String",
+		"description": "The id of the event as defined by <em><a href=\"#addEvent\">addEvent()</a></em>.",
+		"exampleValue": "MyCustomEvent"
+	}],
+	"returnValue": "Returns <em>Void</em> on success",
+	"errors": [{
+		"code": -5,
+		"description": "Unknown event."
+	}]
+}
