@@ -29,7 +29,7 @@
 		"description": "When set to <em>true</em> Homegear tries to read the value from the device instead of returning the cached value. This is not possible for all devices.",
 		"exampleValue": "true"
 	},{
-		"name": "requestFromDevice",
+		"name": "asynchronous",
 		"type": "Boolean",
 		"description": "Only relevant when <em>requestFromDevice</em> is <em>true</em>. When set to <em>true</em> the method returns immediately without waiting for the new value. The new value is sent as an event as soon as it is returned from the device.",
 		"exampleValue": "true"
