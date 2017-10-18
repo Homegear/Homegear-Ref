@@ -1,0 +1,35 @@
+{
+	"name": "updateFirmware",
+	"category": "Firmware Updates",
+	"shortDescription": "Updates the firmware of a device",
+	"description": "This method installs a firmware update on one or more devices. The firmware file has to be located in Homegear's firmware directory (default: <em>/usr/share/homegear/firmware</em>). You can use <em><a href=\"#getDeviceDescription\">getDeviceDescription()</a></em> to find out, if a firmware update is available for a device.",
+	"signatures": [
+		"(1) Void updateFirmware(Integer peerId)",
+		"(2) Void updateFirmware(Integer peerId, Boolean manually)",
+		"(3) Void updateFirmware(Array&lt;Integer&gt; peerIds)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to update. Homegear will try to enable the device's update mode automatically. If this doesn't work or the update fails and the device only boots into update mode, set <em>manually</em> to <em>true</em>.",
+		"exampleValue": "12"
+	}, {
+		"name": "manually",
+		"type": "Boolean",
+		"description": "When set to <em>true</em> Homegear will wait for about 50 seconds for the device to enter the update mode and send an update request.",
+		"exampleValue": "true"
+	}, {
+		"name": "peerIds",
+		"type": "Array&lt;Integer&gt;",
+		"description": "An <em>Array</em> of peer IDs to update. All provided devices will be updated sequentially. You can only provice IDs from one device family (e. g. HomeMatic BidCoS).",
+		"exampleValue": "(Array length=4)\n{\n  (Integer) 12\n  (Integer) 15\n  (Integer) 18\n  (Integer) 23\n}"
+	}],
+	"returnValue": "Returns <em>true</em> on success for compatability reasons.",
+	"errors": [{
+		"code": -2,
+		"description": "Device or channel unknown or array of peers contains devices from multiple families."
+	}, {
+		"code": -32500,
+		"description": "Homegear is already updating devices."
+	}]
+}

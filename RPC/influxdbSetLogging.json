@@ -25,12 +25,12 @@
 		"name": "initialValue",
 		"type": "Variant",
 		"description": "Mandatory when <em>enableLogging</em> is <em>true</em>. Ignored when it is <em>false</em>. The initial value to write into the database. You can for example pass the output of <a href=\"#getValue\">getValue</a>. <em>initialValue</em> is used to determine the type of the variable.",
-		"exampleValue": "TEMPERATURE"
+		"exampleValue": "21.2"
 	}, {
 		"name": "enableLogging",
 		"type": "Boolean",
 		"description": "<em>true</em> enables logging of variable value changes, <em>false</em> disables it and deletes all previously logged entries from the database.",
-		"exampleValue": "TEMPERATURE"
+		"exampleValue": "true"
 	}],
 	"returnValue": "Returns <em>Void</em> on success.",
 	"errors": [{

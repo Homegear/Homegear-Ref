@@ -10,12 +10,12 @@
 	"parameters": [{
 		"name": "component",
 		"type": "String",
-		"description": "The name of the component to get values for as used in <a href=\"#setData\">setData</a>.",
+		"description": "The name of the component to get values for as used in <em><a href=\"#setData\">setData()</a></em>.",
 		"exampleValue": "myaddon"
 	}, {
 		"name": "key",
 		"type": "String",
-		"description": "The key as defined in <a href=\"#setData\">setData</a>. If ommited all values for the component are returned.",
+		"description": "The key as defined in <em><a href=\"#setData\">setData()</a></em>. If ommited all values for the component are returned.",
 		"exampleValue": "mydata",
 		"default": "void"
 	}],

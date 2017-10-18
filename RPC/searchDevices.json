@@ -14,5 +14,5 @@
 		"exampleValue": "1",
 		"default": "void"
 	}],
-	"returnValue": "Returns the number of devices that the method found"
+	"returnValue": "Returns the number of devices that the method found or <em>-2</em> if the search is run in background. If the latter is the case newly found devices are broadcast by <em><a href=\"#newDevices\">newDevices()</a></em>."
 }

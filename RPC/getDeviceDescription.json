@@ -2,14 +2,14 @@
 	"name": "getDeviceDescription",
 	"category": "Devices",
 	"shortDescription": "Returns static information about a device",
-	"description": "This method returns the a struct of type <a href=\"#deviceDescription\">DeviceDescription</a> of the specified device or channel.",
+	"description": "This method returns the a struct of type <em><a href=\"#deviceDescription\">DeviceDescription</a></em> of the specified device or channel.",
 	"signatures": [
 		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel)",
-		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel, Array<String> fields)"
+		"DeviceDescription getDeviceDescription(Integer peerId, Integer channel, Array&lt;String&gt; fields)"
 	],
 	"deprecatedSignatures": [
 		"DeviceDescription getDeviceDescription(String address)",
-		"DeviceDescription getDeviceDescription(String address, Array<String> fields)"
+		"DeviceDescription getDeviceDescription(String address, Array&lt;String&gt; fields)"
 	],
 	"parameters": [{
 		"name": "peerId",
@@ -29,16 +29,16 @@
 	}, {
 		"name": "fields",
 		"type": "Array<String>",
-		"description": "When fields is not empty, only the struct elements defined in the array (e. g. \"ID\" or \"TYPE\") are returned. This saves ressources.",
+		"description": "When fields is not empty, only the struct elements defined in the array (e. g. <em>ID</em> or <em>TYPE</em>) are returned. This saves ressources.",
 		"exampleValue": "[ \"ID\", \"TYPE\" ]"
 	}],
-	"returnValue": "Returns a struct of type <a href=\"#deviceDescription\">DeviceDescription</a>",
+	"returnValue": "Returns a struct of type <em><a href=\"#deviceDescription\">DeviceDescription</a></em>",
 	"errors": [{
 		"code": -2,
 		"description": "Peer or channel is unknown."
 	}],
 	"exampleOutput": [{
 		"call": "getDeviceDescription(89, 0)",
-		"output": "KFN0cnVjdCBsZW5ndGg9MTUpDQp7DQogIFtBRERSRVNTXQ0KICB7DQogICAgKFN0cmluZykgSVREMDAwMDAxMkY6MA0KICB9DQogIFtBRVNfQUNUSVZFXQ0KICB7DQogICAgKEludGVnZXIpIDANCiAgfQ0KICBbQ0hBTk5FTF0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0RJUkVDVElPTl0NCiAgew0KICAgIChJbnRlZ2VyKSAwDQogIH0NCiAgW0ZBTUlMWV0NCiAgew0KICAgIChJbnRlZ2VyKSAxNg0KICB9DQogIFtGTEFHU10NCiAgew0KICAgIChJbnRlZ2VyKSAzDQogIH0NCiAgW0lEXQ0KICB7DQogICAgKEludGVnZXIpIDMNCiAgfQ0KICBbSU5ERVhdDQogIHsNCiAgICAoSW50ZWdlcikgMA0KICB9DQogIFtMSU5LX1NPVVJDRV9ST0xFU10NCiAgew0KICAgIChTdHJpbmcpIA0KICB9DQogIFtMSU5LX1RBUkdFVF9ST0xFU10NCiAgew0KICAgIChTdHJpbmcpIA0KICB9DQogIFtQQVJBTVNFVFNdDQogIHsNCiAgICAoQXJyYXkgbGVuZ3RoPTIpDQogICAgew0KICAgICAgKFN0cmluZykgTUFTVEVSDQogICAgICAoU3RyaW5nKSBWQUxVRVMNCiAgICB9DQogIH0NCiAgW1BBUkVOVF0NCiAgew0KICAgIChTdHJpbmcpIElURDAwMDAwMTJGDQogIH0NCiAgW1BBUkVOVF9UWVBFXQ0KICB7DQogICAgKFN0cmluZykgSVQtU3dpdGNoDQogIH0NCiAgW1RZUEVdDQogIHsNCiAgICAoU3RyaW5nKSBNQUlOVEVOQU5DRQ0KICB9DQogIFtWRVJTSU9OXQ0KICB7DQogICAgKEludGVnZXIpIDENCiAgfQ0KfQ=="
+		"output": "KFN0cnVjdCBsZW5ndGg9MTUpCnsKICBbQUREUkVTU10KICB7CiAgICAoU3RyaW5nKSBJVEQwMDAwMDEyRjowCiAgfQogIFtBRVNfQUNUSVZFXQogIHsKICAgIChJbnRlZ2VyKSAwCiAgfQogIFtDQVRFR09SSUVTXQogIHsKICAgIChBcnJheSBsZW5ndGg9MikKICAgIHsKICAgICAgKEludGVnZXIpIDUKICAgICAgKEludGVnZXIpIDcKICAgIH0KICB9CiAgW0NIQU5ORUxdCiAgewogICAgKEludGVnZXIpIDAKICB9CiAgW0RJUkVDVElPTl0KICB7CiAgICAoSW50ZWdlcikgMAogIH0KICBbRkFNSUxZXQogIHsKICAgIChJbnRlZ2VyKSAxNgogIH0KICBbRkxBR1NdCiAgewogICAgKEludGVnZXIpIDMKICB9CiAgW0lEXQogIHsKICAgIChJbnRlZ2VyKSAzCiAgfQogIFtJTkRFWF0KICB7CiAgICAoSW50ZWdlcikgMAogIH0KICBbTElOS19TT1VSQ0VfUk9MRVNdCiAgewogICAgKFN0cmluZykgCiAgfQogIFtMSU5LX1RBUkdFVF9ST0xFU10KICB7CiAgICAoU3RyaW5nKSAKICB9CiAgW1BBUkFNU0VUU10KICB7CiAgICAoQXJyYXkgbGVuZ3RoPTIpCiAgICB7CiAgICAgIChTdHJpbmcpIE1BU1RFUgogICAgICAoU3RyaW5nKSBWQUxVRVMKICAgIH0KICB9CiAgW1BBUkVOVF0KICB7CiAgICAoU3RyaW5nKSBJVEQwMDAwMDEyRgogIH0KICBbUEFSRU5UX1RZUEVdCiAgewogICAgKFN0cmluZykgSVQtU3dpdGNoCiAgfQogIFtST09NXQogIHsKICAgIChJbnRlZ2VyKSAyCiAgfQogIFtUWVBFXQogIHsKICAgIChTdHJpbmcpIE1BSU5URU5BTkNFCiAgfQogIFtWRVJTSU9OXQogIHsKICAgIChJbnRlZ2VyKSAxCiAgfQp9"
 	}]
 }

@@ -1,0 +1,36 @@
+{
+	"name": "event",
+	"category": "Event Server - Device Events",
+	"shortDescription": "Called on variable changes",
+	"description": "This method is called when a parameter of the parameter set <em>VALUES</em>, a system variable or metadata of a device is changed.",
+	"signatures": [
+		"Void event(String interfaceId, Integer peerId, Integer channel, String variable, Variant value)"
+	],
+	"parameters": [{
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The interface ID as specified in <em><a href=\"#init\">init()</a></em>.",
+		"exampleValue": "0"
+	}, {
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the device whose parameter or metadata was changed. <em>0</em> for system variables.",
+		"exampleValue": "32"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The index of the channel whose parameter was changed. <em>-1</em> for system variables and metadata.",
+		"exampleValue": "2"
+	}, {
+		"name": "variable",
+		"type": "String",
+		"description": "The name of the parameter as defined in the XML file or the name of the system or metadata variable.",
+		"exampleValue": "STATE"
+	}, {
+		"name": "value",
+		"type": "Variant",
+		"description": "The new value. The type of the value is defined in the XML file, by <em><a href=\"#setSystemVariable\">setSystemVariable()</a></em> or <em><a href=\"#setMetadata\">setMetadata()</a></em>. When a system variable is deleted, value is a <em>Struct</em> with two elements: <em>TYPE</em> with the integer value <em>0</em> and <em>CODE</em> with integer value <em>1</em>. When a metadata variable is deleted, value is also a <em>Struct</em> with the same two keys, but <em>TYPE</em> has a value of <em>1</em>.",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns <em>Void</em> on success."
+}

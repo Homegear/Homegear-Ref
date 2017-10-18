@@ -1,0 +1,34 @@
+{
+	"name": "listEvents",
+	"category": "Events",
+	"shortDescription": "Returns all events",
+	"description": "This method returns an <em>Array</em> of type <em><a href=\"#eventDescription\">EventDescription</a></em> with all events previously created with <em><a href=\"#addEvent\">addEvent()</a></em>.",
+	"signatures": [
+		"Array&lt;EventDescription&gt; listEvents()",
+		"Array&lt;EventDescription&gt; listEvents(Integer type)",
+		"Array&lt;EventDescription&gt; listEvents(Integer peerId, Integer channel)",
+		"Array&lt;EventDescription&gt; listEvents(Integer peerId, Integer channel, String variable)"
+	],
+	"parameters": [{
+		"name": "type",
+		"type": "Integer",
+		"description": "<em>0</em> for triggered events or <em>1</em> for timed events. When specified listEvents returns only events of this event type.",
+		"exampleValue": "0"
+	}, {
+		"name": "peedId",
+		"type": "Integer",
+		"description": "The id of the peer to get events for.",
+		"exampleValue": "131"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to get events for or <em>-1</em> to return the events for all channels.",
+		"exampleValue": "2"
+	}, {
+		"name": "variable",
+		"type": "String",
+		"description": "The name of a peer's parameter inside <em>channel</em>. When specified listEvents returns only events for this parameter. ",
+		"exampleValue": "STATE"
+	}],
+	"returnValue": "Returns an <em>Array</em> of type <em><a href=\"#eventDescription\">EventDescription</a></em> on success"
+}

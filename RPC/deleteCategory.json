@@ -1,0 +1,20 @@
+{
+	"name": "deleteCategory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Deletes a category",
+	"description": "This method deletes a category.",
+	"signatures": [
+		"Void deleteCategory(Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Category unknown."
+	}]
+}

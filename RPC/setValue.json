@@ -5,7 +5,7 @@
 	"description": "This method sets the value of a device variable. Note that it can't be used to set configuration parameters.",
 	"signatures": [
 		"Void setValue(Integer peerId, Integer channel, String variableName, Variant value)",
-		"Void setValue(Integer peerId, Integer channel, String variableName, Variant value, Boolean, wait)"
+		"Void setValue(Integer peerId, Integer channel, String variableName, Variant value, Boolean wait)"
 	],
 	"parameters": [{
 		"name": "peerId",

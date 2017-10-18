@@ -1,0 +1,33 @@
+{
+	"name": "runScript",
+	"category": "General",
+	"shortDescription": "Executes a script located in Homegear's script directory",
+	"description": "This method executes a script located in the script directory (default script directory is <em>/var/lib/homegear/scripts</em>). Files ending with <em>.php</em>, <em>.php5</em> and <em>.php7</em> are executed by the internal script engine. You can also execute all other programs or scripts in this directory as well.",
+	"signatures": [
+		"Integer runScript(String filename)",
+		"Integer runScript(String filename, Boolean wait)",
+		"Integer runScript(String filename, String arguments)",
+		"Integer runScript(String filename, String arguments, Boolean wait)"
+	],
+	"parameters": [{
+		"name": "filename",
+		"type": "String",
+		"description": "The name of the script file in the scripts directory. You can specify subdirectories of the scripts directory before the file name.",
+		"exampleValue": "Subdir/MyScript.sh"
+	}, {
+		"name": "wait",
+		"type": "Boolean",
+		"description": "If set to <em>true</em> waits for the script to finish. Otherwise the method returns immediately. Default is <em>true</em>.",
+		"exampleValue": "true"
+	}, {
+		"name": "arguments",
+		"type": "String",
+		"description": "The arguments to pass to the script.",
+		"exampleValue": "-u -a"
+	}],
+	"returnValue": "Returns the exit code of the program or script on success. If <em>wait</em> is <em>false</em>, <em>0</em> is returned when the script is started successfully.",
+	"errors": [{
+		"code": -32400,
+		"description": "Error starting script."
+	}]
+}

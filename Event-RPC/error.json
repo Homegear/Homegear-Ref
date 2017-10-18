@@ -1,0 +1,26 @@
+{
+	"name": "error",
+	"category": "Event Server - General",
+	"shortDescription": "Called when an error occurs in Homegear",
+	"description": "This method is called when an error occurs within Homegear. It is raised for messages of log level 1 (critical), 2 (error) and 3 (warning).",
+	"signatures": [
+		"Void error(String interfaceId, Integer level, String message)"
+	],
+	"parameters": [{
+		"name": "interfaceId",
+		"type": "String",
+		"description": "The interface ID as specified in <em><a href=\"#init\">init()</a></em>.",
+		"exampleValue": "0"
+	}, {
+		"name": "level",
+		"type": "Integer",
+		"description": "The log level of the error message. Possible values are 1 (critical), 2 (error) or 3 (warning).",
+		"exampleValue": "2"
+	}, {
+		"name": "message",
+		"type": "String",
+		"description": "The error message.",
+		"exampleValue": "Module HomeMatic BidCoS: HM-LGW \"Living Room\": Warning: Connection closed. Trying to reconnect..."
+	}],
+	"returnValue": "Returns <em>Void</em> on success."
+}
