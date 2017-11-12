@@ -43,7 +43,7 @@
 	}, {
 		"name": "paramsetKey",
 		"type": "String",
-		"description": "<em>MASTER</em>, <em>VALUES</em> or the address of a linked peer to set the <em>LINK</em> parameter set.",
+		"description": "<em>MASTER</em> for device's configuration parameters, <em>VALUES</em> to set multiple variables at once or the address of a linked peer to set <em>LINK</em> configuration parameters.",
 		"exampleValue": "MASTER"
 	}],
 	"returnValue": "Returns <em>Void</em> on success.",
