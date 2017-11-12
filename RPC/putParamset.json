@@ -43,7 +43,7 @@
 	}, {
 		"name": "paramsetKey",
 		"type": "String",
-		"description": "<em>MASTER</em> for device's configuration parameters, <em>VALUES</em> to set multiple variables at once or the address of a linked peer to set <em>LINK</em> configuration parameters.",
+		"description": "<em>MASTER</em> for device's configuration parameters, <em>VALUES</em> to set multiple variables at once or the address of a linked peer to set <em>LINK</em> configuration parameters. Use <em><a href=\"#getLinks\">getLinks()</a></em> to find the IDs and channels a peer is linked to and <em><a href=\"#getParamset\">getParamset()</a></em> to see if there are any link parameters available.",
 		"exampleValue": "MASTER"
 	}],
 	"returnValue": "Returns <em>Void</em> on success.",
@@ -54,5 +54,5 @@
 		"code": -3,
 		"description": "Parameter set is unknown."
 	}],
-	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnB1dFBhcmFtc2V0KDE3LCAwLCAiTUFTVEVSIiwgYXJyYXkoIkJVUlNUX1JYIiA9PiBmYWxzZSwgQlVUVE9OX0xPQ0sgPT4gdHJ1ZSkpOyc="
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnB1dFBhcmFtc2V0KDE3LCAwLCBhcnJheSgiQlVSU1RfUlgiID0+IGZhbHNlLCBCVVRUT05fTE9DSyA9PiB0cnVlKSk7Jwpob21lZ2VhciAtZSByYyAnJGhnLT5wdXRQYXJhbXNldCgzMSwgMSwgMzQsIDIsIGFycmF5KCJTSE9SVF9PTl9MRVZFTCIgPT4gMTAwLCBMT05HX09OX0xFVkVMID0+IDEwMCkpOyc="
 }
