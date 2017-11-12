@@ -2,10 +2,10 @@
 	"name": "putParamset",
 	"category": "Devices",
 	"shortDescription": "Sets device configuration parameters",
-	"description": "This method is used to set one or more static device configuration parameters. In contrast to <a href=\"#setValue\"><em>setValue()</em></a> <em>putParamset()</em> can set multiple parameters with one call. This is necessary to avoid sending unnecessary packets and therefore cause unnecessary (RF) traffic in some device families.",
+	"description": "This method is used to set one or more static device configuration parameters. (1) is used to configure the device itself, (2) to configure links between two devices (if supported). In contrast to <a href=\"#setValue\"><em>setValue()</em></a> <em>putParamset()</em> can set multiple parameters with one call. This is necessary to avoid sending unnecessary packets and therefore cause unnecessary (RF) traffic in some device families.",
 	"signatures": [
-		"Void putParamset(Integer peerId, Integer channel, Paramset values)",
-    "Void putParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel, Paramset values)"
+		"(1) Void putParamset(Integer peerId, Integer channel, Paramset values)",
+		"(2) Void putParamset(Integer peerId, Integer channel, Integer remotePeerId, Integer remoteChannel, Paramset values)"
 	],
 	"deprecatedSignatures": [
 		"Void putParamset(String address, String paramsetKey, Paramset values)"
@@ -53,5 +53,6 @@
 	}, {
 		"code": -3,
 		"description": "Parameter set is unknown."
-	}]
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnB1dFBhcmFtc2V0KDE3LCAwLCAiTUFTVEVSIiwgYXJyYXkoIkJVUlNUX1JYIiA9PiBmYWxzZSwgQlVUVE9OX0xPQ0sgPT4gdHJ1ZSkpOw=='"
 }
