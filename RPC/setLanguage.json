@@ -1,0 +1,15 @@
+{
+	"name": "setLanguage",
+	"category": "General",
+	"minHomegearVersion": "0.7.11",
+	"shortDescription": "Sets the language of the connection.",
+	"description": "This method sets the language of the connection to return locale dependend strings in some RPC methods.",
+	"signatures": ["Void setLanguage(String language)"],
+	"parameters": [{
+		"name": "language",
+		"type": "String",
+		"description": "The language code to set (first the ISO 639 language code followed by \"-\" and the ISO 3166 country code).",
+		"exampleValue": "de-DE"
+	}],
+	"returnValue": "Returns Void on success"
+}

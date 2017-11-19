@@ -29,7 +29,7 @@
 	}, {
 		"name": "fields",
 		"type": "Array<String>",
-		"description": "When fields is not empty, only the struct elements defined in the array (e. g. <em>ID</em> or <em>TYPE</em>) are returned. This saves ressources.",
+		"description": "When fields is not empty, only the struct elements defined in the array (e. g. <em>ID</em> or <em>TYPE</em>) are returned. This saves ressources. Some elements like <em>DESCRIPTION</em> or <em>LONG_DESCRIPTION</em> are only returned when explicitly requested through this variable.",
 		"exampleValue": "[ \"ID\", \"TYPE\" ]"
 	}],
 	"returnValue": "Returns a struct of type <em><a href=\"#deviceDescription\">DeviceDescription</a></em>",
