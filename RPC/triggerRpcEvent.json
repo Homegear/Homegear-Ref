@@ -2,14 +2,14 @@
 	"name": "triggerRpcEvent",
 	"category": "Event Server",
 	"shortDescription": "Manually sends an RPC event to all RPC event servers",
-	"description": "This method manually calls an RPC event method on all RPC event servers. Currently supported methods are \"<a href=\"deleteDevices\">deleteDevices</a>\", \"<a href=\"newDevices\">newDevices</a>\", and \"<a href=\"updateDevice\">updateDevice</a>\"",
+	"description": "This method manually calls an RPC event method on all RPC event servers. Currently supported methods are \"<a href=\"#deleteDevices\">deleteDevices</a>\", \"<a href=\"#newDevices\">newDevices</a>\", and \"<a href=\"#updateDevice\">updateDevice</a>\"",
 	"signatures": [
 		"Void triggerRpcEvent(String eventMethod, Array parameters)"
 	],
 	"parameters": [{
 		"name": "eventMethod",
 		"type": "String",
-		"description": "This is the method you want to call. The following methods are currently supported:<ul><li><a href=\"deleteDevices\">deleteDevices</a></li><li><a href=\"newDevices\">newDevices</a></li><li><a href=\"updateDevice\">updateDevice</a></li></ul>",
+		"description": "This is the method you want to call. The following methods are currently supported:<ul><li><a href=\"#deleteDevices\">deleteDevices</a></li><li><a href=\"#newDevices\">newDevices</a></li><li><a href=\"#updateDevice\">updateDevice</a></li></ul>",
 		"exampleValue": "newDevices"
 	}, {
 		"name": "parameters",
