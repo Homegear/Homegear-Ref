@@ -3,7 +3,7 @@
 	"category": "Users",
 	"shortDescription": "Creates a new user",
 	"description": "This method creates a new user in Homegear.",
-	"signatures": ["bool createUser($username, $password)"],
+	"signatures": ["bool createUser($username, $password, $groups)"],
 	"parameters": [{
 		"name": "username",
 		"type": "string",
@@ -14,6 +14,11 @@
 		"type": "string",
 		"description": "The password of the new user",
 		"exampleValue": "secret"
+	}, {
+		"name": "groups",
+		"type": "array",
+		"description": "An array of group IDs the user should belong to",
+		"exampleValue": "array(1, 7)"
 	}],
 	"returnValue": "Returns \"true\" on success",
 	"throws": [{

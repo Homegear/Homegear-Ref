@@ -3,7 +3,10 @@
 	"category": "Users",
 	"shortDescription": "Updates the password of an existing user",
 	"description": "This method updates the password of an existing user in Homegear.",
-	"signatures": ["bool updateUser($username, $password)"],
+	"signatures": [
+		"bool updateUser($username, $password, $groups)",
+		"bool updateUser($username, $password, $groups)"
+	],
 	"parameters": [{
 		"name": "username",
 		"type": "string",
@@ -14,6 +17,11 @@
 		"type": "string",
 		"description": "The new password of the user",
 		"exampleValue": "new_secret"
+	}, {
+		"name": "groups",
+		"type": "array",
+		"description": "An array of group IDs the user should belong to",
+		"exampleValue": "array(1, 7)"
 	}],
 	"returnValue": "Returns \"true\" on success",
 	"errors": [{

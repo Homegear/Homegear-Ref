@@ -4,14 +4,14 @@
 	"shortDescription": "Returns all user names",
 	"description": "This method returns an array with all user names known to Homegear.",
 	"signatures": ["array listUsers()"],
-	"returnValue": "Returns a string array with all user names",
+	"returnValue": "Returns an array with all user names and their group IDs. Each array element is a struct with four entries: \"id\" of type int, \"name\" of type string, \"groups\" of type array<int> and \"metadata\" of any type.",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": ""
 	}],
 	"exampleOutput": [{
 		"call": "print_r(listUsers())",
-		"output": "QXJyYXkNCigNCiAgICBbMF0gPT4gaG9tZWdlYXINCiAgICBbMV0gPT4gc2F0aHlhDQopDQo="
+		"output": "KEFycmF5IGxlbmd0aD0xKQp7CiAgKFN0cnVjdCBsZW5ndGg9NCkKICB7CiAgICBbZ3JvdXBzXQogICAgewogICAgICAoQXJyYXkgbGVuZ3RoPTEpCiAgICAgIHsKICAgICAgICAoSW50ZWdlcjY0KSAxCiAgICAgIH0KICAgIH0KICAgIFtpZF0KICAgIHsKICAgICAgKEludGVnZXI2NCkgMQogICAgfQogICAgW21ldGFkYXRhXQogICAgewogICAgICAoU3RydWN0IGxlbmd0aD0wKQogICAgICB7CiAgICAgIH0KICAgIH0KICAgIFtuYW1lXQogICAgewogICAgICAoU3RyaW5nKSBob21lZ2VhcgogICAgfQogIH0KfQ=="
 	}],
-	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICdwcmludF9yKCRoZy0+bGlzdFVzZXJzKCkpOyc="
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwNCiAqLwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmxpc3RVc2VycygpKTsn"
 }
