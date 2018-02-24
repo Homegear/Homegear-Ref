@@ -7,7 +7,9 @@
 		"Void setInstallMode(Boolean on)",
 		"Void setInstallMode(Boolean on, Integer duration)",
 		"Void setInstallMode(Integer familyId, Boolean on)",
-		"Void setInstallMode(Integer familyId, Boolean on, Integer duration)"
+		"Void setInstallMode(Integer familyId, Boolean on, Struct metadata)",
+		"Void setInstallMode(Integer familyId, Boolean on, Integer duration)",
+		"Void setInstallMode(Integer familyId, Boolean on, Integer duration, Struct metadata)"
 	],
 	"parameters": [{
 		"name": "on",
@@ -25,6 +27,12 @@
 		"type": "Integer",
 		"description": "This is the ID of the family for which you want to enable pairing mode. If it is not specified, pairing mode will be enabled for all device families.",
 		"exampleValue": "1",
+		"default": "void"
+	}, {
+		"name": "metadata",
+		"type": "Struct",
+		"description": "Family specific metadata.",
+		"exampleValue": "",
 		"default": "void"
 	}],
 	"returnValue": "Returns Void on success"
