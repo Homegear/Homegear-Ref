@@ -22,7 +22,7 @@
 	}, {
 		"name": "flags",
 		"type": "Integer",
-		"description": "The following flags are available:<ul><li><b>1 (RESET):</b> Resets the device to factory defaults (if possible). If this flag is not set the device is just unpaired without being reset.</li><li><b>2 (FORCE):</b> Removes the device from Homegear. Homegear will try once to unpair or reset the device. If that fails the device is just removed from the central without any further attempts to unpair it.</li><li><b>4 (DEFER):</b> Unpair the device when the next packet is received that can trigger unpairing.</li></ul>",
+		"description": "The following flags are available:<ul><li><b>1 (RESET):</b> Resets the device to factory defaults (if possible). If this flag is not set the device is just unpaired without being reset.</li><li><b>2 (FORCE):</b> Removes the device from Homegear. Homegear will try once to unpair or reset the device. If that fails the device is just removed from the central without any further attempts to unpair it.</li><li><b>4 (DEFER):</b> Unpair the device when the next packet is received that can trigger unpairing.</li><li><b>8 (DELETE_FROM_GATEWAY):</b> Also deletes the device from underlying gateway (if possible).</li></ul>",
 		"exampleValue": "5 (RESET and DEFER)"
 	}],
 	"returnValue": "Returns Void on success.",
