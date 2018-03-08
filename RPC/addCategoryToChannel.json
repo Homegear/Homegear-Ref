@@ -1,16 +1,21 @@
 {
-	"name": "addCategoryToDevice",
+	"name": "addCategoryToChannel",
 	"category": "Rooms and Categories",
-	"shortDescription": "Adds a category to a device",
-	"description": "This method adds a category to a device.",
+	"shortDescription": "Adds a category to a channel",
+	"description": "This method adds a category to a channel.",
 	"signatures": [
-		"Boolean addCategoryToDevice(Integer peerId, Integer categoryId)"
+		"Boolean addCategoryToDevice(Integer peerId, Integer channel, Integer categoryId)"
 	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
 		"description": "The ID of the peer to add the category to.",
 		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to add the category to.",
+		"exampleValue": "1"
 	}, {
 		"name": "categoryId",
 		"type": "Integer",

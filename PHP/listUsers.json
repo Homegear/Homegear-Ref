@@ -10,7 +10,7 @@
 		"description": ""
 	}],
 	"exampleOutput": [{
-		"call": "print_r(listUsers())",
+		"call": "print_v($hg->listUsers())",
 		"output": "KEFycmF5IGxlbmd0aD0xKQp7CiAgKFN0cnVjdCBsZW5ndGg9NCkKICB7CiAgICBbZ3JvdXBzXQogICAgewogICAgICAoQXJyYXkgbGVuZ3RoPTEpCiAgICAgIHsKICAgICAgICAoSW50ZWdlcjY0KSAxCiAgICAgIH0KICAgIH0KICAgIFtpZF0KICAgIHsKICAgICAgKEludGVnZXI2NCkgMQogICAgfQogICAgW21ldGFkYXRhXQogICAgewogICAgICAoU3RydWN0IGxlbmd0aD0wKQogICAgICB7CiAgICAgIH0KICAgIH0KICAgIFtuYW1lXQogICAgewogICAgICAoU3RyaW5nKSBob21lZ2VhcgogICAgfQogIH0KfQ=="
 	}],
 	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwNCiAqLwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmxpc3RVc2VycygpKTsn"

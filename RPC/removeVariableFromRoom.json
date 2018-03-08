@@ -1,0 +1,38 @@
+{
+	"name": "removeVariableFromRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a variable from a room",
+	"description": "This method removes a variable from a room.",
+	"signatures": [
+		"Boolean removeVariableFromRoom(Integer peerId, Integer channel, String variableName, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to remove from the room.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to remove from the room.",
+		"exampleValue": "1"
+	}, {
+		"name": "variableName",
+		"type": "String",
+		"description": "The variable of the peer to assign to the room.",
+		"exampleValue": "TEMPERATURE"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>true</em> on success and <em>false</em> on errors (e. g. unknown channel).",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown room."
+	}, {
+		"code": -2,
+		"description": "Unknown device."
+	}]
+}

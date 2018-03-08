@@ -1,0 +1,20 @@
+{
+	"name": "getChannelsInCategory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns all channels of a category",
+	"description": "This method returns all channels of a category.",
+	"signatures": [
+		"Struct getChannelsInCategory(Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns an <em>Struct</em> with all peer IDs as key and all channels as value (<em>Array&lt;Integer&gt;</em>) assigned to the specified category.",
+	"errors": [{
+		"code": -1,
+		"description": "Category unknown."
+	}]
+}

@@ -1,0 +1,20 @@
+{
+	"name": "getCategoryMetadata",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns the metadata of an existing category",
+	"description": "This method returns the metadata of an existing category.",
+	"signatures": [
+		"Struct getCategoryMetadata(Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns the categorie's metadata on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Category unknown."
+	}]
+}

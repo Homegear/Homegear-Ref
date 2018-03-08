@@ -1,0 +1,20 @@
+{
+	"name": "getRoomMetadata",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns the metadata of an existing room",
+	"description": "This method returns the metadata of an existing room.",
+	"signatures": [
+		"Struct getRoomMetadata(Integer roomId)"
+	],
+	"parameters": [{
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns the categorie's metadata on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Room unknown."
+	}]
+}

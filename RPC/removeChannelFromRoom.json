@@ -1,16 +1,21 @@
 {
-	"name": "addDeviceToRoom",
+	"name": "removeChannelFromRoom",
 	"category": "Rooms and Categories",
-	"shortDescription": "Assigns a device to a room",
-	"description": "This method assigns a device to a room. If a room already is assigned to the device this assignment is overwritten.",
+	"shortDescription": "Removes a channel from a room",
+	"description": "This method removes a channel from a room.",
 	"signatures": [
-		"Boolean addDeviceToRoom(Integer peerId, Integer roomId)"
+		"Boolean removeChannelFromRoom(Integer peerId, Integer channel, Integer roomId)"
 	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
-		"description": "The ID of the peer to assign to the room.",
+		"description": "The ID of the peer to remove from the room.",
 		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to remove from the room.",
+		"exampleValue": "1"
 	}, {
 		"name": "roomId",
 		"type": "Integer",

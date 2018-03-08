@@ -1,16 +1,26 @@
 {
-	"name": "addDeviceToRoom",
+	"name": "addVariableToRoom",
 	"category": "Rooms and Categories",
-	"shortDescription": "Assigns a device to a room",
-	"description": "This method assigns a device to a room. If a room already is assigned to the device this assignment is overwritten.",
+	"shortDescription": "Assigns a variable to a room",
+	"description": "This method assigns a variable to a room. If a room already is assigned to the variable this assignment is overwritten.",
 	"signatures": [
-		"Boolean addDeviceToRoom(Integer peerId, Integer roomId)"
+		"Boolean addVariableToRoom(Integer peerId, Integer channel, String variableName, Integer roomId)"
 	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
 		"description": "The ID of the peer to assign to the room.",
 		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to assign to the room.",
+		"exampleValue": "1"
+	}, {
+		"name": "variableName",
+		"type": "String",
+		"description": "The variable of the peer to assign to the room.",
+		"exampleValue": "TEMPERATURE"
 	}, {
 		"name": "roomId",
 		"type": "Integer",

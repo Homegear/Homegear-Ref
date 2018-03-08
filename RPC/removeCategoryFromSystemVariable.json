@@ -1,0 +1,28 @@
+{
+	"name": "removeCategoryFromSystemVariable",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a category from a system variable",
+	"description": "This method removes a category from a system variable.",
+	"signatures": [
+		"Void removeCategoryFromSystemVariable(String systemVariableName, Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "systemVariableName",
+		"type": "String",
+		"description": "The name of the system variable to remove the category from.",
+		"exampleValue": "12"
+	}, {
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown room."
+	}, {
+		"code": -5,
+		"description": "Unknown variable."
+	}]
+}

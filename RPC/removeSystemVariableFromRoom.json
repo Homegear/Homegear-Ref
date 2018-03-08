@@ -1,0 +1,28 @@
+{
+	"name": "removeSystemVariableFromRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a system variable from a room",
+	"description": "This method removes a system variable from a room.",
+	"signatures": [
+		"Void removeSystemVariableFromRoom(String systemVariableName, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "systemVariableName",
+		"type": "String",
+		"description": "The name of the system variable to remove from the room.",
+		"exampleValue": "12"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown room."
+	}, {
+		"code": -5,
+		"description": "Unknown variable."
+	}]
+}

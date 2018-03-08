@@ -3,7 +3,10 @@
 	"category": "Users",
 	"shortDescription": "Creates a new user",
 	"description": "This method creates a new user in Homegear.",
-	"signatures": ["bool createUser($username, $password, $groups)"],
+	"signatures": [
+		"bool createUser($username, $password, $groups)",
+		"bool createUser($username, $password, $groups, $metadata)"
+	],
 	"parameters": [{
 		"name": "username",
 		"type": "string",
@@ -19,11 +22,16 @@
 		"type": "array",
 		"description": "An array of group IDs the user should belong to",
 		"exampleValue": "array(1, 7)"
+	}, {
+		"name": "metadata",
+		"type": "mixed",
+		"description": "Metadata to store with the user",
+		"exampleValue": "array(\"adminUi\" => true)"
 	}],
 	"returnValue": "Returns \"true\" on success",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": "Returned if parameters are invalid"
 	}],
-	"example": "LyoqDQogKiBFeGVjdXRlIHRoaXMgY29tbWFuZCBpbiB5b3VyIHRlcm1pbmFsDQogKi8NCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmNyZWF0ZVVzZXIoImZvbyIsICJmb29iYXIwMSIpKTsn"
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+Y3JlYXRlVXNlcigiZm9vIiwgImZvb2JhcjAxIiwgYXJyYXkoMSkpKTsn"
 }

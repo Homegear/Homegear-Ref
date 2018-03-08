@@ -1,0 +1,28 @@
+{
+	"name": "addSystemVariableToRoom",
+	"category": "Rooms and Categories",
+	"shortDescription": "Assigns a system variable to a room",
+	"description": "This method assigns a system variable to a room. If a room already is assigned to the system variable this assignment is overwritten.",
+	"signatures": [
+		"Void addSystemVariableToRoom(String systemVariableName, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "systemVariableName",
+		"type": "String",
+		"description": "The name of the system variable to add to the room.",
+		"exampleValue": "12"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown room."
+	}, {
+		"code": -5,
+		"description": "Unknown variable."
+	}]
+}

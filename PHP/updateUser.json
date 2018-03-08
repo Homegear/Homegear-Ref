@@ -4,7 +4,8 @@
 	"shortDescription": "Updates the password of an existing user",
 	"description": "This method updates the password of an existing user in Homegear.",
 	"signatures": [
-		"bool updateUser($username, $password, $groups)",
+		"bool updateUser($username, $password)",
+		"bool updateUser($username, $groups)",
 		"bool updateUser($username, $password, $groups)"
 	],
 	"parameters": [{

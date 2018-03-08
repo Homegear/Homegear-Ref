@@ -1,0 +1,20 @@
+{
+	"name": "getSystemVariablesInCategory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns all system variables of a category",
+	"description": "This method returns all system variables of a category.",
+	"signatures": [
+		"Array&lt;String&gt; getSystemVariablesInCategory(Integer categoryId)"
+	],
+	"parameters": [{
+		"name": "categoryId",
+		"type": "Integer",
+		"description": "The ID of the category as returned by <em><a href=\"#createCategory\">createCategory()</a></em> or <em><a href=\"#getCategories\">getCategories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns an <em>Array&lt;String&gt;</em> with all system variables assigned to the specified category.",
+	"errors": [{
+		"code": -1,
+		"description": "Category unknown."
+	}]
+}

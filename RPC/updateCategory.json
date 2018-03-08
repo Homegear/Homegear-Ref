@@ -1,10 +1,11 @@
 {
 	"name": "updateCategory",
 	"category": "Rooms and Categories",
-	"shortDescription": "Updates the translations of an existing category",
-	"description": "This method updates the translations of an existing category.",
+	"shortDescription": "Updates the translations and metadata of an existing category",
+	"description": "This method updates the translations and metadata of an existing category.",
 	"signatures": [
-		"Void updateCategory(Integer categoryId, Struct translations)"
+		"Void updateCategory(Integer categoryId, Struct translations)",
+		"Void updateCategory(Integer categoryId, Struct translations, Struct metadata)"
 	],
 	"parameters": [{
 		"name": "categoryId",
@@ -16,6 +17,11 @@
 		"type": "Struct",
 		"description": "The name of the category in different languages. The keys are the lower case ISO 639-1 language codes and the upper case ISO 3166-1 alpha-2 country codes seperated by a dash (e. g. en-US or fr-FR). The values are the category names in the different languages.",
 		"exampleValue": "(Struct length=2)\n{\n  [en-US]\n  {\n    (String) Light\n  }\n  [de-DE]\n  {\n    (String) Licht\n  }\n}"
+	}, {
+		"name": "metadata",
+		"type": "Struct",
+		"description": "Arbitrary metadata.",
+		"exampleValue": ""
 	}],
 	"returnValue": "Returns <em>Void</em> on success.",
 	"errors": [{

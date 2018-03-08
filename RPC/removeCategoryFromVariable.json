@@ -1,16 +1,26 @@
 {
-	"name": "removeCategoryFromDevice",
+	"name": "removeCategoryFromVariable",
 	"category": "Rooms and Categories",
-	"shortDescription": "Removes a category from a device",
-	"description": "This method removes a category from a device.",
+	"shortDescription": "Removes a category from a variable",
+	"description": "This method removes a category from a variable.",
 	"signatures": [
-		"Boolean removeCategoryFromDevice(Integer peerId, Integer categoryId)"
+		"Boolean removeCategoryFromVariable(Integer peerId, Integer channel, Integer categoryId)"
 	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
 		"description": "The ID of the peer to remove the category from.",
 		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to remove the category from.",
+		"exampleValue": "1"
+	}, {
+		"name": "variableName",
+		"type": "String",
+		"description": "The variable of the peer to remove the category from.",
+		"exampleValue": "TEMPERATURE"
 	}, {
 		"name": "categoryId",
 		"type": "Integer",

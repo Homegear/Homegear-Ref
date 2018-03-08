@@ -4,7 +4,7 @@
 	"shortDescription": "Removes a device from a room",
 	"description": "This method removes a device from a room.",
 	"signatures": [
-		"Void removeDeviceFromRoom(Integer peerId, Integer roomId)"
+		"Boolean removeDeviceFromRoom(Integer peerId, Integer roomId)"
 	],
 	"parameters": [{
 		"name": "peerId",
@@ -17,5 +17,5 @@
 		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
 		"exampleValue": "3"
 	}],
-	"returnValue": "Returns <em>Void</em> on success."
+	"returnValue": "Returns <em>true</em> on success and <em>false</em> on errors (e. g. unknown channel)."
 }
