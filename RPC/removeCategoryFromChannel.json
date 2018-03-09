@@ -14,7 +14,7 @@
 	}, {
 		"name": "channel",
 		"type": "Integer",
-		"description": "The channel of the peer to remove the category from.",
+		"description": "The channel of the peer to remove the category from. When passing <em>-1</em> the call is equivalent to <em><a href=\"#removeCategoryFromDevice\">removeCategoryFromDevice()</a></em>.",
 		"exampleValue": "1"
 	}, {
 		"name": "categoryId",

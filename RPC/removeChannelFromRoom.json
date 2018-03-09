@@ -14,7 +14,7 @@
 	}, {
 		"name": "channel",
 		"type": "Integer",
-		"description": "The channel of the peer to remove from the room.",
+		"description": "The channel of the peer to remove from the room. When passing <em>-1</em> the call is equivalent to <em><a href=\"#removeDeviceFromRoom\">removeDeviceFromRoom()</a></em>.",
 		"exampleValue": "1"
 	}, {
 		"name": "roomId",

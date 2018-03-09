@@ -4,7 +4,7 @@
 	"shortDescription": "Adds a category to a channel",
 	"description": "This method adds a category to a channel.",
 	"signatures": [
-		"Boolean addCategoryToDevice(Integer peerId, Integer channel, Integer categoryId)"
+		"Boolean addCategoryToChannel(Integer peerId, Integer channel, Integer categoryId)"
 	],
 	"parameters": [{
 		"name": "peerId",
@@ -14,7 +14,7 @@
 	}, {
 		"name": "channel",
 		"type": "Integer",
-		"description": "The channel of the peer to add the category to.",
+		"description": "The channel of the peer to add the category to. When passing <em>-1</em> the call is equivalent to <em><a href=\"#addCategoryToDevice\">addCategoryToDevice()</a></em>.",
 		"exampleValue": "1"
 	}, {
 		"name": "categoryId",
