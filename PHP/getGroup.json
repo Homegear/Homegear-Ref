@@ -1,0 +1,23 @@
+{
+	"name": "Homegear::getGroup",
+	"category": "Users and Groups",
+	"shortDescription": "Returns the translations and the ACL of a group",
+	"description": "This method returns the translations and the ACL of an existing group.",
+	"signatures": [
+		"struct getGroup($groupId)"
+	],
+	"parameters": [{
+		"name": "groupId",
+		"type": "int",
+		"description": "The ID of the group as returned by <em><a href=\"#createGroup\">createGroup()</a></em> or <em><a href=\"#getGroups\">getGroups()</a></em>.",
+		"exampleValue": "100"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid"
+	}],
+	"exampleOutput": [{
+		"call": "Homegear::getGroup(1)",
+		"output": "KFN0cnVjdCBsZW5ndGg9MykKewogIFtBQ0xdCiAgewogICAgKFN0cnVjdCBsZW5ndGg9MikKICAgIHsKICAgICAgW2V2ZW50U2VydmVyTWV0aG9kc10KICAgICAgewogICAgICAgIChTdHJ1Y3QgbGVuZ3RoPTEpCiAgICAgICAgewogICAgICAgICAgWypdCiAgICAgICAgICB7CiAgICAgICAgICAgIChCb29sZWFuKSAxCiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICAgIFttZXRob2RzXQogICAgICB7CiAgICAgICAgKFN0cnVjdCBsZW5ndGg9MSkKICAgICAgICB7CiAgICAgICAgICBbKl0KICAgICAgICAgIHsKICAgICAgICAgICAgKEJvb2xlYW4pIDEKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9CiAgW0lEXQogIHsKICAgIChJbnRlZ2VyNjQpIDEKICB9CiAgW1RSQU5TTEFUSU9OU10KICB7CiAgICAoU3RydWN0IGxlbmd0aD0yKQogICAgewogICAgICBbZGUtREVdCiAgICAgIHsKICAgICAgICAoU3RyaW5nKSBBZG1pbmlzdHJhdG9yZW4KICAgICAgfQogICAgICBbZW4tVVNdCiAgICAgIHsKICAgICAgICAoU3RyaW5nKSBBZG1pbmlzdHJhdG9ycwogICAgICB9CiAgICB9CiAgfQp9Cg=="
+	}]
+}

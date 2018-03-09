@@ -1,0 +1,21 @@
+{
+	"name": "Homegear::groupExists",
+	"category": "Users and Groups",
+	"shortDescription": "Checks if a group exists",
+	"description": "This method checks if the group with the given ID exists.",
+	"signatures": [
+		"bool groupExists($groupId)"
+	],
+	"parameters": [{
+		"name": "groupId",
+		"type": "int",
+		"description": "The ID of the group as returned by <em><a href=\"#createGroup\">createGroup()</a></em> or <em><a href=\"#getGroups\">getGroups()</a></em>.",
+		"exampleValue": "100"
+	}],
+	"returnValue": "Returns <em>true</em> if the group exists and <em>false</em> otherwise.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid"
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPmdyb3VwRXhpc3RzKDEwMCkpOyc="
+}

@@ -1,0 +1,31 @@
+{
+	"name": "Homegear::updateGroup",
+	"category": "Users and Groups",
+	"shortDescription": "Creates a new group",
+	"description": "This method updates the names or the ACL of an existing group.",
+	"signatures": [
+		"void updateGroup($groupId, $acl)",
+		"void updateGroup($groupId, $translations, $acl)"
+	],
+	"parameters": [{
+		"name": "groupId",
+		"type": "int",
+		"description": "The ID of the group as returned by <em><a href=\"#createGroup\">createGroup()</a></em> or <em><a href=\"#getGroups\">getGroups()</a></em>.",
+		"exampleValue": "100"
+	}, {
+		"name": "translations",
+		"type": "struct",
+		"description": "The name of the group in different languages. The keys are the lower case ISO 639-1 language codes and the upper case ISO 3166-1 alpha-2 country codes seperated by a dash (e. g. en-US or fr-FR). The values are the group names in the different languages.",
+		"exampleValue": "(Struct length=2)\n{\n  [en-US]\n  {\n    (String) Guests\n  }\n  [de-DE]\n  {\n    (String) Gäste\n  }\n}"
+	}, {
+		"name": "acl",
+		"type": "struct",
+		"description": "The Access Control List (ACL) to assign to the group. See <em><a href=\"#createGroup\">createGroup()</a></em> for information about the ACL structure.",
+		"exampleValue": "(Struct length=2)\n{\n  [eventServerMethods]\n  {\n    (Struct length=1)\n    {\n      [*]\n      {\n        (Boolean) 1\n      }\n    }\n  }\n  [methods]\n  {\n    (Struct length=1)\n    {\n      [*]\n      {\n        (Boolean) 1\n      }\n    }\n  }\n}"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid"
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+dXBkYXRlR3JvdXAoMTAwLCBhcnJheSgiZW4tVVMiID0+ICJHdWVzdHMiLCAiZGUtREUiID0+ICJHw6RzdGUiKSwgYXJyYXkoInZhcmlhYmxlc1JlYWQiID0+IGFycmF5KDMgPT4gYXJyYXkoMSA9PiBhcnJheSgiVEVNUEVSQVRVUkUiID0+IHRydWUsICJIVU1JRElUWSIgPT4gdHJ1ZSkpLCA1ID0+IGFycmF5KDEgPT4gYXJyYXkoIlRFTVBFUkFUVVJFIiA9PiB0cnVlKSkpLCAidmFyaWFibGVzV3JpdGUiID0+IGFycmF5KCksICJtZXRob2RzIiA9PiBhcnJheSgiKiIgPT4gdHJ1ZSksICJldmVudFNlcnZlck1ldGhvZHMiID0+IGFycmF5KCIqIiA9PiB0cnVlKSkpKTsn"
+}

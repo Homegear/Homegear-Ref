@@ -1,0 +1,14 @@
+{
+	"name": "Homegear::getGroups",
+	"category": "Users and Groups",
+	"shortDescription": "Returns the ID, translations and the ACL of all groups",
+	"description": "This method returns the ID, translations and the ACL of all existing groups.",
+	"signatures": [
+		"array getGroups()"
+	],
+	"returnValue": "Returns an array with one element for each group. Each element is a <em>struct</em> with the keys <em>ID</em>, <em>TRANSLATIONS</em> and <em>ACL</em>.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid"
+	}]
+}

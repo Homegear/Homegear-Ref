@@ -1,0 +1,20 @@
+{
+	"name": "Homegear::deleteGroup",
+	"category": "Users and Groups",
+	"shortDescription": "Deletes a group",
+	"description": "This method deletes an existing group.",
+	"signatures": [
+		"void deleteGroup($groupId)"
+	],
+	"parameters": [{
+		"name": "groupId",
+		"type": "int",
+		"description": "The ID of the group as returned by <em><a href=\"#createGroup\">createGroup()</a></em> or <em><a href=\"#getGroups\">getGroups()</a></em>.",
+		"exampleValue": "100"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Returned if parameters are invalid"
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPmRlbGV0ZUdyb3VwKDEwMCk7Jw=="
+}
