@@ -1,6 +1,6 @@
 {
 	"name": "Homegear::deleteUser",
-	"category": "Users",
+	"category": "Users and Groups",
 	"shortDescription": "Deletes an existing user",
 	"description": "This method deletes an existing user from Homegear.",
 	"signatures": ["bool deleteUser($username)"],

@@ -1,6 +1,6 @@
 {
 	"name": "Homegear::updateUser",
-	"category": "Users",
+	"category": "Users and Groups",
 	"shortDescription": "Updates the password of an existing user",
 	"description": "This method updates the password of an existing user in Homegear.",
 	"signatures": [

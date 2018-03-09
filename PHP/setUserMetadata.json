@@ -1,0 +1,30 @@
+{
+	"name": "Homegear::setUserMetadata",
+	"category": "Users and Groups",
+	"shortDescription": "Adds arbitrary metadata to a user",
+	"description": "This method adds arbitrary metadata to an existing user in Homegear.",
+	"signatures": [
+		"bool setUserMetadata($username, $metadata)"
+	],
+	"parameters": [{
+		"name": "username",
+		"type": "string",
+		"description": "The name of the user",
+		"exampleValue": "will"
+	}, {
+		"name": "metadata",
+		"type": "struct",
+		"description": "The metadata to store",
+		"exampleValue": ""
+	}],
+	"returnValue": "Returns \"true\" on success",
+	"errors": [{
+		"code": "false",
+		"description": "Something has gone wrong (e. g. the user does not exist)"
+	}],
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "It is returned if parameters are invalid."
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICd2YXJfZHVtcCgkaGctPnNldFVzZXJNZXRhZGF0YSgiZm9vIiwgYXJyYXkoImJhciIgPT4gMTIsICJiYXIyIiA9PiAidGVzdCIpKSk7Jw=="
+}

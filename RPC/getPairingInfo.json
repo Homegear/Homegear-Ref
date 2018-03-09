@@ -1,0 +1,18 @@
+{
+	"name": "getPairingInfo",
+	"category": "Pairing",
+	"shortDescription": "Returns information about communication modules and how devices of a family are paired",
+	"description": "This method returns all information necessary to add communication modules and to pair devices.",
+	"signatures": ["Struct; getPairingInfo(Integer familyId)"],
+	"parameters": [{
+		"name": "familyId",
+		"type": "Integer",
+		"description": "The ID of the family for which you want to get the supported pairing methods",
+		"exampleValue": "1"
+	}],
+	"returnValue": "Returns the pairing information as a struct.",
+	"exampleOutput": [{
+		"call": "getPairingInfo(0)",
+		"output": "QXJyYXkNCigNCiAgICBbMF0gPT4gYWRkRGV2aWNlDQogICAgWzFdID0+IHNldEluc3RhbGxNb2RlDQopDQo="
+	}]
+}

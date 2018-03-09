@@ -1,6 +1,6 @@
 {
 	"name": "Homegear::createUser",
-	"category": "Users",
+	"category": "Users and Groups",
 	"shortDescription": "Creates a new user",
 	"description": "This method creates a new user in Homegear.",
 	"signatures": [

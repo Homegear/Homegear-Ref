@@ -1,6 +1,6 @@
 {
 	"name": "Homegear::userExists",
-	"category": "Users",
+	"category": "Users and Groups",
 	"shortDescription": "Checks if a user is known to Homegear",
 	"description": "This method checks if a user is known to Homegear.",
 	"signatures": ["bool userExists($username)"],

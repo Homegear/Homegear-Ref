@@ -1,10 +1,10 @@
 {
 	"name": "Homegear::listUsers",
-	"category": "Users",
+	"category": "Users and Groups",
 	"shortDescription": "Returns all user names",
 	"description": "This method returns an array with all user names known to Homegear.",
 	"signatures": ["array listUsers()"],
-	"returnValue": "Returns an array with all user names and their group IDs. Each array element is a struct with four entries: \"id\" of type int, \"name\" of type string, \"groups\" of type array<int> and \"metadata\" of any type.",
+	"returnValue": "Returns an array with all user names, their group IDs and their metadata. Each array element is a struct with four entries: \"id\" of type <em>int</em>, \"name\" of type <em>string</em>, \"groups\" of type <em>array&lt;int&gt;</em> and \"metadata\" of type <em>struct</em>.",
 	"throws": [{
 		"exception": "HomegearException",
 		"description": ""

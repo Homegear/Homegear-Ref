@@ -1,0 +1,21 @@
+{
+	"name": "Homegear::getUsersGroups",
+	"category": "Users and Groups",
+	"shortDescription": "Returns the groups a user is assigned to",
+	"description": "This method returns all IDs of the groups a user is assigned to.",
+	"signatures": [
+		"array getUsersGroups($username)"
+	],
+	"parameters": [{
+		"name": "username",
+		"type": "string",
+		"description": "The name of the user",
+		"exampleValue": "will"
+	}],
+	"returnValue": "Returns the group IDs as an array on success.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "It is returned if parameters are invalid."
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+Z2V0VXNlcnNHcm91cHMoImZvbyIpKTsn"
+}
