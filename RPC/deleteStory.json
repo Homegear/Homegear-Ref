@@ -1,0 +1,20 @@
+{
+	"name": "deleteStory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Deletes a story",
+	"description": "This method deletes a story.",
+	"signatures": [
+		"Void deleteStory(Integer storyId)"
+	],
+	"parameters": [{
+		"name": "storyId",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Story unknown."
+	}]
+}

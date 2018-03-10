@@ -7,7 +7,7 @@
 		"Void setRoomMetadata(Integer roomId, Struct metadata)"
 	],
 	"parameters": [{
-		"name": "categoryId",
+		"name": "roomId",
 		"type": "Integer",
 		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
 		"exampleValue": "3"

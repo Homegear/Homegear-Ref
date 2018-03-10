@@ -1,0 +1,28 @@
+{
+	"name": "addRoomToStory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Assigns a room to a story",
+	"description": "This method assigns a room to a story.",
+	"signatures": [
+		"Boolean addRoomToStory(Integer storyId, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "story",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "12"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Unknown story."
+	}, {
+		"code": -2,
+		"description": "Unknown room."
+	}]
+}
