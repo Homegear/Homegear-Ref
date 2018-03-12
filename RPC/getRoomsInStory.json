@@ -1,0 +1,20 @@
+{
+	"name": "getRoomsInStory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns all rooms of a story",
+	"description": "This method returns all rooms of a story.",
+	"signatures": [
+		"Array&lt;Integer&gt; getRoomsInStory(Integer storyId)"
+	],
+	"parameters": [{
+		"name": "storyId",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns an <em>Array&lt;Integer&gt;</em> with all room IDs assigned to the specified story.",
+	"errors": [{
+		"code": -1,
+		"description": "Story unknown."
+	}]
+}

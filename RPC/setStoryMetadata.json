@@ -1,0 +1,25 @@
+{
+	"name": "setStoryMetadata",
+	"category": "Rooms and Categories",
+	"shortDescription": "Sets the metadata of an existing story",
+	"description": "This method updates the translations of an existing story.",
+	"signatures": [
+		"Void setStoryMetadata(Integer storyId, Struct metadata)"
+	],
+	"parameters": [{
+		"name": "storyId",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "3"
+	}, {
+		"name": "metadata",
+		"type": "Struct",
+		"description": "Arbitrary metadata.",
+		"exampleValue": ""
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Story unknown."
+	}]
+}

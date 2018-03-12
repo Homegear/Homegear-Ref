@@ -1,0 +1,28 @@
+{
+	"name": "removeRoomFromStory",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a room from a story",
+	"description": "This method removes a room from a story.",
+	"signatures": [
+		"Boolean removeRoomFromStory(Integer storyId, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "storyId",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "3"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "The ID of the room as returned by <em><a href=\"#createRoom\">createRoom()</a></em> or <em><a href=\"#getRooms\">getRooms()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Story unknown."
+	}, {
+		"code": -2,
+		"description": "Invalid room ID."
+	}]
+}

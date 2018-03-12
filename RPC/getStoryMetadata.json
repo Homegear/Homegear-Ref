@@ -1,0 +1,20 @@
+{
+	"name": "getStoryMetadata",
+	"category": "Rooms and Categories",
+	"shortDescription": "Returns the metadata of an existing story",
+	"description": "This method returns the metadata of an existing story.",
+	"signatures": [
+		"Struct getStoryMetadata(Integer storyId)"
+	],
+	"parameters": [{
+		"name": "storyId",
+		"type": "Integer",
+		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns the story's metadata on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Story unknown."
+	}]
+}
