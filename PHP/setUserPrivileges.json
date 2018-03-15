@@ -1,0 +1,17 @@
+{
+	"name": "Homegear::setUserPrivileges",
+	"category": "Users and Groups",
+	"shortDescription": "Drops script engine privileges to a users's",
+	"description": "This method drops script engine privileges to the specified user's. By default the script engine runs as system group <em>2</em>. After executing this method, all Homegear method calls of the executing thread are executed with the privileges of the specified user.",
+	"signatures": [
+		"bool setUserPrivileges($username)"
+	],
+	"parameters": [{
+		"name": "username",
+		"type": "string",
+		"description": "The alphanumeric name of the user",
+		"exampleValue": "will"
+	}],
+	"returnValue": "Returns \"true\" on success",
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+c2V0VXNlclByaXZpbGVnZXMoImZvbyIpKTsn"
+}
