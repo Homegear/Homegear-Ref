@@ -2,13 +2,21 @@
 	"name": "setName",
 	"category": "Devices",
 	"shortDescription": "Sets the name of a peer",
-	"description": "This method sets the name of a peer. The name makes it easier to identify the peer.",
-	"signatures": ["Void setName(Integer peerId, String name)"],
+	"description": "This method sets the name of a peer or channel. The name makes it easier to identify the peer.",
+	"signatures": [
+		"Void setName(Integer peerId, String name)",
+		"Void setName(Integer peerId, Integer channel, String name)"
+	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
 		"description": "The ID of the peer you want to set the name for",
 		"exampleValue": "131"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer you want to set the name for (a channel of <em>-1</em> sets the device's name). You can omit the channel when setting the name of the device.",
+		"exampleValue": "1"
 	}, {
 		"name": "name",
 		"type": "String",

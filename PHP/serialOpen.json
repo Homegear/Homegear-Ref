@@ -3,7 +3,7 @@
 	"category": "Serial Communication (TTY)",
 	"shortDescription": "Opens a serial device",
 	"description": "This method opens a serial device and returns a device handle required for HomegearSerial::read() and HomegearSerial::write(). Remember to close the device with HomegearSerial::close() if you don't need it anymore.",
-	"signatures": ["resource open(string $device, int $baudrate [, bool $evenParity = false [, bool $oddParity = false]])"],
+	"signatures": ["resource open(string $device, int $baudrate [, bool $evenParity = false [, bool $oddParity = false [, int $characterSize = 8 [, bool $twoStopBits = false]]]])"],
 	"parameters": [{
 		"name": "device",
 		"type": "string",
@@ -22,7 +22,17 @@
 	}, {
 		"name": "oddParity",
 		"type": "bool",
-		"description": "Set to \"true\" if the data contains an even parity bit",
+		"description": "Set to \"true\" if the data contains an odd parity bit. \"evenParity\" and \"oddParity\" are mutually exclusive.",
+		"exampleValue": "true"
+	}, {
+		"name": "characterSize",
+		"type": "int",
+		"description": "The character size in bits. Valid values are 5, 6, 7 or 8.",
+		"exampleValue": "7"
+	}, {
+		"name": "twoStopBits",
+		"type": "bool",
+		"description": "By default one stop bit is used. Set this argument to \"true\" to enable two stop bits.",
 		"exampleValue": "true"
 	}],
 	"returnValue": "Returns the file pointer resource handle of the serial device",
