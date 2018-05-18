@@ -1,0 +1,43 @@
+{
+	"name": "Homegear::configureGateway",
+	"category": "General",
+	"shortDescription": "Sets the certificates on an unconfigured Homegear Gateway",
+	"description": "This method remotely sets the certificates on an unconfigured Homegear Gateway. To find gateways and to check if a gateway is configured, you can use <em><a href=\"#HomegearssdpSearch\">Homegear::ssdpSearch(\"urn:schemas-upnp-org:device:basic:1\", 5000)</a></em>. The response contains the field <em>HG-Gateway-Configured</em> which is set to <em>1</em> if the gateway is unconfigured. The certificates can be generated using Homegear Management.",
+	"signatures": ["void configureGateway(string $host, int $port, $caCert, $gatewayCert, $gatewayKey, $password)"],
+	"parameters": [{
+		"name": "host",
+		"type": "string",
+		"description": "The host name or IP address of the gateway to connect to.",
+		"exampleValue": "192.168.178.104"
+	}, {
+		"name": "port",
+		"type": "int",
+		"description": "The port number the gateway service listens on. The default value is 2017.",
+		"exampleValue": "2017"
+	}, {
+		"name": "caCert",
+		"type": "string",
+		"description": "The Base64 encoded CA certificate.",
+		"exampleValue": ""
+	}, {
+		"name": "gatewayCert",
+		"type": "string",
+		"description": "The Base64 encoded gateway certificate.",
+		"exampleValue": ""
+	}, {
+		"name": "gatewayKey",
+		"type": "string",
+		"description": "The Base64 encoded gateway private key.",
+		"exampleValue": ""
+	}, {
+		"name": "password",
+		"type": "string",
+		"description": "The password as specifed in <em>gateway.conf</em> of or printed on the gateway.",
+		"exampleValue": "aJn10ymAkloiq28nKlOlf4QjsN"
+	}],
+	"returnValue": "Returns void on success.",
+	"throws": [{
+		"exception": "HomegearException",
+		"description": "Thrown on any errors."
+	}]
+}
