@@ -2,7 +2,7 @@
 	"name": "Homegear::configureGateway",
 	"category": "General",
 	"shortDescription": "Sets the certificates on an unconfigured Homegear Gateway",
-	"description": "This method remotely sets the certificates on an unconfigured Homegear Gateway. To find gateways and to check if a gateway is configured, you can use <em><a href=\"#HomegearssdpSearch\">Homegear::ssdpSearch(\"urn:schemas-upnp-org:device:basic:1\", 5000)</a></em>. The response contains the field <em>HG-Gateway-Configured</em> which is set to <em>1</em> if the gateway is unconfigured. The certificates can be generated using Homegear Management.",
+	"description": "This method remotely sets the certificates on an unconfigured Homegear Gateway. To find gateways and to check if a gateway is configured, you can use <em><a href=\"#HomegearssdpSearch\">Homegear::ssdpSearch(\"urn:schemas-upnp-org:device:basic:1\", 5000)</a></em>. The response contains the field <em>HG-Gateway-Configured</em> which is set to <em>0</em> if the gateway is unconfigured. The certificates can be generated using Homegear Management.",
 	"signatures": ["void configureGateway(string $host, int $port, $caCert, $gatewayCert, $gatewayKey, $password)"],
 	"parameters": [{
 		"name": "host",
