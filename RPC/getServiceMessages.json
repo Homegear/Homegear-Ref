@@ -5,7 +5,7 @@
 	"description": "This method returns all service messages that are currently active in Homegear (device unreachable, config pending, low battery, sabotage, ...).",
 	"signatures": [
 		"Array&lt;Struct&gt; getServiceMessages(bool newFormat)",
-		"Array&lt;Array&lt;Variant&gt;&gt; getServiceMessages(bool newFormat)",
+		"Array&lt;Array&lt;Variant&gt;&gt; getServiceMessages(bool newFormat)"
 	],
 	"parameters": [{
 		"name": "newFormat",
