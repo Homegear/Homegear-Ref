@@ -7,13 +7,21 @@
 		"Struct getAllValues()",
 		"Struct getAllValues(Boolean returnWriteOnlyVariables)",
 		"Struct getAllValues(Integer peerId)",
-		"Struct getAllValues(Integer peerId, Boolean returnWriteOnlyVariables)"
+		"Struct getAllValues(Integer peerId, Boolean returnWriteOnlyVariables)",
+		"Struct getAllValues(Array&lt;Integer&gt; peerIds)",
+		"Struct getAllValues(Array&lt;Integer&gt;, Boolean returnWriteOnlyVariables)"
 	],
 	"parameters": [{
 		"name": "peerId",
 		"type": "Integer",
 		"description": "When specified, only variables of this peer are returned.",
 		"exampleValue": "12",
+		"default": "void"
+	}, {
+		"name": "peerIds",
+		"type": "Array&lt;Integer&gt;",
+		"description": "When specified, only variables of these peers are returned.",
+		"exampleValue": "[ 10, 11, 12 ]",
 		"default": "void"
 	}, {
 		"name": "returnWriteOnlyVariables",
