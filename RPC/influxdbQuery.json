@@ -4,7 +4,8 @@
 	"shortDescription": "Executes an InfluxDB query",
 	"description": "This method executes an InfluxDB query in the database connected to <b>Homegear InfluxDB</b>. It is only available, when <b>Homegear InfluxDB</b> is installed and running.",
 	"signatures": [
-		"Struct influxdbQuery(Boolean httpPost, String query)"
+		"Struct influxdbQuery(Boolean httpPost, String query)",
+		"Struct influxdbQuery(Boolean httpPost, String query, Struct additionalHttpQueryParameters)"
 	],
 	"parameters": [{
 		"name": "httpPost",
@@ -16,6 +17,11 @@
 		"type": "String",
 		"description": "The query to execute.",
 		"exampleValue": "SHOW MEASUREMENTS"
+	}, {
+		"name": "additionalHttpQueryParameters",
+		"type": "Struct",
+		"description": "These parameters are appended to the HTTP query parameters.",
+		"exampleValue": "{\"epoch\": \"ms\"}"
 	}],
 	"returnValue": "Returns a <em>Struct</em> with the result.",
 	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICdwcmludF92KCRoZy0+aW5mbHV4ZGJRdWVyeShmYWxzZSwgIlNIT1cgTUVBU1VSRU1FTlRTIikpOyc=",
