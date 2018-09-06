@@ -4,7 +4,7 @@
 	"shortDescription": "Called on variable changes",
 	"description": "This method is called when a parameter of the parameter set <em>VALUES</em>, a system variable or metadata of a device is changed.",
 	"signatures": [
-		"Void event(String senderId, Integer peerId, Integer channel, String variable, Variant value)"
+		"Void event(String eventSource, Integer peerId, Integer channel, String variable, Variant value)"
 	],
 	"parameters": [{
 		"name": "eventSource",
