@@ -4,12 +4,12 @@
 	"shortDescription": "Called on variable changes",
 	"description": "This method is called when a parameter of the parameter set <em>VALUES</em>, a system variable or metadata of a device is changed.",
 	"signatures": [
-		"Void event(String interfaceId, Integer peerId, Integer channel, String variable, Variant value)"
+		"Void event(String senderId, Integer peerId, Integer channel, String variable, Variant value)"
 	],
 	"parameters": [{
-		"name": "interfaceId",
+		"name": "eventSource",
 		"type": "String",
-		"description": "The interface ID as specified in <em><a href=\"#init\">init()</a></em>.",
+		"description": "When the events are <b>not</b> sent over the same network connection as incoming RPC calls, <em>eventSource</em> is set to the interface ID as specified in <em><a href=\"#init\">init()</a></em>. Otherwise it is set to the instance causing the variable update. Possible values are: <em>device-[Peer ID]</em>, <em>scriptEngine</em>, <em>scriptEngine</em>, <em>ipcServer</em>, <em>homegear</em>, <em>rpc-client-[address]:[port]</em> or the interface ID as specified in <em><a href=\"#init\">init()</a></em> of the network client updating the variable.",
 		"exampleValue": "0"
 	}, {
 		"name": "peerId",
