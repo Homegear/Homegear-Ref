@@ -5,7 +5,8 @@
 	"description": "This method can be used to store arbitrary data in Homegear's database. You can retrieve this data later by calling <em><a href=\"#getSystemVariable\">getSystemVariable()</a></em>.",
 	"signatures": [
 		"Void setSystemVariable(String name)",
-		"Void setSystemVariable(String name, Variant value)"
+		"Void setSystemVariable(String name, Variant value)",
+		"Void setSystemVariable(String name, Variant value, Integer flags)"
 	],
 	"parameters": [{
 		"name": "name",
@@ -17,6 +18,11 @@
 		"type": "Variant",
 		"description": "The value to be stored. When ommited the type of the variable is set to <em>Void</em>.",
 		"exampleValue": "43"
+	}, {
+		"name": "flags",
+		"type": "Integer",
+		"description": "Pass <em>0</em> for no flags and to not restrict access. The following flags are available:<ul><li>1: Make variable readonly over all network connections.</li><li>2: Make variable invisible and not readable and not writeable over all network connections.</li></ul>",
+		"exampleValue": "0"
 	}],
 	"returnValue": "Returns <em>Void</em> on success",
 	"errors": [{
