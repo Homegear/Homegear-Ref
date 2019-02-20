@@ -1,0 +1,26 @@
+{
+	"name": "getSystemVariableFlags",
+	"category": "System Variables",
+	"shortDescription": "Returns the flags assigned to a system variable",
+	"description": "This method returns the flags previously assigned to a system variable with <em><a href=\"#setSystemVariable\">setSystemVariable()</a></em>.",
+	"signatures": ["Integer getSystemVariableFlags(String name)"],
+	"parameters": [{
+		"name": "name",
+		"type": "String",
+		"description": "The name as defined in <em><a href=\"#setSystemVariable\">setSystemVariable()</a></em>",
+		"exampleValue": "myVariable"
+	}],
+	"returnValue": "Returns the flags of the system variable",
+	"errors": [{
+		"code": -1,
+		"description": "Variable not found."
+	}, {
+		"code": -32602,
+		"description": "Name is longer than 250 characters."
+	}],
+	"exampleOutput": [{
+		"call": "getSystemVariableFlags(\"SYSTEM_TEMPERATURE\")",
+		"output": "KEludGVnZXIpIDI="
+	}],
+	"example": "LyoqCiAqIEV4ZWN1dGUgdGhpcyBjb21tYW5kIGluIHlvdXIgdGVybWluYWwKICovCmhvbWVnZWFyIC1lIHJjICckaGctPnNldFN5c3RlbVZhcmlhYmxlKCJURVNUIiwgIkhlbGxvIEhvbWVnZWFyIiwgMik7Jwpob21lZ2VhciAtZSByYyAncHJpbnRfdigkaGctPmdldFN5c3RlbVZhcmlhYmxlRmxhZ3MoIlRFU1QiKSk7Jw=="
+}

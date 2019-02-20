@@ -5,9 +5,9 @@
 	"description": "This method returns all system variables.",
 	"signatures": [
 		"(1) Struct getAllSystemVariables()",
-		"(2) Struct getAllSystemVariables(Boolean returnRoomsAndCategories)"
+		"(2) Struct getAllSystemVariables(Boolean returnRoomsCategoriesAndFlags)"
 	],
-	"returnValue": "(1) returns a struct with one element for each variable containing the previously stored value. The name of the element is the variable name. (2) returns a struct with the name of the system variable as key and as value the fields <em>VALUE</em>, <em>ROOM</em> and <em>CATEGORIES</em>. The latter two are omitted when undefined.",
+	"returnValue": "(1) returns a struct with one element for each variable containing the previously stored value. The name of the element is the variable name. (2) returns a struct with the name of the system variable as key and as value the fields <em>VALUE</em>, <em>ROOM</em>, <em>CATEGORIES</em> and <em>FLAGS</em>. The latter three are omitted when undefined.",
 	"exampleOutput": [{
 		"call": "getAllSystemVariables()",
 		"output": "KFN0cnVjdCBsZW5ndGg9MykNCnsNCiAgW0dhdGVMYXN0QWN0aW9uXQ0KICB7DQogICAgKEludGVnZXIpIDE0NjA0Nzk4MDANCiAgfQ0KICBbR2F0ZVN0YXRlXQ0KICB7DQogICAgKEJvb2xlYW4pIDANCiAgfQ0KICBbU1lTVEVNX1RFTVBFUkFUVVJFXQ0KICB7DQogICAgKEZsb2F0KSA0NC45Mw0KICB9DQp9DQo="
