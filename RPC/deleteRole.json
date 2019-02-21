@@ -1,0 +1,20 @@
+{
+	"name": "deleteRole",
+	"category": "Rooms and Categories",
+	"shortDescription": "Deletes a role",
+	"description": "This method deletes a role.",
+	"signatures": [
+		"Void deleteRole(Integer roleId)"
+	],
+	"parameters": [{
+		"name": "roleId",
+		"type": "Integer",
+		"description": "The ID of the role as returned by <em><a href=\"#createRole\">createRole()</a></em> or <em><a href=\"#getRoles\">getRoles()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>Void</em> on success.",
+	"errors": [{
+		"code": -1,
+		"description": "Role unknown."
+	}]
+}

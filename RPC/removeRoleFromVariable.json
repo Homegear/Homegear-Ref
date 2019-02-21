@@ -1,0 +1,31 @@
+{
+	"name": "removeRoleFromVariable",
+	"category": "Rooms and Categories",
+	"shortDescription": "Removes a role from a variable",
+	"description": "This method removes a role from a variable.",
+	"signatures": [
+		"Boolean removeRoleFromVariable(Integer peerId, Integer channel, Integer roleId)"
+	],
+	"parameters": [{
+		"name": "peerId",
+		"type": "Integer",
+		"description": "The ID of the peer to remove the role from.",
+		"exampleValue": "12"
+	}, {
+		"name": "channel",
+		"type": "Integer",
+		"description": "The channel of the peer to remove the role from.",
+		"exampleValue": "1"
+	}, {
+		"name": "variableName",
+		"type": "String",
+		"description": "The variable of the peer to remove the role from.",
+		"exampleValue": "TEMPERATURE"
+	}, {
+		"name": "roleId",
+		"type": "Integer",
+		"description": "The ID of the role as returned by <em><a href=\"#createRole\">createRole()</a></em> or <em><a href=\"#getRoles\">getRoles()</a></em>.",
+		"exampleValue": "3"
+	}],
+	"returnValue": "Returns <em>true</em> on success and <em>false</em> if something went wrong (e. g. unknown channel)."
+}
