@@ -1,0 +1,39 @@
+{
+	"name": "aggregateRoles",
+	"category": "Rooms and Categories",
+	"shortDescription": "Aggregates values of variables with specific roles",
+	"description": "This method aggregates values of variables with specific roles.",
+	"signatures": [
+		"Struct aggregateRoles(Integer aggregationType, Integer roleId, Struct aggregationParameters)",
+		"Struct aggregateRoles(Integer aggregationType, Array&lt;Integer&gt; roleIds, Struct aggregationParameters)",
+		"Struct aggregateRoles(Integer aggregationType, Integer roleId, Struct aggregationParameters, Integer roomId)",
+		"Struct aggregateRoles(Integer aggregationType, Array&lt;Integer&gt; roleIds, Struct aggregationParameters, Integer roomId)"
+	],
+	"parameters": [{
+		"name": "aggregationType",
+		"type": "Struct",
+		"description": "The type of aggregation to perform. Available aggregations:<ul><li><b>1: countTrue</b> - Evaluates the variables to <em>true</em> and <em>false</em> (all variable types are evaluated) and counts the result.</li><li><b>2: countDistinct</b> - Counts all distinct number values.</li><li><b>3: countMinimum</b> - Counts all variables having their minimum value.</li><li><b>4: countMaximum</b> - Counts all variables having their maximum value.</li><li><b>5: countBelowThreshold</b> - Counts all variables below a threshold. The threshold value needs to be set in <em>aggregationParameters</em> to the key <em>threshold</em>.</li><li><b>4: countAboveThreshold</b> - Counts all variables above a threshold. The threshold value needs to be set in <em>aggregationParameters</em> to the key <em>threshold</em>.</li></ul>",
+		"exampleValue": "3"
+	}, {
+		"name": "roleId",
+		"type": "Integer",
+		"description": "The role ID to get the variables to aggregate for.",
+		"exampleValue": "101001"
+	}, {
+		"name": "roleIds",
+		"type": "Array",
+		"description": "Multiple role IDs to get the variables to aggregate for.",
+		"exampleValue": "[101001, 101002, 101003]"
+	}, {
+		"name": "aggregationParameters",
+		"type": "Struct",
+		"description": "Additional aggregation parameters. Required for some aggregations. See <em>aggregationType</em> if additional parameters are required.",
+		"exampleValue": "{\"threshold\": 20}"
+	}, {
+		"name": "roomId",
+		"type": "Integer",
+		"description": "If specified only variables within this room are aggregated.",
+		"exampleValue": "5"
+	}],
+	"returnValue": "Returns the aggregated values as a <em>Struct</em>."
+}
