@@ -4,7 +4,7 @@
 	"shortDescription": "Removes a role from a variable",
 	"description": "This method removes a role from a variable.",
 	"signatures": [
-		"Boolean removeRoleFromVariable(Integer peerId, Integer channel, Integer roleId)"
+		"Boolean removeRoleFromVariable(Integer peerId, Integer channel, String variableName, Integer roleId)"
 	],
 	"parameters": [{
 		"name": "peerId",
