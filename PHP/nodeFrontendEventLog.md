@@ -1,10 +1,8 @@
 <!---
 {
-    "category": "<Category>",
-    "name": "<Name of the method>",
-    "shortDescription": "<Short description for the method overview>",
-    "minHomegearVersion": "0.0.0-0000",
-	"maxHomegearVersion": "0.0.0-0000"
+    "category": "Nodes",
+    "name": "HomegearNodeBase::frontendEventLog",
+    "shortDescription": "Writes a line to the Node-BLUE event log"
 }
 --->
 
