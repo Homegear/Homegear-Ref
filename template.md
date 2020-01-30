@@ -13,7 +13,7 @@
 <!---
 Valid types for PHP parameters:
 
-void, string, int, float, bool, object and array
+void, string, int, float, bool, object, array and variant
 
 Valid types for Homegear RPC parameters:
 
