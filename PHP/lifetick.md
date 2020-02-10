@@ -29,7 +29,7 @@ Checks for hanging event broadcasts.
 
 ## All family modules
 
-Executes `lifetick()` of each family module. There is a default implementation and families can implement their own lifetick.
+Executes `lifetick()` on each family module. There is a default implementation and families can implement their own lifetick. The default implementation checks for deadlocks in packet processing of all communication interfaces.
 
 
 ## The script engine server
