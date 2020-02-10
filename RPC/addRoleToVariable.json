@@ -4,7 +4,7 @@
 	"shortDescription": "Adds a role to a variable",
 	"description": "This method adds a role to a variable.",
 	"signatures": [
-		"Boolean addRoleToVariable(Integer peerId, Integer channel, String variableName, Integer roleId [, Integer direction = 2] [, Boolean invert = false])",
+		"Boolean addRoleToVariable(Integer peerId, Integer channel, String variableName, Integer roleId [, Integer direction = 2] [, Boolean invert = false])"
 	],
 	"parameters": [{
 		"name": "peerId",
