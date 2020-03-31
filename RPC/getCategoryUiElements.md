@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Array<Struct> getCategoryUiElements(Integer category, String language)
 ```
 

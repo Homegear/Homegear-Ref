@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Array<Struct> getRoomUiElements(Integer room, String language)
 ```
 
