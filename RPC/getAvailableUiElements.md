@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Array<Struct> getAvailableUiElements(String language)
 ```
 

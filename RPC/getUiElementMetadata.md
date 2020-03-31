@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Struct getUiElementMetadata(Integer databaseId)
 ```
 
@@ -20,7 +20,7 @@ Returns metadata previously stored with [addUiElement()](#addUiElement) or [setU
 
 ## databaseId
 
-The ID of the UI element.
+The ID of the UI element as returned by the get methods in the key `databaseId`.
 
 # Return Values
 
@@ -28,4 +28,6 @@ Returns the metadata `Struct`.
 
 # Exceptions
 
-This method only throws default exceptions.
+| Code | Description                                |
+|:-----|:-------------------------------------------|
+| -1   | Returned when the UI element is not found. |

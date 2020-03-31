@@ -40,14 +40,15 @@ A long description. Method references should be specified as links: [myMethod()]
 
 <!--- Always surround variable names and values with "`". --->
 
+Description of `parameter1`.
+
+### Example
+
 ```json
 {
 	"example": "Use JSON to document example values."
 }
 ```
-
-Description of `parameter1`.
-
 
 # Return Values
 

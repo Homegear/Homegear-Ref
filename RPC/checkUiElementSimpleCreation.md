@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Boolean checkUiElementSimpleCreation(Integer peerId, Integer channel, String variableName)
 ```
 

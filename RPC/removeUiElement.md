@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Void removeUiElement(Integer databaseId)
 ```
 
@@ -20,7 +20,7 @@ Deletes an UI element previously created with [addUiElement()](#addUiElement).
 
 ## databaseId
 
-The ID of the UI element.
+The ID of the UI element as returned by the get methods in the key `databaseId`.
 
 # Return Values
 

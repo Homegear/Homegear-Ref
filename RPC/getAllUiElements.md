@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 Array<Struct> getAllUiElements(String language)
 ```
 
@@ -24,7 +24,7 @@ The language to return the UI elements for. E. g. `en-US` or `de-DE`.
 
 # Return Values
 
-Returns an `Array` with all UI elements.
+Returns an `Array` with all UI elements. Note that the database ID is encoded in the key `databaseId`.
 
 # Exceptions
 

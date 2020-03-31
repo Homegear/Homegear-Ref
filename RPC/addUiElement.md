@@ -8,7 +8,7 @@
 
 # Signatures
 
-```php
+```
 (1) Integer addUiElement(Integer peerId, Integer channel, String variableName, String label)
 (2) Integer addUiElement(String elementId, Struct elementDescription [, Struct metadata = Void])
 ```
@@ -49,7 +49,9 @@ The ID (name) of the UI element as defined in it's XML file.
 
 ## elementDescription
 
-A `Struct` to set label, room and input/output variables for the UI element. For example:
+A `Struct` to set label, room and input/output variables for the UI element.
+
+### Example
 
 ```json
 {
