@@ -57,6 +57,7 @@ Description of `parameter1`.
 
 # Exceptions
 
+This method only throws default exceptions.
 
 # Changelog
 

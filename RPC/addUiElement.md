@@ -10,7 +10,7 @@
 
 ```php
 (1) Integer addUiElement(Integer peerId, Integer channel, String variableName, String label)
-(2) Integer addUiElement(String uiElementId, Struct uiElementDescription [, Struct uiElementMetadata = Void])
+(2) Integer addUiElement(String elementId, Struct elementDescription [, Struct metadata = Void])
 ```
 
 # Description
@@ -39,7 +39,7 @@ The name of the variable to add an UI element for.
 
 The label of the UI element which will be displayed in the UI.
 
-## uiElementId
+## elementId
 
 The ID (name) of the UI element as defined in it's XML file.
 
@@ -47,7 +47,7 @@ The ID (name) of the UI element as defined in it's XML file.
 "Base.lightingSwitch"
 ```
 
-## uiElementDescription
+## elementDescription
 
 A `Struct` to set label, room and input/output variables for the UI element. For example:
 
@@ -76,15 +76,15 @@ A `Struct` to set label, room and input/output variables for the UI element. For
 }
 ```
 
-## uiElementMetadata
+## metadata
 
-Dynamic metadata which can be overwritten later with [setUiElementMetadata()](#setUiElementMetadata) and read with [getUiElementMetadata()](#getUiElementMetadata). It is returned in key `dynamicMetadata` in the `Struct` returned by [getAllUiElements()](#getAllUiElements) The dynamic metadata can also be set in `uiElementDescription` by specifying it in key `dynamicMetadata`. Specifying it in `uiElementMetadata` takes precedence over `dynamicMetadata` in `uiElementDescription`.
+Dynamic metadata which can be overwritten later with [setUiElementMetadata()](#setUiElementMetadata) and read with [getUiElementMetadata()](#getUiElementMetadata). It is returned in key `dynamicMetadata` in the `Struct` returned by [getAllUiElements()](#getAllUiElements) The dynamic metadata can also be set in `uiElementDescription` by specifying it in key `dynamicMetadata`. Specifying it in `metadata` takes precedence over `dynamicMetadata` in `elementDescription`.
 
 # Return Values
 
 Returns the database ID of the newly created UI element.
 
-# Errors
+# Exceptions
 
 | Code | Description                                                                                                                                                                                                               |
 |:-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
