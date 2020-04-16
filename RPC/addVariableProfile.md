@@ -31,14 +31,32 @@ A `Struct` with language/name pairs of the profile:
 
 ## profile
 
-The profile itself. The content of the `Struct` can be chosen freely. Only the key `values` containing the variable states to set is mandatory. `values` is an `Array`. Each element again is an `Array` of four or five elements:
+The profile itself. The content of the profile `Struct` can be chosen freely. Only the key `values` containing the variable states to set is mandatory. `values` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
 
-| Number of elements | Description                                                                                                                                                                                                                                                                               |
-|:-------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4 elements         | Peer ID (`Integer`), channel (`Integer`), variable name (`String`) and variable value (`Variant`).                                                                                                                                                                                        |
-| 5 elements         | Peer ID (`Integer`), channel (`Integer`), variable name (`String`), variable value (`Variant`) and "wait" (`Boolean`). The last parameter specifies if the profile execution waits for the parameter to be set. By default the execution doesn't wait (last parameter is set to `false`). |
+### Mandatory elements of the `values` array
 
-The room ID can be optionally specified in `room`.
+| Key        | Type      | Description                         |
+|:-----------|:----------|:------------------------------------|
+| `peerId`   | `Integer` | The peer ID of the variable to set. |
+| `channel`  | `Integer` | The channel of the variable to set. |
+| `variable` | `String`  | The name of the variable to set.    |
+| `value`    | `Variant` | The value to set.                   |
+
+### Optional elements of the `values` array
+
+In addition there are the following optional elements:
+
+| Key                      | Type      | Default | Description                                                                                                                                                      |
+|:-------------------------|:----------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `wait`                   | `Boolean` | `false` | Wait for a value to be sent to the device before setting the next value.                                                                                         |
+| `ignoreValueFromDevice`  | `Boolean` | `true`  | Ignore values from device for detection if a profile is currently active.                                                                                        |
+| `deviceRefractoryPeriod` | `Integer` | `60`    | Only used when `ignoreValueFromDevice` is `false`. For this number of seconds values from the device are ignored for detection if a profile is currently active. |
+
+### Optional elements of the profile struct
+
+| Key    | Type      | Default | Description                                            |
+|:-------|:----------|:--------|:-------------------------------------------------------|
+| `room` | `Integer` |         | When specified the profile is associated to this room. |
 
 ### Example
 
@@ -47,8 +65,18 @@ The room ID can be optionally specified in `room`.
     "myOptionalKey": ["myOptionalArray"],
     "room": 12,
     "values": [
-        [12, 1, "STATE", true],
-        [14, 2, "LEVEL", 47]
+        {
+            "peerId": 12,
+            "channel": 1,
+            "variable": "STATE",
+            "value": true
+        },
+        {
+            "peerId": 14,
+            "channel": 2,
+            "variable": "LEVEL",
+            "value": 47
+        }
     ]
 }
 ```
@@ -76,9 +104,24 @@ $profileId = $hg->addVariableProfile([
     "de-DE" => "Mein Profil"
 ], [
     "values" => [
-        [0, -1, "TEST1", true],
-        [0, -1, "TEST2", 47],
-        [0, -1, "TEST3", "Hello Homegear"]
+        [
+            "peerId" => 0,
+            "channel" => -1,
+            "variable" => "TEST1",
+            "value" => true
+        ],
+        [
+            "peerId" => 0,
+            "channel" => -1,
+            "variable" => "TEST2",
+            "value" => 47
+        ],
+        [
+            "peerId" => 0,
+            "channel" => -1,
+            "variable" => "TEST3",
+            "value" => "Hello Homegear"
+        ]
     ]
 ]);
 

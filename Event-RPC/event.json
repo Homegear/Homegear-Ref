@@ -1,6 +1,6 @@
 {
 	"name": "event",
-	"category": "Event Server - Device Events",
+	"category": "Event Server - Devices",
 	"shortDescription": "Called on variable changes",
 	"description": "This method is called when a parameter of the parameter set <em>VALUES</em>, a system variable or metadata of a device is changed.",
 	"signatures": [
@@ -9,7 +9,7 @@
 	"parameters": [{
 		"name": "eventSource",
 		"type": "String",
-		"description": "When the events are <b>not</b> sent over the same connection as incoming RPC calls, <em>eventSource</em> is set to the interface ID as specified in <em><a href=\"#init\">init()</a></em>. Otherwise it is set to the instance causing the variable update. Possible values are: <em>device-[Peer ID]</em>, <em>scriptEngine</em>, <em>ipcServer</em>, <em>homegear</em>, <em>rpc-client-[address]:[port]</em> or the interface ID as specified in <em><a href=\"#init\">init()</a></em> of the network client updating the variable.",
+		"description": "When the events are <b>not</b> sent over the same connection as incoming RPC calls, <em>eventSource</em> is set to the interface ID as specified in <em><a href=\"#init\">init()</a></em>. Otherwise it is set to the instance causing the variable update. Possible values are: <em>device-[Peer ID]</em>, <em>scriptEngine</em>, <em>ipcServer</em>, <em>profileManager</em>, <em>homegear</em>, <em>rpc-client-[address]:[port]</em> or the interface ID as specified in <em><a href=\"#init\">init()</a></em> of the network client updating the variable.",
 		"exampleValue": "0"
 	}, {
 		"name": "peerId",

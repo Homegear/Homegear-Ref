@@ -28,7 +28,15 @@ The language to fill the key name of the returned `Struct` with. E. g. `en-US` o
 
 # Return Values
 
-Returns the specified variable profile `Struct`. Note that the profile ID is encoded in the key `id`, the language-specific profile name in the key `name`.
+Returns the specified variable profile `Struct`. The following keys are inserted by Homegear in addition to the content specified in [addVariableProfile()](#addVariableProfile):
+
+| Key                   | Type      | Description                                                                     |
+|:----------------------|:----------|:--------------------------------------------------------------------------------|
+| `id`                  | `Integer` | The ID of the profile.                                                          |
+| `name`                | `String`  | The language-specific profile name.                                             |
+| `isActive`            | `Boolean` | `true` when the profile is currently active.                                    |
+| `totalVariableCount`  | `Integer` | The total number of variables in this profile.                                  |
+| `activeVariableCount` | `Integer` | The number of variables specified in this profile that match the profile value. |
 
 # Exceptions
 
