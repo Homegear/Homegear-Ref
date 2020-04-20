@@ -5,14 +5,21 @@
 	"description": "When you use this method, Homegear searches for new devices in all device families that support the method.",
 	"signatures": [
 		"Integer searchDevices()",
-		"Integer searchDevices(Integer familyId)"
+		"Integer searchDevices(Integer familyId)",
+		"Integer searchDevices(Integer familyId, String interfaceId)"
 	],
 	"parameters": [{
 		"name": "familyId",
 		"type": "Integer",
 		"description": "This is the ID of the family that you want to search for devices.",
 		"exampleValue": "1",
-		"default": "void"
+		"default": "Void"
+	}, {
+		"name": "interfaceId",
+		"type": "String",
+		"description": "Limit the search to this interface. Does not work with all device families.",
+		"exampleValue": "My-Interface",
+		"default": "Void"
 	}],
 	"returnValue": "Returns the number of devices that the method found or <em>-2</em> if the search is run in background. If the latter is the case newly found devices are broadcast by <em><a href=\"#newDevices\">newDevices()</a></em>."
 }
