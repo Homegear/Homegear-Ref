@@ -42,6 +42,15 @@ The profile itself. The content of the profile `Struct` can be chosen freely. On
 | `variable` | `String`  | The name of the variable to set.    |
 | `value`    | `Variant` | The value to set.                   |
 
+Alternatively the following set of mandatory elements is possible:
+
+| Key     | Type      | Description                                          |
+|:--------|:----------|:-----------------------------------------------------|
+| `role`  | `Integer` | All variables with this role will be set to `value`. |
+| `value` | `Variant` | The value to set.                                    |
+
+*Please note that adding or removing variables to/from the specified roles after the profile has been created requires a Homegear restart or a call to [updateVariableProfile()](#updateVariableProfile) for the profile to work.*
+
 ### Optional elements of the `values` array
 
 In addition there are the following optional elements:
@@ -93,6 +102,8 @@ Returns the ID of the newly created profile.
 
 # Examples
 
+## With variables
+
 ```bash
 homegear -e rc '
 $hg->setSystemVariable("TEST1", false);
@@ -121,6 +132,37 @@ $profileId = $hg->addVariableProfile([
             "channel" => -1,
             "variable" => "TEST3",
             "value" => "Hello Homegear"
+        ]
+    ]
+]);
+
+$hg->activateVariableProfile($profileId);
+print_v($hg->getSystemVariable("TEST1"));
+print_v($hg->getSystemVariable("TEST2"));
+print_v($hg->getSystemVariable("TEST3"));
+'
+```
+
+## With roles
+
+```bash
+homegear -e rc '
+$hg->setSystemVariable("TEST1", false);
+$hg->setSystemVariable("TEST2", true);
+$hg->setSystemVariable("TEST3", true);
+
+$hg->addRoleToVariable(0, -1, "TEST1", 100001);
+$hg->addRoleToVariable(0, -1, "TEST2", 100001);
+$hg->addRoleToVariable(0, -1, "TEST3", 100001, 2, true); //Invert
+
+$profileId = $hg->addVariableProfile([
+    "en-US" => "My profile",
+    "de-DE" => "Mein Profil"
+], [
+    "values" => [
+        [
+            "role" => 100001,
+            "value" => true
         ]
     ]
 ]);
