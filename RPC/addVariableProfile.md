@@ -31,9 +31,11 @@ A `Struct` with language/name pairs of the profile:
 
 ## profile
 
-The profile itself. The content of the profile `Struct` can be chosen freely. Only the key `values` containing the variable states to set is mandatory. `values` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
+The profile itself. The content of the profile `Struct` can be chosen freely. Either the key `values` or the key `roles` is mandatory. It is allowed to specify both.
 
 ### Mandatory elements of the `values` array
+
+`values` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
 
 | Key        | Type      | Description                         |
 |:-----------|:----------|:------------------------------------|
@@ -41,15 +43,6 @@ The profile itself. The content of the profile `Struct` can be chosen freely. On
 | `channel`  | `Integer` | The channel of the variable to set. |
 | `variable` | `String`  | The name of the variable to set.    |
 | `value`    | `Variant` | The value to set.                   |
-
-Alternatively the following set of mandatory elements is possible:
-
-| Key     | Type      | Description                                          |
-|:--------|:----------|:-----------------------------------------------------|
-| `role`  | `Integer` | All variables with this role will be set to `value`. |
-| `value` | `Variant` | The value to set.                                    |
-
-*Please note that adding or removing variables to/from the specified roles after the profile has been created requires a Homegear restart or a call to [updateVariableProfile()](#updateVariableProfile) for the profile to work.*
 
 ### Optional elements of the `values` array
 
@@ -60,6 +53,17 @@ In addition there are the following optional elements:
 | `wait`                   | `Boolean` | `false` | Wait for a value to be sent to the device before setting the next value.                                                                                         |
 | `ignoreValueFromDevice`  | `Boolean` | `true`  | Ignore values from device for detection if a profile is currently active.                                                                                        |
 | `deviceRefractoryPeriod` | `Integer` | `60`    | Only used when `ignoreValueFromDevice` is `false`. For this number of seconds values from the device are ignored for detection if a profile is currently active. |
+
+### Mandatory elements of the `roles` array
+
+`roles` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
+
+| Key     | Type      | Description                                          |
+|:--------|:----------|:-----------------------------------------------------|
+| `role`  | `Integer` | All variables with this role will be set to `value`. |
+| `value` | `Variant` | The value to set.                                    |
+
+*Please note that adding or removing variables to/from the specified roles after the profile has been created requires a Homegear restart or a call to [updateVariableProfile()](#updateVariableProfile) for the profile to work.*
 
 ### Optional elements of the profile struct
 
@@ -159,7 +163,7 @@ $profileId = $hg->addVariableProfile([
     "en-US" => "My profile",
     "de-DE" => "Mein Profil"
 ], [
-    "values" => [
+    "roles" => [
         [
             "role" => 100001,
             "value" => true
