@@ -9,6 +9,7 @@
 # Signatures
 
 ```
+Struct getVariableProfile(Integer profileId)
 Struct getVariableProfile(Integer profileId, String language)
 ```
 
@@ -24,19 +25,20 @@ The ID of the profile as returned by [addVariableProfile()](#addVariableProfile)
 
 ## language
 
-The language to fill the key name of the returned `Struct` with. E. g. `en-US` or `de-DE`.
+The language to fill the key name of the returned `Struct` with. E. g. `en-US` or `de-DE`. When not specified all translations are returned.
 
 # Return Values
 
 Returns the specified variable profile `Struct`. The following keys are inserted by Homegear in addition to the content specified in [addVariableProfile()](#addVariableProfile):
 
-| Key                   | Type      | Description                                                                     |
-|:----------------------|:----------|:--------------------------------------------------------------------------------|
-| `id`                  | `Integer` | The ID of the profile.                                                          |
-| `name`                | `String`  | The language-specific profile name.                                             |
-| `isActive`            | `Boolean` | `true` when the profile is currently active.                                    |
-| `totalVariableCount`  | `Integer` | The total number of variables in this profile.                                  |
-| `activeVariableCount` | `Integer` | The number of variables specified in this profile that match the profile value. |
+| Key                   | Type      | Description                                                                                      |
+|:----------------------|:----------|:-------------------------------------------------------------------------------------------------|
+| `id`                  | `Integer` | The ID of the profile.                                                                           |
+| `name`                | `String`  | The language-specific profile name. Only returned, when language code is specified.              |
+| `translations`        | `Struct`  | The profile name in all specified languages. Only returned, when language code is not specified. |
+| `isActive`            | `Boolean` | `true` when the profile is currently active.                                                     |
+| `totalVariableCount`  | `Integer` | The total number of variables in this profile.                                                   |
+| `activeVariableCount` | `Integer` | The number of variables specified in this profile that match the profile value.                  |
 
 # Exceptions
 

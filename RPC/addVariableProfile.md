@@ -44,16 +44,6 @@ The profile itself. The content of the profile `Struct` can be chosen freely. Ei
 | `variable` | `String`  | The name of the variable to set.    |
 | `value`    | `Variant` | The value to set.                   |
 
-### Optional elements of the `values` array
-
-In addition there are the following optional elements:
-
-| Key                      | Type      | Default | Description                                                                                                                                                      |
-|:-------------------------|:----------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `wait`                   | `Boolean` | `false` | Wait for a value to be sent to the device before setting the next value.                                                                                         |
-| `ignoreValueFromDevice`  | `Boolean` | `true`  | Ignore values from device for detection if a profile is currently active.                                                                                        |
-| `deviceRefractoryPeriod` | `Integer` | `60`    | Only used when `ignoreValueFromDevice` is `false`. For this number of seconds values from the device are ignored for detection if a profile is currently active. |
-
 ### Mandatory elements of the `roles` array
 
 `roles` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
@@ -62,6 +52,16 @@ In addition there are the following optional elements:
 |:--------|:----------|:-----------------------------------------------------|
 | `role`  | `Integer` | All variables with this role will be set to `value`. |
 | `value` | `Variant` | The value to set.                                    |
+
+### Optional elements of a `values` and `roles` array entry
+
+In addition there are the following optional elements available in both a `values` entry and a `roles` entry:
+
+| Key                      | Type      | Default | Description                                                                                                                                                      |
+|:-------------------------|:----------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `wait`                   | `Boolean` | `false` | Wait for a value to be sent to the device before setting the next value.                                                                                         |
+| `ignoreValueFromDevice`  | `Boolean` | `true`  | Ignore values from device for detection if a profile is currently active.                                                                                        |
+| `deviceRefractoryPeriod` | `Integer` | `60`    | Only used when `ignoreValueFromDevice` is `false`. For this number of seconds values from the device are ignored for detection if a profile is currently active. |
 
 *Please note that adding or removing variables to/from the specified roles after the profile has been created requires a Homegear restart or a call to [updateVariableProfile()](#updateVariableProfile) for the profile to work.*
 

@@ -9,6 +9,7 @@
 # Signatures
 
 ```
+Array<Struct> getAllVariableProfiles()
 Array<Struct> getAllVariableProfiles(String language)
 ```
 
@@ -26,13 +27,14 @@ The language to fill the key name of the returned `Struct` with. E. g. `en-US` o
 
 Returns an `Array` with all variable profiles. The following keys are inserted by Homegear in addition to the content specified in [addVariableProfile()](#addVariableProfile):
 
-| Key                   | Type      | Description                                                                     |
-|:----------------------|:----------|:--------------------------------------------------------------------------------|
-| `id`                  | `Integer` | The ID of the profile.                                                          |
-| `name`                | `String`  | The language-specific profile name.                                             |
-| `isActive`            | `Boolean` | `true` when the profile is currently active.                                    |
-| `totalVariableCount`  | `Integer` | The total number of variables in this profile.                                  |
-| `activeVariableCount` | `Integer` | The number of variables specified in this profile that match the profile value. |
+| Key                   | Type      | Description                                                                                      |
+|:----------------------|:----------|:-------------------------------------------------------------------------------------------------|
+| `id`                  | `Integer` | The ID of the profile.                                                                           |
+| `name`                | `String`  | The language-specific profile name. Only returned, when language code is specified.              |
+| `translations`        | `Struct`  | The profile name in all specified languages. Only returned, when language code is not specified. |
+| `isActive`            | `Boolean` | `true` when the profile is currently active.                                                     |
+| `totalVariableCount`  | `Integer` | The total number of variables in this profile.                                                   |
+| `activeVariableCount` | `Integer` | The number of variables specified in this profile that match the profile value.                  |
 
 # Exceptions
 
