@@ -7,7 +7,7 @@
 		"Boolean addRoomToStory(Integer storyId, Integer roomId)"
 	],
 	"parameters": [{
-		"name": "story",
+		"name": "storyId",
 		"type": "Integer",
 		"description": "The ID of the story as returned by <em><a href=\"#createStory\">createStory()</a></em> or <em><a href=\"#getStories\">getStories()</a></em>.",
 		"exampleValue": "12"

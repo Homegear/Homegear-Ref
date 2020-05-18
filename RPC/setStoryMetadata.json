@@ -2,7 +2,7 @@
 	"name": "setStoryMetadata",
 	"category": "Rooms and Categories",
 	"shortDescription": "Sets the metadata of an existing story",
-	"description": "This method updates the translations of an existing story.",
+	"description": "This method updates the metadata of an existing story.",
 	"signatures": [
 		"Void setStoryMetadata(Integer storyId, Struct metadata)"
 	],
