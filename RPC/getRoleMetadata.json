@@ -1,6 +1,6 @@
 {
 	"name": "getRoleMetadata",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Returns the metadata of an existing role",
 	"description": "This method returns the metadata of an existing role.",
 	"signatures": [

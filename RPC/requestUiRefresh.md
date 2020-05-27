@@ -21,7 +21,7 @@ This method should cause a Homegear UI to reload and triggers the event method [
 
 ## id
 
-An arbitrary ID which is passed to [requestUiRefresh()](#requestUiRefreshEvent). It can be used to identify a specific UI.
+An arbitrary ID which is passed to [requestUiRefresh()](#requestUiRefreshEvent). It can be used to identify a specific UI. When empty, all UIs should be refreshed.
 
 # Return Values
 

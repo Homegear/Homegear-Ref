@@ -1,6 +1,6 @@
 {
 	"name": "removeRoleFromVariable",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Removes a role from a variable",
 	"description": "This method removes a role from a variable.",
 	"signatures": [

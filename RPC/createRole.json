@@ -1,6 +1,6 @@
 {
 	"name": "createRole",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Creates a new role",
 	"description": "This method creates a new role.",
 	"signatures": [

@@ -1,6 +1,6 @@
 {
 	"name": "getVariablesInRole",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Returns all variables of a role",
 	"description": "This method returns all variables of a role.",
 	"signatures": [

@@ -1,6 +1,6 @@
 {
 	"name": "deleteRole",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Deletes a role",
 	"description": "This method deletes a role.",
 	"signatures": [

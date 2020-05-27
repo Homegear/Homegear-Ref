@@ -1,6 +1,6 @@
 {
 	"name": "getRoles",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Returns information about all roles",
 	"description": "This method returns all role IDs, one or all translations and the role metadata.",
 	"signatures": [

@@ -9,7 +9,7 @@
 # Signatures
 
 ```
-Boolean checkUiElementSimpleCreation(Integer peerId, Integer channel, String variableName)
+Struct checkUiElementSimpleCreation(Integer peerId, Integer channel, String variableName)
 ```
 
 # Description
@@ -32,7 +32,14 @@ The variable name to check.
 
 # Return Values
 
-Returns `true` when simple UI element creation is possible and `false` otherwise.
+Returns a `Struct` with the following elements:
+
+| Key          | Optional | Type             | Description                                                                                              |
+|:-------------|:---------|:-----------------|:---------------------------------------------------------------------------------------------------------|
+| visualizable | no       | `Boolean`        | Set to `true` when the variable can be visualized using simple UI element creation.                      |
+| reason       | yes      | `String`         | Only set when `visualizable` is `false`. Explains why the variable is not visualizable.                  |
+| visualized   | yes      | `Boolean`        | Only set when `visualizable` is `true`. Set to `true` when the variable is already used in a UI element. |
+| uiElements   | yes      | `Array<Integer>` | UI elements that visualize this variable.                                                                |
 
 # Exceptions
 

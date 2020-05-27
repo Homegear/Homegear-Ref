@@ -1,6 +1,6 @@
 {
 	"name": "setRoleMetadata",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Sets the metadata of an existing role",
 	"description": "This method updates the translations of an existing role.",
 	"signatures": [

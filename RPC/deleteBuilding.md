@@ -25,7 +25,7 @@ The ID of the building as returned by [createBuilding()](#createBuilding) or [ge
 
 # Return Values
 
-Returns `Void` on seccess.
+Returns `Void` on success.
 
 # Exceptions
 

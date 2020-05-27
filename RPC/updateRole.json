@@ -1,6 +1,6 @@
 {
 	"name": "updateRole",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Updates the translations and metadata of an existing role",
 	"description": "This method updates the translations and metadata of an existing role.",
 	"signatures": [

@@ -37,7 +37,7 @@ Arbitrary metadata.
 
 # Return Values
 
-Returns `Void` on seccess.
+Returns `Void` on success.
 
 | Code | Description       |
 |:-----|:------------------|

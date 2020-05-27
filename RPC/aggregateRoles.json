@@ -1,6 +1,6 @@
 {
 	"name": "aggregateRoles",
-	"category": "Rooms and Categories",
+	"category": "Roles",
 	"shortDescription": "Aggregates values of variables with specific roles",
 	"description": "This method aggregates values of variables with specific roles.",
 	"signatures": [

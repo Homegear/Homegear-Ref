@@ -38,4 +38,4 @@ Arbitrary metadata.
 
 # Return Values
 
-Returns the ID of the new building on seccess.
+Returns the ID of the new building on success.
