@@ -4,8 +4,9 @@
 	"shortDescription": "Manually creates a device",
 	"description": "This method manually creates a new device. It is not supported by all device families, and it is also not supported for all devices. createDevice can be used to create virtual devices in the family \"Miscellaneous\".",
 	"signatures": [
-		"Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion)",
-		"Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion, String interfaceId)"
+		"(1) Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion)",
+		"(2) Integer createDevice(Integer familyId, Integer deviceType, String serialNumber, Integer address, Integer firmwareVersion, String interfaceId)",
+		"(3) Integer createDevice(String code)"
 	],
 	"parameters": [{
 		"name": "familyId",
@@ -37,17 +38,22 @@
 		"type": "String",
 		"description": "The ID of the interface as defined in the family configuration file with which you want to associate the newly created device",
 		"exampleValue": "My-Interface"
+	}, {
+		"name": "code",
+		"type": "String",
+		"description": "A code containing all information to create or pair the device",
+		"exampleValue": "30S0000050E71BB+1P004000000009+10Z00+11Z23981AB3+S---"
 	}],
-	"returnValue": "Returns the ID of the new device on success",
+	"returnValue": "Returns the ID of the new device on success.",
 	"errors": [{
 		"code": -2,
-		"description": "The device family is unknown or unavailable."
+		"description": "The device family is unknown or unavailable (<em>(1)</em> and <em>(2)</em>). Device creation or pairing is taking place in background i. e. for wake up devices (<em>(3)</em>)."
 	}, {
 		"code": -5,
-		"description": "A device with this serial number or address already exists."
+		"description": "A device with this serial number or address already exists (<em>(1)</em>, <em>(2)</em> and <em>(3)</em>)."
 	}, {
 		"code": -6,
-		"description": "This device type is unknown."
+		"description": "This device type is unknown or no matching device could be found (<em>(1)</em>, <em>(2)</em> and <em>(3)</em>)."
 	}, {
 		"code": -32601,
 		"description": "Method not implemented by the device family"

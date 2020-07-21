@@ -84,7 +84,7 @@ Scales the logical value of the variable. This makes the variable look like the 
 }
 ```
 
-This will scale the device value to a value between `0` and `100`.
+This will scale the device value with a value range between `0` and `255` to a value between `0` and `100`.
 
 # Return Values
 
