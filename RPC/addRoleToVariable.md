@@ -58,6 +58,18 @@ The ID of the role as returned by [createRole()](#createRole) or [getRoles()](#g
 201003
 ```
 
+## direction
+
+Specifies, whether the variable is an input or output variable - or both. This is relevant, when there is one variable for input and another variable for output. Specifying `direction` you can assign the same role to both of them.
+
+| Value | Description                                                  |
+| ----- | ------------------------------------------------------------ |
+| `0`   | The variable is an input variable (i. e. the value is coming from the device). Readonly variables are always input variables. |
+| `1`   | The variable is an output variable (i. e. the value is sent to the device). Writeonly variables are always output variables. |
+| `2`   | This is the default. The variable is an input and output variable. |
+
+
+
 ## invert
 
 Invert the value of the variable. This makes the variable look like the inverted value everywhere it can be accessed.
@@ -66,13 +78,12 @@ Invert the value of the variable. This makes the variable look like the inverted
 
 Scales the logical value of the variable. This makes the variable look like the scaled version everywhere it can be accessed. Scale is a `Struct` with the following entries:
 
-| Key | Optional | Description          |
-|:-----|:--|:---------------------|
-`valueMin` | yes | The minimum value of the unscaled variable. If omitted Homegear uses the minimum value from the device description file.
-`valueMax` | yes | The maximum value of the unscaled variable. If omitted Homegear uses the maximum value from the device description file.
-`scaleMin` | no | The minimum value of the scale range the variable should be scaled to.
-`scaleMax` | no | The maximum value of the scale range the variable should be scaled to.
-
+| Key        | Optional | Description                                                  |
+| ---------- | -------- | ------------------------------------------------------------ |
+| `valueMin` | yes      | The minimum value of the unscaled variable. If omitted Homegear uses the minimum value from the device description file. |
+| `valueMax` | yes      | The maximum value of the unscaled variable. If omitted Homegear uses the maximum value from the device description file. |
+| `scaleMin` | no       | The minimum value of the scale range the variable should be scaled to. |
+| `scaleMax` | no       | The maximum value of the scale range the variable should be scaled to. |
 ### Example
 
 ```json

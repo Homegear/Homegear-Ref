@@ -46,7 +46,7 @@ The profile itself. The content of the profile `Struct` can be chosen freely. Ei
 
 ### Mandatory elements of the `roles` array
 
-`roles` is an `Array`. Each element again is a `Struct` with the following mandatory elements:
+`roles` is an `Array`. Each element again is an `Array` with the following mandatory elements:
 
 | Key     | Type      | Description                                          |
 |:--------|:----------|:-----------------------------------------------------|
