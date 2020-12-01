@@ -3,7 +3,7 @@
 	"category": "GPIO Operations",
 	"shortDescription": "Exports a GPIO",
 	"description": "This method exports a GPIO. Make sure you have sufficient permissions to do that. If this is not the case, you can set \"exportGpios\" in /etc/homegear/main.conf. This setting tells Homegear to export the GPIOs when it starts up and before it drops its root privileges.",
-	"signatures": ["void open(int $index)"],
+	"signatures": ["void export(int $index)"],
 	"parameters": [{
 		"name": "index",
 		"type": "int",
