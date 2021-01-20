@@ -4,7 +4,7 @@
 	"shortDescription": "Sends an event to the Node-BLUE frontend",
 	"description": "This method sends an event to the Node-BLUE frontend. The following events are available:<ul><li><b>status:</b> Displays a status message below the node. <em>topic</em> needs to be <em>statusBottom/&lt;nodeId&gt;</em> and data an array with the keys <em>text</em>, <em>fill</em> and <em>shape</em>. <em>text</em> can be set to a small string. It is optional and should be short (< 20 characters). <em>fill</em> can be <em>red</em>, <em>green</em>, <em>yellow</em>, <em>blue</em> or <em>grey</em>. Valid values for <em>shape</em> are <em>ring</em> and <em>dot</em>. For example: <em>array('text' => 'connected', 'fill' => 'green', 'shape' => 'dot')</em>. </li><li><b>debug:</b> Appends a message to the frontend debug log. <em>topic</em> has to be set to <em>debug</em> and message to an array with the keys <em>id</em>, <em>name</em>, <em>msg</em>, <em>format</em> and <em>property</em>. <em>id</em> is a node ID that is being displayed as the debug message's header. <em>name</em> is the node's type. <em>msg</em> is the message to display. <em>format</em> is the type of the message and has to be one of: <em>array[&lt;length&gt;]</em>, <em>boolean</em>, <em>number</em>, <em>string[&lt;length&gt;]</em>, <em>Object</em> or <em>null</em>. <em>property</em> the property of the message that is being shown.</li></ul>",
 	"signatures": [
-		"void nodeEvent(string topic, mixed data)"
+		"void nodeEvent(string topic, mixed data[, bool retain = true])"
 	],
 	"parameters": [{
 		"name": "topic",
@@ -15,6 +15,11 @@
 		"name": "data",
 		"type": "mixed",
 		"description": "The data to send to the entity defined by <em>topic</em>.",
+		"exampleValue": ""
+	}, {
+		"name": "retain",
+		"type": "bool",
+		"description": "By default node events are retained. Set this parameter to <em>false</em> to only send them once to currently connected frontends.",
 		"exampleValue": ""
 	}],
 	"returnValue": "Returns void on success."
