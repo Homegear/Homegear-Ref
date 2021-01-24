@@ -2,7 +2,7 @@
 	"name": "HomegearNodeBase::invokeNodeMethod",
 	"category": "Nodes",
 	"shortDescription": "Invokes a node-specific RPC method",
-	"description": "This method is only available within a Node-BLUE node. It invokes a PHP or C++ method defined within another node and can therefore be used for inter-node communication.",
+	"description": "This method is only available within a Node-BLUE node. It invokes a method defined within another node (except simple PHP and Python nodes) and can therefore be used for inter-node communication. This is especially required for a node to communicate with configuration nodes.",
 	"signatures": [
 		"mixed invokeNodeMethod(string nodeId, string methodName, array parameters [, bool wait = true])"
 	],
