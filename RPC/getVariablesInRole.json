@@ -4,13 +4,19 @@
 	"shortDescription": "Returns all variables of a role",
 	"description": "This method returns all variables of a role.",
 	"signatures": [
-		"Struct getVariablesInRole(Integer roleId)"
+		"Struct getVariablesInRole(Integer roleId)",
+		"Struct getVariablesInRole(Integer roleId, Integer peerId)"
 	],
 	"parameters": [{
 		"name": "roleId",
 		"type": "Integer",
 		"description": "The ID of the role as returned by <em><a href=\"#createRole\">createRole()</a></em> or <em><a href=\"#getRoles\">getRoles()</a></em>.",
 		"exampleValue": "3"
+	}, {
+		"name": "peerId",
+		"type": "Integer",
+		"description": "Only return variables for this peer ID.",
+		"exampleValue": "12"
 	}],
 	"returnValue": "Returns variables assigned to the specified role. The root element is a <em>Struct</em> with all peer IDs as key and all channels as value (<em>Struct</em>). The channels again have the variables as value (<em>Array&lt;String&gt;</em>).",
 	"errors": [{
