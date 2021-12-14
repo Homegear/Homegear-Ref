@@ -18,6 +18,10 @@ This method updates the translations and metadata of an existing building.
 
 # Parameters
 
+## buildingId
+
+The ID of the building as returned by [createBuilding()](#createBuilding) or [getBuildings()](#getBuildings).
+
 ## translations
 
 The name of the building in different languages. The keys are the lower case ISO 639-1 language codes and the upper case ISO 3166-1 alpha-2 country codes seperated by a dash (e. g. en-US or fr-FR). The values are the building names in the different languages.

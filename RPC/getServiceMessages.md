@@ -37,6 +37,7 @@ If `newFormat` is `true`, each element is a `Struct` with the following elements
 | Key             | Type      | Types         | Optional | Description                                                  |
 | --------------- | --------- | ------------- | -------- | ------------------------------------------------------------ |
 | `TYPE`          | `Integer` |               | no       | `0` for global, `1` for family and `2` for device service messages. |
+| `PRIORITY`      | `Integer` | `0`, `1`, `2` | no       | `1`: critical, `2`: error, `3`: warning, `4`: info, `5`: debug |
 | `TIMESTAMP`     | `Integer` | `0`, `1`, `2` | no       | The unix timestamp in seconds of the timepoint the service message was set. |
 | `FAMILY_ID`     | `Integer` | `1`           | no       | The ID of the family that created the service message.       |
 | `INTERFACE`     | `String`  | `1`           | yes      | When the service message is associated to a communication interface, the interface ID is set here. |

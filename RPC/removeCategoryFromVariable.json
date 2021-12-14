@@ -4,7 +4,7 @@
 	"shortDescription": "Removes a category from a variable",
 	"description": "This method removes a category from a variable.",
 	"signatures": [
-		"Boolean removeCategoryFromVariable(Integer peerId, Integer channel, Integer categoryId)"
+		"Boolean removeCategoryFromVariable(Integer peerId, Integer channel, String variableName, Integer categoryId)"
 	],
 	"parameters": [{
 		"name": "peerId",
