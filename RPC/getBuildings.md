@@ -30,13 +30,14 @@ An optional lower case ISO 639-1 language and upper case ISO 3166-1 alpha-2 coun
 
 # Return Values
 
-Returns an `Array<Struct>` with all buildings on success. When `languageCode` is specified, each `Array` element is a `Struct` with four entries:
+Returns an `Array<Struct>` with all buildings on success. When `languageCode` is specified, each `Array` element is a `Struct` with five entries:
 
 | Key  | Type      |
 |:-----|:----------|
 | `ID` | `Integer` |
 | `NAME` | `String` |
 | `STORIES` | `Array<Integer>` |
+| `BUILDING_PARTS` | `Array<Integer>` |
 | `METADATA` | `Struct` |
 
 The name will be resolved in the following order:
@@ -46,13 +47,14 @@ The name will be resolved in the following order:
 3. First available language
 4. Empty string
 
-When `languageCode` is not specified, each `Array` element is also a `Struct` with four entries:
+When `languageCode` is not specified, each `Array` element is also a `Struct` with five entries:
 
 | Key  | Type      |
 |:-----|:----------|
 | `ID` | `Integer` |
 | `TRANSLATIONS` | `Struct` |
 | `STORIES` | `Array<Integer>` |
+| `BUILDING_PARTS` | `Array<Integer>` |
 | `METADATA` | `Struct` |
 
 The key of `TRANSLATIONS` is the language code and the value the translation.
