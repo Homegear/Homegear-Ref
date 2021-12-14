@@ -25,7 +25,7 @@ The ID of the building as returned by [createBuilding()](#createBuilding) or [ge
 
 ## storyId
 
-The ID of the building as returned by [createBuilding()](#createBuilding) or [getBuildings()](#getBuildings).
+The ID of the story as returned by [createStory()](#createStory) or [getStories()](#getStories).
 
 # Return Values
 
